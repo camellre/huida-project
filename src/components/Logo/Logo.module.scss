@@ -1,0 +1,17 @@
+.logoContainer {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.logoImg {
+  max-height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .logoImg {
+    max-height: 80px;
+  }
+}

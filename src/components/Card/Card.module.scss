@@ -1,0 +1,44 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitleContainer {
+  margin: 20px 0 0;
+}
+
+.cardTitle {
+  display: block;
+  font-size: 40px;
+}
+
+.cardSubtitleContainer {
+  margin: 20px 0 0;
+}
+
+.cardSubtitle {
+  display: block;
+  font-size: 20px;
+}
+
+.cardBodyContainer {
+  margin: 20px 0 0;
+}
+
+.cardBodyContentContainer {
+  margin: 20px 0 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBodyIconContainer {
+  display: flex;
+}
+
+// @media screen and (min-width: 768px) {
+//   .cardBodyContentContainer {
+//     max-width: 70%;
+//   }
+// }

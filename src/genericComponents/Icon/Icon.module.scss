@@ -1,0 +1,20 @@
+.iconContainer {
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.icon {
+  fill: black;
+  width: 30px;
+}
+
+.iconContainer:hover {
+  background: rgb(208, 212, 212);
+}
