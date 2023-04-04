@@ -5,3 +5,22 @@
   align-items: center;
   height: 100%;
 }
+
+.logInBoxWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.logInSubBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logInFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
