@@ -1,0 +1,21 @@
+.cardTitleContainer {
+  align-self: flex-start;
+}
+
+.cardBodyContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.cardSubBodyContainer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .cardSubBodyContainer {
+    flex-direction: column;
+  }
+}

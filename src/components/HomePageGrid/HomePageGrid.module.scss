@@ -16,20 +16,20 @@
   max-width: 100%;
 }
 
-.grenadaPassportFloat {
-  position: absolute;
-  top: 7%;
-  right: 4%;
-  width: 8em;
-}
+// .grenadaPassportFloat {
+//   position: absolute;
+//   top: 7%;
+//   right: 4%;
+//   width: 4em;
+// }
 
 @media screen and (min-width: 768px) {
   .gridItem_1 {
     grid-column: 1/3;
   }
 
-  .grenadaPassportFloat {
-    top: 3%;
-    right: -16%;
-  }
+  // .grenadaPassportFloat {
+  //   top: 3%;
+  //   right: -16%;
+  // }
 }

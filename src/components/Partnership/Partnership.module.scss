@@ -1,0 +1,27 @@
+.cardTitleContainer {
+  align-self: flex-start;
+}
+
+.cardBodyWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3em;
+}
+
+.cardSubBodyWrapper_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 7em;
+}
+
+.cardSubBodyText {
+  max-width: 40em;
+}
+
+.cardSubBodyWrapper_2 {
+  display: grid;
+  grid-template-columns: (repeat(4, 1fr));
+  gap: 5em;
+}

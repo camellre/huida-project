@@ -1,4 +1,45 @@
+.footerBackground {
+  background-color: #ffbf23;
+  padding-bottom: 3em;
+}
+
 .footerContainer {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+.cardTitleWrapper {
+  align-self: flex-start;
+}
+
+.cardBodyWrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5em;
+}
+
+.footerItemWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3em;
+}
+
+.footerItemWrapper_icon {
+  row-gap: 0;
+}
+
+.footerItemGridWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
+.footerItemText {
+  max-width: 9em;
+}
+
+.footerBottemBar {
+  text-align: center;
+  background-color: black;
+  color: white;
 }
