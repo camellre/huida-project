@@ -9,9 +9,9 @@ function LogInPage() {
       <NavBar />
       <div className={style.logInPageWrapper}>
         <div className={style.logInBoxWrapper}>
-          <div>
-            <h1>汇达移民</h1>
-            <img src="" alt="" />
+          <div className={style.logInLeftSubBoxWrapper}>
+            <h1 className={style.loginBoxLogoTitle}>汇达移民</h1>
+            <img className={style.logInQRCodeWrapper} src="" alt="" />
           </div>
           <div className={style.logInSubBoxWrapper}>
             <div>
@@ -44,7 +44,7 @@ function LogInPage() {
               <Icon IconImage={icon_1} />
               <Icon IconImage={icon_1} />
             </div>
-            <div>
+            <div className={style.logInTermsWrapper}>
               <input type="checkbox" />
               <span>
                 同意并阅读《汇达移民网络服务使用协议》和《汇达移民用户隐私条款》
