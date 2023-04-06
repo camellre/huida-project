@@ -5,6 +5,7 @@ import NavBarImageUser from "../../assets/user.svg";
 import NavBarImageSettings from "../../assets/settings.svg";
 import Button from "../../genericComponents/Button/Button";
 import Logo from "../Logo/Logo";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const iconContainer = <Icon IconImage={NavBarImageSettings} />;
@@ -105,7 +106,10 @@ export default function NavBar() {
         </div>
         <div className={style.navBarMenuToolContainer}>
           <Icon IconImage={NavBarImageUser} />
-          <Button theme="navBarButton" text="Log In" />
+          {/* <Button theme="navBarButton" text="Log In" /> */}
+          <Link to={"/login"}>
+            <Button theme="navBarButton" text="Log In" />
+          </Link>
         </div>
       </div>
       <div className={style.navBarMobileMenuContainer}>

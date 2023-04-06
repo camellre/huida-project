@@ -2,6 +2,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import Icon from "../../genericComponents/Icon/Icon";
 import style from "./LogInPage.module.scss";
 import icon_1 from "../../assets/user.svg";
+import { Link } from "react-router-dom";
 
 function LogInPage() {
   return (
@@ -35,7 +36,9 @@ function LogInPage() {
               <div className={style.logInButtonWrapper}>
                 <button>注册新用户</button>
                 <span>已有账户？</span>
-                <button>登录</button>
+                <Link to={"/account"}>
+                  <button>登录</button>
+                </Link>
               </div>
             </form>
             <div>-or-</div>
