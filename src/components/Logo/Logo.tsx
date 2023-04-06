@@ -1,5 +1,5 @@
 import style from "./Logo.module.scss";
-import logo from "../../assets/hd_logo.svg";
+import logo from "../../assets/huida-logo-svg.svg";
 
 function Logo() {
   return (

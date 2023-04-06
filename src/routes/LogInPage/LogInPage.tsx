@@ -1,4 +1,3 @@
-import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import Icon from "../../genericComponents/Icon/Icon";
 import style from "./LogInPage.module.scss";
@@ -20,17 +19,27 @@ function LogInPage() {
             </div>
             <form className={style.logInFormWrapper} action="">
               <label htmlFor="userId">邮箱</label>
-              <input type="text" id="userId" placeholder="输入Email邮箱地址" />
+              <input
+                className={style.logInInputBox}
+                type="text"
+                id="userId"
+                placeholder="输入Email邮箱地址"
+              />
               <label htmlFor="password">密码</label>
-              <input type="text" id="password" placeholder="输入密码" />
-              <div>
+              <input
+                className={style.logInInputBox}
+                type="text"
+                id="password"
+                placeholder="输入密码"
+              />
+              <div className={style.logInButtonWrapper}>
                 <button>注册新用户</button>
                 <span>已有账户？</span>
                 <button>登录</button>
               </div>
             </form>
             <div>-or-</div>
-            <div>
+            <div className={style.logInIconWrapper}>
               <Icon IconImage={icon_1} />
               <Icon IconImage={icon_1} />
               <Icon IconImage={icon_1} />
@@ -44,7 +53,6 @@ function LogInPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
