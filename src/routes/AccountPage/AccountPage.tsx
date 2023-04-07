@@ -14,7 +14,7 @@ function AccountPage() {
           <div className={style.sideBarTitleWrapper}>
             <span className={style.sideBarPhoto}>P</span>
             <div>
-              <div>ID/名字</div>
+              <div>用户名/名字</div>
               <div>账号管理</div>
             </div>
           </div>
