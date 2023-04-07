@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import style from "./AccountPage.module.scss";
 import IconStatic from "../../genericComponents/IconStatic/IconStatic";
@@ -15,7 +15,7 @@ function AccountPage() {
             <span className={style.sideBarPhoto}>P</span>
             <div>
               <div>用户名/名字</div>
-              <div>账号管理</div>
+              <Link to={"/account/profile"}>账号管理 </Link>
             </div>
           </div>
           <div className={style.sideBarContentWrapper}>
@@ -43,7 +43,6 @@ function AccountPage() {
           <Button theme="navBarButton" text="登出账号" />
         </aside>
         <div className={style.accountPageContentWrapper}>
-          <h1>Content</h1>
           <Outlet />
         </div>
       </div>
