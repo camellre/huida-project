@@ -1,7 +1,10 @@
 import NavBar from "../../components/NavBar/NavBar";
 import Icon from "../../genericComponents/Icon/Icon";
 import style from "./LogInPage.module.scss";
-import icon_1 from "../../assets/user.svg";
+import icon_1 from "../../assets/Google.svg";
+import icon_2 from "../../assets/Facebook.svg";
+import icon_3 from "../../assets/WhatsApp.svg";
+import backGroundImage_1 from "../../assets/rectangle_2.svg";
 import { Link } from "react-router-dom";
 
 function LogInPage() {
@@ -12,7 +15,11 @@ function LogInPage() {
         <div className={style.logInBoxWrapper}>
           <div className={style.logInLeftSubBoxWrapper}>
             <h1 className={style.loginBoxLogoTitle}>汇达移民</h1>
-            <img className={style.logInQRCodeWrapper} src="" alt="" />
+            <img
+              className={style.logInQRCodeWrapper}
+              src={backGroundImage_1}
+              alt=""
+            />
           </div>
           <div className={style.logInSubBoxWrapper}>
             <div>
@@ -34,7 +41,7 @@ function LogInPage() {
                 placeholder="输入密码"
               />
               <div className={style.logInButtonWrapper}>
-                <button>注册新用户</button>
+                <button className={style.logInButton}>注册新用户</button>
                 <span>已有账户？</span>
                 <Link to={"/account"}>
                   <button>登录</button>
@@ -44,8 +51,8 @@ function LogInPage() {
             <div>-or-</div>
             <div className={style.logInIconWrapper}>
               <Icon IconImage={icon_1} />
-              <Icon IconImage={icon_1} />
-              <Icon IconImage={icon_1} />
+              <Icon IconImage={icon_2} />
+              <Icon IconImage={icon_3} />
             </div>
             <div className={style.logInTermsWrapper}>
               <input type="checkbox" />

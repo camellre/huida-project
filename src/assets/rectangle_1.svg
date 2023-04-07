@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="776" height="502" viewBox="0 0 776 502" fill="none"><defs><linearGradient id="linear_0" x1="50%" y1="50%" x2="51%" y2="100%" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#66ABFF" stop-opacity="1" /><stop offset="1" stop-color="#00E9ED" stop-opacity="0.45" /></linearGradient><filter id="filter_0" x="-35" y="-35" width="846" height="572" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dx="7" dy="12"/>
+          <feGaussianBlur stdDeviation="17.5"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend mode="normal" in2="shape" result="effect1_Shadow"/></filter></defs><g id="矩形 1" filter="url(#filter_0)"><path id="矩形 1" fill-rule="evenodd" fill="url(#linear_0)" transform="translate(0 0)  rotate(0 388 251)" opacity="1" d="M40,502L736,502C758.09,502 776,484.09 776,462L776,40C776,17.91 758.09,0 736,0L40,0C17.91,0 0,17.91 0,40L0,462C0,484.09 17.91,502 40,502Z " /></g></svg>
