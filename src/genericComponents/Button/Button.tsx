@@ -1,10 +1,10 @@
 import style from "./Button.module.scss";
 
 interface ButtonProp {
-  theme: "navBarButton" | "cardButton" | "longButton" | "shortButton";
   text: string;
+  theme?: string;
 }
 
-export default function Button({ theme, text }: ButtonProp) {
-  return <button className={style[theme]}>{text}</button>;
+export default function Button({ text, theme }: ButtonProp) {
+  return <button className={[style.button, theme].join(" ")}>{text}</button>;
 }

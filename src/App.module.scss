@@ -1,4 +1,10 @@
-.mainBodyContainer {
-  max-width: 1024px;
-  margin: 0 auto;
+
+.imageWrapper {
+  height: 90vh;
+  width: 90vh;
+  border: 3px solid black;
+}
+
+.image {
+  max-width: 5em;
 }

@@ -1,17 +1,18 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import style from "./Card.module.scss";
 
 interface CardProps {
-  childrenTop: React.ReactNode;
-  childrenBottom: React.ReactNode;
+  childrenTop: ReactNode;
+  childrenBottom: ReactNode;
+  cardStyle?: string;
 }
 
-function Card({ childrenTop, childrenBottom }: CardProps) {
+function Card({ childrenTop, childrenBottom, cardStyle }: CardProps) {
   return (
-    <div className={style.cardContainer}>
+    <article className={[style.cardContainer, cardStyle].join(" ")}>
       {childrenTop}
       {childrenBottom}
-    </div>
+    </article>
   );
 }
 

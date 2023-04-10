@@ -1,24 +1,24 @@
-.btn {
-  border-radius: 5px;
-  height: 38px;
+.button {
+  border-radius: 0.5em;
+  height: 2.5em;
   cursor: pointer;
-  font-size: 1rem;
-  align-items: center;
+  font-size: 1em;
   display: flex;
+  align-items: center;
   justify-content: center;
   white-space: nowrap;
   transition: all 0.3s;
 }
 
-.navBarButton {
-  @extend .btn;
-  background: #ffbf23;
-  color: white;
-  border: 2px solid black;
-  width: 100px;
-}
+// .navBarButton {
+//   @extend .btn;
+//   background: #ffbf23;
+//   color: white;
+//   border: 2px solid black;
+//   width: 100px;
+// }
 
-.navBarButton:hover {
-  background: black;
-  border: 2px solid black;
-}
+// .navBarButton:hover {
+//   background: black;
+//   border: 2px solid black;
+// }
