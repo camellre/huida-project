@@ -3,41 +3,82 @@ import Logo from "../Logo/Logo";
 import style from "./NavigationBar.module.scss";
 import languageIcon from "../../assets/globe-1-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
-import { useState } from "react";
+import React, { useState } from "react";
+
+interface dropDownFunctionType {
+  [key: string]: () => void;
+}
 
 export const NavigationBar = () => {
-  const [show, setShow] = useState(style.dropDownMenuWrapper_1);
-
-  const handleMenuClick = () => {
-    if (show === style.dropDownMenuWrapper_1)
-      return setShow(
-        [style.dropDownMenuWrapper_1, style.dropDownMenuWrapperShow].join(" ")
-      );
-    return setShow(style.dropDownMenuWrapper_1);
+  const [dropDownList, setDropDownList] = useState([false, false, false]);
+  const dropDownFunction: dropDownFunctionType = {
+    navBar: () => {
+      setDropDownList([false, false, false]);
+    },
+    homePage: () => {
+      setDropDownList([false, false, false]);
+    },
+    immigrationService: () => {
+      setDropDownList([true, true, false]);
+    },
+    otherService: () => {
+      setDropDownList([true, false, true]);
+    },
+    contactUs: () => {
+      setDropDownList([false, false, false]);
+    },
+  };
+  const handleMouseMovement = (e: React.MouseEvent<HTMLElement>) => {
+    const animationFunction = dropDownFunction[e.currentTarget.id];
+    return animationFunction();
   };
 
   return (
-    <nav className={style.navBar}>
+    <nav
+      id="navBar"
+      onMouseLeave={handleMouseMovement}
+      className={style.navBar}
+    >
       <div className={style.navBarWrapper}>
         <Logo />
-        <menu className={style.menuWrapper}>
+        <menu className={[style.menuWrapper, style.menuFlexGrow].join(" ")}>
           <li className={style.menuItemWrapper}>
-            <a className={style.menuItem} href="#">
+            <a
+              id="homePage"
+              onMouseEnter={handleMouseMovement}
+              className={style.menuItem}
+              href="#"
+            >
               首页
             </a>
           </li>
           <li className={style.menuItemWrapper}>
-            <a onClick={handleMenuClick} className={style.menuItem} href="#">
+            <a
+              id="immigrationService"
+              onMouseEnter={handleMouseMovement}
+              className={style.menuItem}
+              href="#"
+            >
               移民服务
             </a>
           </li>
           <li className={style.menuItemWrapper}>
-            <a className={style.menuItem} href="#">
+            <a
+              id="otherService"
+              onMouseEnter={handleMouseMovement}
+              className={style.menuItem}
+              href="#"
+            >
               其他服务
             </a>
           </li>
           <li className={style.menuItemWrapper}>
-            <a className={style.menuItem} href="#">
+            <a
+              id="contactUs"
+              onMouseEnter={handleMouseMovement}
+              className={style.menuItem}
+              href="#"
+            >
               联系我们
             </a>
           </li>
@@ -57,17 +98,52 @@ export const NavigationBar = () => {
           </li>
         </menu>
       </div>
-      <menu className={show}>
-        <a href="#" className={style.dropDownMenuItem}>
-          移民服务1
-        </a>
-        <a href="#" className={style.dropDownMenuItem}>
-          移民服务2
-        </a>
-        <a href="#" className={style.dropDownMenuItem}>
-          移民服务3
-        </a>
-      </menu>
+      <div
+        className={
+          dropDownList[0]
+            ? [style.dropDownWrapper, style.dropDownWrapperShow].join(" ")
+            : style.dropDownWrapper
+        }
+      >
+        <menu
+          className={
+            dropDownList[1]
+              ? [style.dropDownMenuWrapper, style.dropDownMenuWrapperShow].join(
+                  " "
+                )
+              : style.dropDownMenuWrapper
+          }
+        >
+          <a href="#" className={style.dropDownMenuItem}>
+            移民服务1
+          </a>
+          <a href="#" className={style.dropDownMenuItem}>
+            移民服务2
+          </a>
+          <a href="#" className={style.dropDownMenuItem}>
+            移民服务3
+          </a>
+        </menu>
+        <menu
+          className={
+            dropDownList[2]
+              ? [style.dropDownMenuWrapper, style.dropDownMenuWrapperShow].join(
+                  " "
+                )
+              : style.dropDownMenuWrapper
+          }
+        >
+          <a href="#" className={style.dropDownMenuItem}>
+            其他服务1
+          </a>
+          <a href="#" className={style.dropDownMenuItem}>
+            其他服务2
+          </a>
+          <a href="#" className={style.dropDownMenuItem}>
+            其他服务3
+          </a>
+        </menu>
+      </div>
     </nav>
   );
 };
