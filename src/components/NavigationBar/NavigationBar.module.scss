@@ -75,3 +75,44 @@
 .languageIcon {
   max-width: 2em;
 }
+
+.mobileMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.mobileMenuWrapperShow {
+  max-height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  row-gap: 0.5em;
+}
+
+.mobileMenuItemWrapper {
+  width: 100%;
+}
+
+.mobileMenuItem {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileMenuWrapper {
+    display: none;
+  }
+}

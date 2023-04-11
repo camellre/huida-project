@@ -144,6 +144,34 @@ export const NavigationBar = () => {
           </a>
         </menu>
       </div>
+      <div
+        className={[style.mobileMenuWrapper, style.mobileMenuWrapperShow].join(
+          " "
+        )}
+      >
+        <menu className={style.mobileMenu}>
+          <li className={style.mobileMenuItemWrapper}>
+            <a className={style.mobileMenuItem} href="#">
+              首页
+            </a>
+          </li>
+          <li className={style.mobileMenuItemWrapper}>
+            <a className={style.mobileMenuItem} href="#">
+              移民服务
+            </a>
+          </li>
+          <li className={style.mobileMenuItemWrapper}>
+            <a className={style.mobileMenuItem} href="#">
+              其他服务
+            </a>
+          </li>
+          <li className={style.mobileMenuItemWrapper}>
+            <a className={style.mobileMenuItem} href="#">
+              联系我们
+            </a>
+          </li>
+        </menu>
+      </div>
     </nav>
   );
 };
