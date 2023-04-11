@@ -1,12 +1,19 @@
 .navBar {
   position: fixed;
   top: 0;
-  left: 0.5em;
-  right: 0.5em;
+  left: 0.25em;
+  right: 0.25em;
   width: auto;
   background-color: red;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .navBar {
+    left: 0.5em;
+    right: 0.5em;
+  }
 }
 
 .navBarWrapper {
@@ -17,12 +24,18 @@
 }
 
 .menuWrapper {
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
   column-gap: 0.7em;
+}
+
+@media screen and (min-width: 768px) {
+  .menuWrapper {
+    display: flex;
+  }
 }
 
 .menuFlexGrow {
@@ -41,11 +54,30 @@
   align-items: center;
 }
 
+.mobileMenuSwitchWrapper {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 0.25em;
+  padding: 0;
+  // column-gap: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileMenuSwitchWrapper {
+    display: none;
+  }
+}
+
+.mobileMenuSwitch {
+  max-height: 2.5em;
+}
+
 .dropDownWrapper {
   width: 100%;
   overflow: hidden;
   height: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-out;
 }
 
 .dropDownWrapperShow {
@@ -63,7 +95,7 @@
   column-gap: 10em;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-out;
 }
 
 .dropDownMenuWrapperShow {
@@ -80,14 +112,14 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 0;
+  height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-out;
 }
 
 .mobileMenuWrapperShow {
-  max-height: 100vh;
+  height: 8em;
   opacity: 1;
   visibility: visible;
 }
@@ -95,6 +127,7 @@
 .mobileMenu {
   display: flex;
   flex-direction: column;
+  height: 100%;
   list-style: none;
   padding: 0;
   margin: 0;

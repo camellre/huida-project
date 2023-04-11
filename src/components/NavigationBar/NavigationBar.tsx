@@ -2,6 +2,7 @@ import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 import Logo from "../Logo/Logo";
 import style from "./NavigationBar.module.scss";
 import languageIcon from "../../assets/globe-1-svgrepo-com.svg";
+import mobileMenuSwtich from "../../assets/menu-duo-md-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
 import React, { useState } from "react";
 
@@ -11,6 +12,8 @@ interface dropDownFunctionType {
 
 export const NavigationBar = () => {
   const [dropDownList, setDropDownList] = useState([false, false, false]);
+  const [mobileMenuSwitch, setMobileMenuSwitch] = useState(false);
+
   const dropDownFunction: dropDownFunctionType = {
     navBar: () => {
       setDropDownList([false, false, false]);
@@ -28,9 +31,15 @@ export const NavigationBar = () => {
       setDropDownList([false, false, false]);
     },
   };
+
   const handleMouseMovement = (e: React.MouseEvent<HTMLElement>) => {
     const animationFunction = dropDownFunction[e.currentTarget.id];
     return animationFunction();
+  };
+
+  const handleMobileMenuSwitch = () => {
+    if (mobileMenuSwitch === false) return setMobileMenuSwitch(true);
+    return setMobileMenuSwitch(false);
   };
 
   return (
@@ -97,6 +106,14 @@ export const NavigationBar = () => {
             <Button theme={style.customerServiceButton} text="在线客服" />
           </li>
         </menu>
+        <menu className={style.mobileMenuSwitchWrapper}>
+          <li onClick={handleMobileMenuSwitch}>
+            <ImageWrapper
+              imageSrc={mobileMenuSwtich}
+              imageStyle={style.mobileMenuSwitch}
+            />
+          </li>
+        </menu>
       </div>
       <div
         className={
@@ -145,9 +162,11 @@ export const NavigationBar = () => {
         </menu>
       </div>
       <div
-        className={[style.mobileMenuWrapper, style.mobileMenuWrapperShow].join(
-          " "
-        )}
+        className={
+          mobileMenuSwitch
+            ? [style.mobileMenuWrapper, style.mobileMenuWrapperShow].join(" ")
+            : style.mobileMenuWrapper
+        }
       >
         <menu className={style.mobileMenu}>
           <li className={style.mobileMenuItemWrapper}>
