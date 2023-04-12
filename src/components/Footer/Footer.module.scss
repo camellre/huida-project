@@ -1,45 +1,24 @@
 .footerBackground {
+  position: relative;
+  top: 3em;
   background-color: #ffbf23;
-  padding-bottom: 3em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
 }
 
-.footerContainer {
-  max-width: 1024px;
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  .footerBackground {
+    top: 5em;
+  }
 }
 
-.cardTitleWrapper {
-  align-self: flex-start;
-}
-
-.cardBodyWrapper {
+.footerWrapper {
   display: flex;
-  flex-direction: row;
-  column-gap: 5em;
+  max-width: 75em;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .footerItemWrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3em;
-}
-
-.footerItemWrapper_icon {
-  row-gap: 0;
-}
-
-.footerItemGridWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3em;
-}
-
-.footerItemText {
-  max-width: 9em;
-}
-
-.footerBottemBar {
-  text-align: center;
-  background-color: black;
-  color: white;
+  margin: 1em 0;
 }

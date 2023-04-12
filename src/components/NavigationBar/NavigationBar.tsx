@@ -131,15 +131,21 @@ export const NavigationBar = () => {
               : style.dropDownMenuWrapper
           }
         >
-          <a href="#" className={style.dropDownMenuItem}>
-            移民服务1
-          </a>
-          <a href="#" className={style.dropDownMenuItem}>
-            移民服务2
-          </a>
-          <a href="#" className={style.dropDownMenuItem}>
-            移民服务3
-          </a>
+          <li>
+            <a href="#" className={style.dropDownMenuItem}>
+              移民服务1
+            </a>
+          </li>
+          <li>
+            <a href="#" className={style.dropDownMenuItem}>
+              移民服务2
+            </a>
+          </li>
+          <li>
+            <a href="#" className={style.dropDownMenuItem}>
+              移民服务3
+            </a>
+          </li>
         </menu>
         <menu
           className={

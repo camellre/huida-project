@@ -1,6 +1,7 @@
 import style from "./App.module.scss";
 import { NavigationBar } from "./components/NavigationBar/NavigationBar";
 import { HomeGrid } from "./components/HomeGrid/HomeGrid";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <NavigationBar />
       </header>
       <HomeGrid />
+      <Footer />
     </>
   );
 }
