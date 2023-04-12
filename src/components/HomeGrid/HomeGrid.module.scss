@@ -1,0 +1,40 @@
+.homeGridWrapper {
+  position: relative;
+  top: 3em;
+  bottom: 0;
+  display: grid;
+  row-gap: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  .homeGridWrapper {
+    top: 5em;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gridItemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grenadaAdWrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.grenadaAdItem {
+  display: flex;
+  align-items: center;
+}
+
+.grenadaAdIcon {
+  max-width: 3em;
+}
+
+.image_1 {
+  max-width: 40em;
+}

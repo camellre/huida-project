@@ -2,7 +2,7 @@ import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 import Logo from "../Logo/Logo";
 import style from "./NavigationBar.module.scss";
 import languageIcon from "../../assets/globe-1-svgrepo-com.svg";
-import mobileMenuSwtich from "../../assets/menu-duo-md-svgrepo-com.svg";
+import mobileMenuSwitchIcon from "../../assets/menu-duo-md-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
 import React, { useState } from "react";
 
@@ -38,7 +38,7 @@ export const NavigationBar = () => {
   };
 
   const handleMobileMenuSwitch = () => {
-    if (mobileMenuSwitch === false) return setMobileMenuSwitch(true);
+    if (!mobileMenuSwitch) return setMobileMenuSwitch(true);
     return setMobileMenuSwitch(false);
   };
 
@@ -109,7 +109,7 @@ export const NavigationBar = () => {
         <menu className={style.mobileMenuSwitchWrapper}>
           <li onClick={handleMobileMenuSwitch}>
             <ImageWrapper
-              imageSrc={mobileMenuSwtich}
+              imageSrc={mobileMenuSwitchIcon}
               imageStyle={style.mobileMenuSwitch}
             />
           </li>
