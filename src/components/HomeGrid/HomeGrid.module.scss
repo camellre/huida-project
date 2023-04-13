@@ -12,7 +12,7 @@
 @media screen and (min-width: 768px) {
   .homeGrid {
     top: 5em;
-    grid-template-columns: repeat(2, minmax(20em, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid2Cols {
@@ -24,90 +24,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.gridItem {
-  max-width: 90%;
-}
-
-.grenadaAdWrapper {
-  display: flex;
-}
-
-.grenadaAdItem {
-  display: flex;
-  align-items: center;
-}
-
-.grenadaAdIcon {
-  max-width: 3em;
-}
-
-.maltaCardButtonWrapper {
-  display: flex;
-  justify-content: end;
-}
-
-.ourServiceCardWrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3em;
-}
-
-@media screen and (min-width: 768px) {
-  .ourServiceCardWrapper {
-    display: flex;
-    column-gap: 3em;
-    flex-direction: row;
-  }
-}
-
-.ourServiceCardItemWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .ourServiceCardItemWrapper {
-    display: block;
-  }
-}
-
-.customerSupportWrapper {
-  max-width: 70%;
-}
-
-.supportAdWrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.supportAdItemWrapper {
-  display: flex;
-  align-items: center;
-}
-
-.partnerSubTitleWrapper {
-  display: flex;
-  align-items: center;
-  column-gap: 15em;
-}
-
-.partnerAdWrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5em;
-}
-
-.partnerAdItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.feedbackWrapper {
-  display: flex;
-  justify-content: space-between;
 }
