@@ -2,7 +2,9 @@ import style from "./LogInPage.module.scss";
 import icon_1 from "../../assets/Google.svg";
 import icon_2 from "../../assets/Facebook.svg";
 import icon_3 from "../../assets/WhatsApp.svg";
+import QRCode from "../../assets/rectangle_2.svg";
 import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
+import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 
 function LogInPage() {
   return (
@@ -12,7 +14,10 @@ function LogInPage() {
       </header>
       <main className={style.logInPageWrapper}>
         <div className={style.logInBoxWrapper}>
-          <div className={style.logInQRCode}></div>
+          <div className={style.logInQRCodeWrapper}>
+            <h2>汇达移民</h2>
+            <ImageWrapper imageSrc={QRCode} wrapperStyle={style.logInQRCode} />
+          </div>
           <div className={style.logInWrapper}>
             <h1>登录/注册</h1>
             <form className={style.logInForm} action="">

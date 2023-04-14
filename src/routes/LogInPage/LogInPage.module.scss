@@ -14,14 +14,42 @@
   }
 }
 
+.logInBoxWrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 3em;
+  background: linear-gradient(
+    180deg,
+    rgba(102, 171, 255, 0.99) 0%,
+    rgba(0, 233, 237, 0.45) 100%
+  );
+  box-shadow: inset 0 0 32px rgba(0, 0, 0, 0.35);
+}
+
 .logInWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2em 3em;
+  background-color: white;
+  border-radius: 3em;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .logInForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.logInQRCodeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.5em;
+}
+
+.logInQRCode {
+  margin: 0 2.5em;
 }
