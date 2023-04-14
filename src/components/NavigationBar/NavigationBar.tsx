@@ -5,6 +5,7 @@ import languageIcon from "../../assets/globe-1-svgrepo-com.svg";
 import mobileMenuSwitchIcon from "../../assets/menu-duo-md-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface dropDownFunctionType {
   [key: string]: () => void;
@@ -49,7 +50,7 @@ export const NavigationBar = () => {
       className={style.navBar}
     >
       <div className={style.navBarWrapper}>
-        <Logo />
+        <Logo logoWrapperStyle={style.navBarLogoWrapper} />
         <menu className={[style.menuWrapper, style.menuFlexGrow].join(" ")}>
           <li className={style.menuItemWrapper}>
             <a
@@ -100,7 +101,9 @@ export const NavigationBar = () => {
             />
           </li>
           <li>
-            <Button theme={style.logInButton} text="Log In/Sign Up" />
+            <Link to={"/login"}>
+              <Button theme={style.logInButton} text="Log In/Sign Up" />
+            </Link>
           </li>
           <li>
             <Button theme={style.customerServiceButton} text="在线客服" />

@@ -1,7 +1,13 @@
 .footerBackground {
   position: relative;
   top: 3em;
-  background-color: #ffbf23;
+  background: linear-gradient(
+    0deg,
+    rgba(201, 201, 201, 0.3) 100%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 0%
+  );
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.15);
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
 }
@@ -13,54 +19,102 @@
 }
 
 .footerWrapper {
-  display: flex;
-  max-width: 75em;
+  position: relative;
+  max-width: 64em;
   margin: 0 auto;
-  flex-direction: column;
 }
 
 .footerLogoWrapper {
   display: flex;
   justify-content: center;
-  margin: 1em 0;
+  height: 4em;
+  padding: 1em 0 0;
 }
 
 @media screen and (min-width: 768px) {
   .footerLogoWrapper {
-    display: block;
-    margin: 1em 0;
-  }
-}
-
-.footerItemWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  row-gap: 1em;
-  max-width: 12em;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 768px) {
-  .footerItemWrapper {
-    flex-direction: row;
-    max-width: 100%;
-    column-gap: 7em;
-  }
-}
-
-.footerContactWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-@media screen and (min-width: 768px) {
-  .footerContactWrapper {
-    flex-direction: row;
     justify-content: start;
-    align-items: end;
-    column-gap: 5em;
+    height: 5em;
+    margin: 0 2em;
+  }
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-rows: repeat(12, minmax(1em, auto));
+  justify-content: center;
+  margin: 0 2em;
+}
+
+.mobileBreakLine {
+  border: none;
+  height: 2px;
+  background-color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .mobileBreakLine {
+    display: none;
+  }
+
+  .footerGrid {
+    grid-template-rows: repeat(3, minmax(1em, auto));
+    grid-template-columns: repeat(5, minmax(1em, 1fr));
+    grid-template-areas:
+      "contact contact      quickLinks follow     social"
+      "address salesEmail   term       newsLetter social"
+      "phone   supportEmail policy     emailSub   social";
+    column-gap: 1em;
+    row-gap: 3em;
+    padding: 0 0 4em 0;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  .quickLinks {
+    grid-area: quickLinks;
+  }
+
+  .follow {
+    grid-area: follow;
+  }
+
+  .address {
+    grid-area: address;
+  }
+
+  .salesEmail {
+    grid-area: salesEmail;
+  }
+
+  .term {
+    grid-area: term;
+  }
+
+  .newsLetter {
+    grid-area: newsLetter;
+  }
+
+  .phone {
+    grid-area: phone;
+  }
+
+  .supportEmail {
+    grid-area: supportEmail;
+  }
+
+  .policy {
+    grid-area: policy;
+  }
+
+  .emailSub {
+    grid-area: emailSub;
+  }
+
+  .social {
+    grid-area: social;
   }
 }
 
@@ -68,12 +122,17 @@
   display: flex;
   flex-direction: row;
   margin: 1em 0;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
   .footerSocialIcon {
+    position: absolute;
+    top: 2%;
+    left: 85%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -81,5 +140,5 @@
   background-color: black;
   text-align: center;
   color: white;
-  margin: 0;
+  padding: 0.5em 0;
 }

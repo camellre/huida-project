@@ -10,7 +10,7 @@
     rgba(255, 255, 255, 0.99) 15%,
     rgba(201, 201, 201, 0.99) 100%
   );
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   z-index: 9;
@@ -26,8 +26,20 @@
 .navBarWrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 75em;
+  max-width: 68em;
   margin: 0 auto;
+}
+
+.navBarLogoWrapper {
+  height: 2em;
+  margin: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .navBarLogoWrapper {
+    height: 3em;
+    margin: 1em;
+  }
 }
 
 .menuWrapper {
@@ -85,7 +97,7 @@
 }
 
 .dropDownWrapperShow {
-  height: 45vh;
+  height: 31vh;
 }
 
 .dropDownMenuWrapper {

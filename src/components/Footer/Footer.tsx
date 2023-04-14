@@ -6,65 +6,64 @@ function Footer() {
   return (
     <footer className={style.footerBackground}>
       <div className={style.footerWrapper}>
-        <div className={style.footerLogoWrapper}>
-          <Logo />
-        </div>
-        <ul className={style.footerItemWrapper}>
-          <li>
-            <ul className={style.footerContactWrapper}>
-              <li>
-                <h2>Contact</h2>
-                <p>
-                  500 Market Street
-                  <br />
-                  San Francisco CA, 94518
-                </p>
-                <p>
-                  Sales:
-                  <br />
-                  info@mysite.com
-                </p>
-              </li>
-              <li>
-                <p>
-                  General Inquires:
-                  <br />
-                  123-456-7890
-                </p>
-                <p>
-                  Customer Care:
-                  <br />
-                  info@mysite.com
-                </p>
-              </li>
-            </ul>
+        <Logo logoWrapperStyle={style.footerLogoWrapper} />
+        <ul className={style.footerGrid}>
+          <li className={style.contact}>
+            <h2>Contact</h2>
+            <hr className={style.mobileBreakLine} />
           </li>
-          <li>
-            <ul>
-              <li>
-                <h2>Quick Links</h2>
-              </li>
-              <li>
-                <p>Terms & Conditions</p>
-                <p>Privacy Policy</p>
-              </li>
-            </ul>
+          <li className={style.address}>
+            <p>
+              500 Market Street
+              <br />
+              San Francisco CA, 94518
+            </p>
           </li>
-          <li>
-            <ul>
-              <li>
-                <h2>Follow</h2>
-              </li>
-              <li>
-                <p>
-                  Sign up to get the latest <br />
-                  news on us.
-                </p>
-              </li>
-              <li>Email Subscribe</li>
-            </ul>
+          <li className={style.salesEmail}>
+            <p>
+              Sales:
+              <br />
+              info@mysite.com
+            </p>
           </li>
-          <li>
+          <li className={style.phone}>
+            <p>
+              General Inquires:
+              <br />
+              123-456-7890
+            </p>
+          </li>
+          <li className={style.supportEmail}>
+            <p>
+              Customer Care:
+              <br />
+              info@mysite.com
+            </p>
+          </li>
+
+          <li className={style.quickLinks}>
+            <h2>Quick Links</h2>
+            <hr className={style.mobileBreakLine} />
+          </li>
+          <li className={style.term}>
+            <p>Terms & Conditions</p>
+          </li>
+          <li className={style.policy}>
+            <p>Privacy Policy</p>
+          </li>
+
+          <li className={style.follow}>
+            <h2>Follow</h2>
+            <hr className={style.mobileBreakLine} />
+          </li>
+          <li className={style.newsLetter}>
+            <p>
+              Sign up to get the latest <br />
+              news on us.
+            </p>
+          </li>
+          <li className={style.emailSub}>Email Subscribe</li>
+          <li className={style.social}>
             <ul className={style.footerSocialIcon}>
               <li>
                 <img src={icon} alt="" />
@@ -87,8 +86,10 @@ function Footer() {
             </ul>
           </li>
         </ul>
-        <p className={style.footerCopyright}>2023 by Huida</p>
       </div>
+      <p className={style.footerCopyright}>
+        &copy; 2023 Hong Kong Huida Business Information Co., Ltd
+      </p>
     </footer>
   );
 }
