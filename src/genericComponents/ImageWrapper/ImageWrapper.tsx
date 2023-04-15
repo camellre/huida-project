@@ -14,8 +14,8 @@ export default function ImageWrapper({
   wrapperStyle,
 }: IconProp) {
   return (
-    <figure className={[style.imageWrapper, wrapperStyle].join(" ")}>
+    <picture className={[style.imageWrapper, wrapperStyle].join(" ")}>
       <img className={imageStyle} src={imageSrc} alt={imageAlt} />
-    </figure>
+    </picture>
   );
 }

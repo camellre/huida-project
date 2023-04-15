@@ -1,56 +1,56 @@
 import { Link, Outlet } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar";
 import style from "./AccountPage.module.scss";
-import IconStatic from "../../genericComponents/IconStatic/IconStatic";
-import sideBarIcon_1 from "../../assets/my_application_icon.svg";
-import sideBarIcon_2 from "../../assets/unfinished_application_icon.svg";
-import sideBarIcon_3 from "../../assets/submitted_application_icon.svg";
-import sideBarIcon_4 from "../../assets/new_application_icon.svg";
-import sideBarIcon_5 from "../../assets/inbox_icon.svg";
-import Button from "../../genericComponents/Button/Button";
-import MyApplicationIcon from "../../components/MyApplicationIcon/MyApplicationIcon";
+import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
+import { UserIcon } from "../../genericComponents/UserIcon/UserIcon";
+import { FilePlusIcon } from "../../genericComponents/FilePlusIcon/FilePlusIcon";
+import { FolderIcon } from "../../genericComponents/FolderIcon/FolderIcon";
+import { FileExclamationIcon } from "../../genericComponents/FileExclamationIcon/FileExclamationIcon";
+import { FileCheckIcon } from "../../genericComponents/FileCheckIcon/FileCheckIcon";
+import { InboxIcon } from "../../genericComponents/InboxIcon/InboxIcon";
 
 function AccountPage() {
   return (
     <>
-      <NavBar />
-      <div className={style.accountPageWrapper}>
-        <aside className={style.accountPageSideBarWrapper}>
-          <div className={style.sideBarTitleWrapper}>
-            <span className={style.sideBarPhoto}>P</span>
+      <header>
+        <NavigationBar />
+      </header>
+      <main className={style.accountBodyWrapper}>
+        <article className={style.sideBar}>
+          <div className={style.accountProfileBoxWrapper}>
+            <UserIcon userIconStyle={style.userIcon} />
             <div>
-              <div>用户名/名字</div>
-              <Link to={"/account/profile"}>账号管理 </Link>
+              <p>ID号/名字</p>
+              <p>账号管理</p>
             </div>
           </div>
-          <div className={style.sideBarContentWrapper}>
-            <div className={style.sideBarMenuItemWrapper}>
-              <MyApplicationIcon />
-              <span>我的申请</span>
-            </div>
-            <div className={style.sideBarMenuItemWrapper}>
-              <IconStatic IconImage={sideBarIcon_2} />
-              <span>未提交申请</span>
-            </div>
-            <div className={style.sideBarMenuItemWrapper}>
-              <IconStatic IconImage={sideBarIcon_3} />
-              <span>已提交申请</span>
-            </div>
-            <div className={style.sideBarMenuItemWrapper}>
-              <IconStatic IconImage={sideBarIcon_4} />
-              <span>新建申请</span>
-            </div>
-            <div className={style.sideBarMenuItemWrapper}>
-              <IconStatic IconImage={sideBarIcon_5} />
-              <span>收信箱(5)</span>
-            </div>
-          </div>
-          <Button theme="navBarButton" text="登出账号" />
-        </aside>
-        <div className={style.accountPageContentWrapper}>
-          <Outlet />
-        </div>
-      </div>
+          <ul className={style.sideBarMenuWrapper}>
+            <li className={style.sideBarMenuItem}>
+              <FolderIcon folderIconStyle={style.sideBarMenuIcon} />
+              <p>我的申请</p>
+            </li>
+            <li className={style.sideBarMenuItem}>
+              <FileExclamationIcon
+                fileExclamationIconStyle={style.sideBarMenuIcon}
+              />
+              <p>未交申请</p>
+            </li>
+            <li className={style.sideBarMenuItem}>
+              <FileCheckIcon fileCheckIconStyle={style.sideBarMenuIcon} />
+              <p>已交申请</p>
+            </li>
+            <li className={style.sideBarMenuItem}>
+              <FilePlusIcon filePlusIconStyle={style.sideBarMenuIcon} />
+              <p>新建申请</p>
+            </li>
+            <li className={style.sideBarMenuItem}>
+              <InboxIcon inboxIconStyle={style.sideBarMenuIcon} />
+              <p>收信箱</p>
+            </li>
+            <li className={style.logOutButton}></li>
+          </ul>
+        </article>
+        <article className={style.accountBody}></article>
+      </main>
     </>
   );
 }

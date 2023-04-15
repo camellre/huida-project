@@ -1,67 +1,72 @@
-.accountPageWrapper {
+.accountBodyWrapper {
+  position: relative;
+  top: 3em;
+  height: calc(100vh - 3em);
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.accountPageSideBarWrapper {
+@media screen and (min-width: 768px) {
+  .accountBodyWrapper {
+    top: 5em;
+    height: calc(100vh - 5em);
+  }
+}
+
+.sideBar {
+  flex-basis: 16em;
+  background-color: #5142fc;
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  row-gap: 2em;
-  width: 20%;
-  background: #5142fc;
-  border-radius: 5px;
-  height: calc(100vh - 112px);
+  color: white;
 }
 
-.accountPageContentWrapper {
+.accountProfileBoxWrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 3em;
-  width: 80%;
-}
-
-.sideBarTitleWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 65%;
-  border: 2px solid white;
-  border-radius: 5px;
-}
-
-.sideBarPhoto {
+  padding: 0.75em 1em;
+  margin: 2em 0;
   border: 1px solid white;
-  background: ghostwhite;
-  height: 3em;
-  width: 3em;
-  border-radius: 100%;
-  padding: 1em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  border-radius: 0.5em;
+  column-gap: 1em;
 }
 
-.sideBarContentWrapper {
+.accountProfileBoxWrapper p {
+  margin: 0.25em 0;
+}
+
+.userIcon {
+  width: 3em;
+  fill: white;
+}
+
+.sideBarMenuWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  row-gap: 2em;
+  row-gap: 0.5em;
+  width: 100%;
 }
 
-.sideBarMenuItemWrapper {
+.sideBarMenuItem {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 60%;
+  padding: 0 1em;
+  transition: all 0.2s;
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.sideBarIcon {
-  background-image: url("src/assets/my_application_icon.svg");
-  background-color:red;
+.sideBarMenuItem:hover {
+  border: 1px solid white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.sideBarMenuIcon {
+  height: 2em;
+  fill: white;
 }

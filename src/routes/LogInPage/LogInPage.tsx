@@ -5,6 +5,8 @@ import icon_3 from "../../assets/WhatsApp.svg";
 import QRCode from "../../assets/rectangle_2.svg";
 import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
 import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
+import Button from "../../genericComponents/Button/Button";
+import { Link } from "react-router-dom";
 
 function LogInPage() {
   return (
@@ -13,7 +15,7 @@ function LogInPage() {
         <NavigationBar />
       </header>
       <main className={style.logInPageWrapper}>
-        <div className={style.logInBoxWrapper}>
+        <article className={style.logInBoxWrapper}>
           <div className={style.logInQRCodeWrapper}>
             <h2>汇达移民</h2>
             <ImageWrapper imageSrc={QRCode} wrapperStyle={style.logInQRCode} />
@@ -22,13 +24,25 @@ function LogInPage() {
             <h1>登录/注册</h1>
             <form className={style.logInForm} action="">
               <label htmlFor="userId">邮箱</label>
-              <input type="text" id="userId" placeholder="输入Email邮箱地址" />
+              <input
+                className={style.logInInput}
+                type="text"
+                id="userId"
+                placeholder="输入Email邮箱地址"
+              />
               <label htmlFor="password">密码</label>
-              <input type="text" id="password" placeholder="输入密码" />
-              <div>
-                <button>注册新用户</button>
+              <input
+                className={style.logInInput}
+                type="text"
+                id="password"
+                placeholder="输入密码"
+              />
+              <div className={style.logInButtonWrapper}>
+                <Button text="注册新用户" />
                 <span>已有账户？</span>
-                <button>登录</button>
+                <Link to={"/account"}>
+                  <Button text="登录" />
+                </Link>
               </div>
             </form>
             <div>-or-</div>
@@ -44,7 +58,7 @@ function LogInPage() {
               </span>
             </div>
           </div>
-        </div>
+        </article>
       </main>
     </>
   );
