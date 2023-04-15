@@ -7,6 +7,7 @@ import { FolderIcon } from "../../genericComponents/FolderIcon/FolderIcon";
 import { FileExclamationIcon } from "../../genericComponents/FileExclamationIcon/FileExclamationIcon";
 import { FileCheckIcon } from "../../genericComponents/FileCheckIcon/FileCheckIcon";
 import { InboxIcon } from "../../genericComponents/InboxIcon/InboxIcon";
+import Button from "../../genericComponents/Button/Button";
 
 function AccountPage() {
   return (
@@ -20,7 +21,9 @@ function AccountPage() {
             <UserIcon userIconStyle={style.userIcon} />
             <div>
               <p>ID号/名字</p>
-              <p>账号管理</p>
+              <Link to={"/account/profile"}>
+                <p>账号管理</p>
+              </Link>
             </div>
           </div>
           <ul className={style.sideBarMenuWrapper}>
@@ -46,10 +49,12 @@ function AccountPage() {
               <InboxIcon inboxIconStyle={style.sideBarMenuIcon} />
               <p>收信箱</p>
             </li>
-            <li className={style.logOutButton}></li>
           </ul>
+          <Button text="登出账号" theme={style.logOutButton} />
         </article>
-        <article className={style.accountBody}></article>
+        <article className={style.accountBody}>
+          <Outlet />
+        </article>
       </main>
     </>
   );
