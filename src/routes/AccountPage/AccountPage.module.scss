@@ -13,7 +13,7 @@
 }
 
 .sideBar {
-  flex-basis: 16em;
+  min-width: 16em;
   background-color: #5142fc;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
@@ -79,4 +79,8 @@
   background-color: red;
   border: none;
   margin: 3em 0 0;
+}
+
+.accountBody {
+  width: 100%;
 }
