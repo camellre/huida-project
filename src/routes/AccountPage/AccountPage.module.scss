@@ -13,7 +13,8 @@
 }
 
 .sideBar {
-  min-width: 16em;
+  position: relative;
+  width: 16em;
   background-color: #5142fc;
   border-top-right-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
@@ -21,6 +22,33 @@
   flex-direction: column;
   align-items: center;
   color: white;
+  flex-shrink: 0;
+  transition: all 0.1s;
+}
+
+.sideBarShrink {
+  width: 4em;
+}
+
+.sideBarToggler {
+  position: absolute;
+  background: #5142fc;
+  border-radius: 0.5em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  height: 2.5em;
+  width: 2.5em;
+  right: -8%;
+  top: 20%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.transformedToggler {
+  transform: rotate(180deg);
+}
+
+.sideBarShrinkText {
+  display: none;
 }
 
 .accountProfileBoxWrapper {
