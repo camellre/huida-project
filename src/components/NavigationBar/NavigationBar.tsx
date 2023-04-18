@@ -16,6 +16,9 @@ export const NavigationBar = () => {
   const [mobileMenuSwitch, setMobileMenuSwitch] = useState(false);
 
   const dropDownFunction: dropDownFunctionType = {
+    navLogo: () => {
+      setDropDownList([false, false, false]);
+    },
     navBar: () => {
       setDropDownList([false, false, false]);
     },
@@ -50,27 +53,34 @@ export const NavigationBar = () => {
       className={style.navBar}
     >
       <div className={style.navBarWrapper}>
-        <Logo logoWrapperStyle={style.navBarLogoWrapper} />
+        <Link
+          id="navLogo"
+          className={style.navBarLogoWrapper}
+          onMouseEnter={handleMouseMovement}
+          to="/"
+        >
+          <Logo />
+        </Link>
         <menu className={[style.menuWrapper, style.menuFlexGrow].join(" ")}>
           <li className={style.menuItemWrapper}>
-            <a
+            <Link
               id="homePage"
               onMouseEnter={handleMouseMovement}
               className={style.menuItem}
-              href="#"
+              to="/"
             >
               首页
-            </a>
+            </Link>
           </li>
           <li className={style.menuItemWrapper}>
-            <a
+            <Link
               id="immigrationService"
               onMouseEnter={handleMouseMovement}
               className={style.menuItem}
-              href="#"
+              to="/citizenship"
             >
               移民服务
-            </a>
+            </Link>
           </li>
           <li className={style.menuItemWrapper}>
             <a
@@ -134,20 +144,29 @@ export const NavigationBar = () => {
               : style.dropDownMenuWrapper
           }
         >
-          <li>
-            <a href="#" className={style.dropDownMenuItem}>
-              移民服务1
-            </a>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务1</a>
           </li>
-          <li>
-            <a href="#" className={style.dropDownMenuItem}>
-              移民服务2
-            </a>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务2</a>
           </li>
-          <li>
-            <a href="#" className={style.dropDownMenuItem}>
-              移民服务3
-            </a>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务3</a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务4</a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务5</a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务6</a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务7</a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#">移民服务8</a>
           </li>
         </menu>
         <menu
@@ -159,15 +178,21 @@ export const NavigationBar = () => {
               : style.dropDownMenuWrapper
           }
         >
-          <a href="#" className={style.dropDownMenuItem}>
-            其他服务1
-          </a>
-          <a href="#" className={style.dropDownMenuItem}>
-            其他服务2
-          </a>
-          <a href="#" className={style.dropDownMenuItem}>
-            其他服务3
-          </a>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#" className={style.dropDownMenuItem}>
+              其他服务1
+            </a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#" className={style.dropDownMenuItem}>
+              其他服务2
+            </a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#" className={style.dropDownMenuItem}>
+              其他服务3
+            </a>
+          </li>
         </menu>
       </div>
       <div

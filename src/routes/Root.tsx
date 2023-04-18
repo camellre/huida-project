@@ -8,6 +8,7 @@ import ErrorPage from "../genericComponents/ErrorPage/ErrorPage";
 import LogInPage from "./LogInPage/LogInPage";
 import AccountPage from "./AccountPage/AccountPage";
 import AccountProfile from "../components/AccountProfile/AccountProfile";
+import { CitizenshipPage } from "./CitizenshipPage/CitizenshipPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ export const router = createBrowserRouter(
       <Route path="/account" element={<AccountPage />}>
         <Route path="profile" element={<AccountProfile />} />
       </Route>
+      <Route path="/citizenship" element={<CitizenshipPage />} />
     </>
   )
 );

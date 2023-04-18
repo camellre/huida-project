@@ -117,7 +117,7 @@
   }
 }
 
-.footerSocialIcon {
+.footerSocialIconWrapper {
   display: flex;
   flex-direction: row;
   margin: 1em 0;
@@ -125,7 +125,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .footerSocialIcon {
+  .footerSocialIconWrapper {
     position: absolute;
     top: 2%;
     left: 85%;
@@ -140,4 +140,9 @@
   text-align: center;
   color: white;
   padding: 0.5em 0;
+}
+
+.footerSocialIcon {
+  width: 2em;
+  margin: 0.5em;
 }

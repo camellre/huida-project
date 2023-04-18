@@ -19,6 +19,7 @@
   justify-content: space-between;
   max-width: 68em;
   margin: 0 auto;
+  padding: 0 0.5em;
 }
 
 .navBarLogoWrapper {
@@ -84,7 +85,7 @@
   width: 100%;
   overflow: hidden;
   height: 0;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .dropDownWrapperShow {
@@ -94,19 +95,24 @@
 .dropDownMenuWrapper {
   height: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, auto));
+  justify-content: space-around;
   align-items: center;
-  column-gap: 10em;
+  column-gap: 1em;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .dropDownMenuWrapperShow {
   height: 100%;
   visibility: visible;
   opacity: 1;
+}
+
+.dropDownMenuItemWrapper {
+  justify-self: center;
 }
 
 .languageIcon {
@@ -120,7 +126,7 @@
   height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .mobileMenuWrapperShow {

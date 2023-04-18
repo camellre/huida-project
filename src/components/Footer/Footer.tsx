@@ -1,6 +1,7 @@
 import Logo from "../Logo/Logo";
 import style from "./Footer.module.scss";
-import icon from "../../assets/Facebook.svg";
+import iconFacebook from "../../assets/facebook-f.svg";
+import { FacebookIcon } from "../../genericComponents/FacebookIcon/FacebookIcon";
 
 function Footer() {
   return (
@@ -64,24 +65,24 @@ function Footer() {
           </li>
           <li className={style.emailSub}>Email Subscribe</li>
           <li className={style.social}>
-            <ul className={style.footerSocialIcon}>
+            <ul className={style.footerSocialIconWrapper}>
               <li>
-                <img src={icon} alt="" />
+                <FacebookIcon facebookIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={icon} alt="" />
+                <img src={iconFacebook} alt="" />
               </li>
               <li>
-                <img src={icon} alt="" />
+                <img src={iconFacebook} alt="" />
               </li>
               <li>
-                <img src={icon} alt="" />
+                <img src={iconFacebook} alt="" />
               </li>
               <li>
-                <img src={icon} alt="" />
+                <img src={iconFacebook} alt="" />
               </li>
               <li>
-                <img src={icon} alt="" />
+                <img src={iconFacebook} alt="" />
               </li>
             </ul>
           </li>
