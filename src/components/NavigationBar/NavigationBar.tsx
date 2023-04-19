@@ -1,11 +1,11 @@
 import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 import Logo from "../Logo/Logo";
 import style from "./NavigationBar.module.scss";
-import languageIcon from "../../assets/globe-1-svgrepo-com.svg";
 import mobileMenuSwitchIcon from "../../assets/menu-duo-md-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { LanguageIcon } from "../../genericComponents/LanguageIcon/LanguageIcon";
 
 interface dropDownFunctionType {
   [key: string]: () => void;
@@ -83,33 +83,27 @@ export const NavigationBar = () => {
             </Link>
           </li>
           <li className={style.menuItemWrapper}>
-            <a
+            <Link
               id="otherService"
               onMouseEnter={handleMouseMovement}
               className={style.menuItem}
-              href="#"
+              to="/service"
             >
               其他服务
-            </a>
+            </Link>
           </li>
           <li className={style.menuItemWrapper}>
-            <a
+            <Link
               id="contactUs"
               onMouseEnter={handleMouseMovement}
               className={style.menuItem}
-              href="#"
+              to="/contact"
             >
               联系我们
-            </a>
+            </Link>
           </li>
         </menu>
         <menu className={style.menuWrapper}>
-          <li>
-            <ImageWrapper
-              imageSrc={languageIcon}
-              imageStyle={style.languageIcon}
-            />
-          </li>
           <li>
             <Link to={"/login"}>
               <Button theme={style.logInButton} text="Log In/Sign Up" />
@@ -117,6 +111,9 @@ export const NavigationBar = () => {
           </li>
           <li>
             <Button theme={style.customerServiceButton} text="在线客服" />
+          </li>
+          <li>
+            <LanguageIcon languageIconStyle={style.languageIcon} />
           </li>
         </menu>
         <menu className={style.mobileMenuSwitchWrapper}>

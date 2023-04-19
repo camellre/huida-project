@@ -116,7 +116,14 @@
 }
 
 .languageIcon {
-  max-width: 2em;
+  width: 1.5em;
+  fill: rgba(85, 91, 168, 0.5);
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+}
+
+.languageIcon:hover {
+  fill: rgba(85, 91, 168, 1);
 }
 
 .mobileMenuWrapper {

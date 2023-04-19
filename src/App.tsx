@@ -1,7 +1,7 @@
 import style from "./App.module.scss";
 import { NavigationBar } from "./components/NavigationBar/NavigationBar";
-import { HomeGrid } from "./components/HomeGrid/HomeGrid";
 import Footer from "./components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <header>
         <NavigationBar />
       </header>
-      <HomeGrid />
+      <Outlet />
       <Footer />
     </>
   );

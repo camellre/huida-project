@@ -1,6 +1,5 @@
 import Logo from "../Logo/Logo";
 import style from "./Footer.module.scss";
-import iconFacebook from "../../assets/facebook-f.svg";
 import { FacebookIcon } from "../../genericComponents/FacebookIcon/FacebookIcon";
 import { TwitterIcon } from "../../genericComponents/TwitterIcon/TwitterIcon";
 import { InstagramIcon } from "../../genericComponents/InstagramIcon/InstagramIcon";
