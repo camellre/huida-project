@@ -1,0 +1,22 @@
+.contactUsPageWrapper {
+  position: relative;
+  top: 3em;
+  bottom: 0;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contactUsPageWrapper {
+    top: 5em;
+  }
+}
+
+.contactUsFormWrapper {
+  display: flex;
+  flex-direction: column;
+}

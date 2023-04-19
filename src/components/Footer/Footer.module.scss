@@ -143,7 +143,13 @@
 }
 
 .footerSocialIcon {
+  fill: rgba(0, 0, 0, 0.75);
   height: 2em;
   margin: 0.5em;
   cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.footerSocialIcon:hover {
+  fill: rgba(0, 0, 0, 1);
 }
