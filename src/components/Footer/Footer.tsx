@@ -2,6 +2,11 @@ import Logo from "../Logo/Logo";
 import style from "./Footer.module.scss";
 import iconFacebook from "../../assets/facebook-f.svg";
 import { FacebookIcon } from "../../genericComponents/FacebookIcon/FacebookIcon";
+import { TwitterIcon } from "../../genericComponents/TwitterIcon/TwitterIcon";
+import { InstagramIcon } from "../../genericComponents/InstagramIcon/InstagramIcon";
+import { TiktokIcon } from "../../genericComponents/TiktokIcon/TiktokIcon";
+import { YoutubeIcon } from "../../genericComponents/YoutubeIcon/YoutubeIcon";
+import { WeiboIcon } from "../../genericComponents/WeiboIcon/WeiboIcon";
 
 function Footer() {
   return (
@@ -70,19 +75,19 @@ function Footer() {
                 <FacebookIcon facebookIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={iconFacebook} alt="" />
+                <TwitterIcon twitterIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={iconFacebook} alt="" />
+                <InstagramIcon instagramIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={iconFacebook} alt="" />
+                <TiktokIcon tiktokIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={iconFacebook} alt="" />
+                <YoutubeIcon youtubeIconStyle={style.footerSocialIcon} />
               </li>
               <li>
-                <img src={iconFacebook} alt="" />
+                <WeiboIcon weiboIconStyle={style.footerSocialIcon} />
               </li>
             </ul>
           </li>
