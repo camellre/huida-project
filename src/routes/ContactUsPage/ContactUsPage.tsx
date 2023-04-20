@@ -6,9 +6,11 @@ export const ContactUsPage = () => {
     <main className={style.contactUsPageWrapper}>
       <h1>联系我们</h1>
       <article>
-        <h2>您的意向</h2>
         <form action="">
           <ul className={style.contactUsFormWrapper}>
+            <li>
+              <h2>您的意向</h2>
+            </li>
             <li>
               <label htmlFor="programDropdown">项目</label>
               <select name="program" id="programDropdown">
@@ -35,11 +37,9 @@ export const ContactUsPage = () => {
               <label htmlFor="questionBox">详细问题</label>
               <textarea name="question" id="questionBox"></textarea>
             </li>
-          </ul>
-        </form>
-        <h2>您的联系方式</h2>
-        <form action="">
-          <ul>
+            <li>
+              <h2>您的联系方式</h2>
+            </li>
             <li>
               <label htmlFor="fullName">您的姓名</label>
               <input type="text" id="fullName" />
