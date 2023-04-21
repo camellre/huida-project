@@ -145,19 +145,43 @@
   left: 0;
   background-image: url("src/assets/classroom (1).webp");
   background-repeat: no-repeat;
-  background-position: 0 -4em;
+  background-position: -6em 0;
   background-size: cover;
-  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .content_2_Background {
+    background-position: -9em 0;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1999px) {
+  .content_2_Background {
+    background-position: 0 -5em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .content_2_Background {
+    background-position: 0 -9em;
+  }
 }
 
 .content_2_Wrapper {
   position: relative;
   max-width: 68em;
+  height: 100%;
   margin: 0 auto;
   padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  top: 5em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .content_2_Wrapper {
     height: 100%;
   }
@@ -167,13 +191,22 @@
     width: 40%;
     position: absolute;
     right: 0;
+  }
+
+  .content_2_BlackBackground::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 140%;
+    left: -40%;
+    bottom: 0;
     background: linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.4) 5%,
-      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0) 1%,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.95) 75%,
       rgba(0, 0, 0, 0.99) 100%
     );
-    box-shadow: -2em 0 2em rgba(0, 0, 0, 0.4);
   }
 
   .content_2_text_1 {
