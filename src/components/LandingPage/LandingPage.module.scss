@@ -2,14 +2,12 @@
   width: 100%;
   height: 35em;
   position: relative;
-  top: 3em;
   overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .landingPageWrapper {
     height: 40em;
-    top: 5em;
   }
 
   .landingPageTogglerWrapper {
@@ -34,16 +32,13 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  left: -100%;
+  transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
   background-image: url("src/assets/planeWindows-2560.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 0.5s;
-}
-
-.content_1_Background_Show {
-  left: 0;
+  transition: all 1s;
+  overflow: hidden;
 }
 
 .landingPageWrapper h2 {
@@ -165,16 +160,13 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 100%;
+  transform: translateX(calc((var(--current-index, 0) - 1) * -100%));
   background-image: url("src/assets/classroom (1).webp");
   background-repeat: no-repeat;
   background-position: -6em 0;
   background-size: cover;
-  transition: all 0.5s;
-}
-
-.content_2_Background_Show {
-  left: 0;
+  transition: all 1s;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -286,16 +278,13 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 200%;
+  transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
   background-image: url("src/assets/Digital_Transformation.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 0.5s;
-}
-
-.content_3_Background_Show {
-  left: 0;
+  transition: all 1s;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {

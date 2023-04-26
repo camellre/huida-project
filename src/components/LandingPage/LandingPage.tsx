@@ -12,16 +12,17 @@ interface LandingPageSwitch {
 
 export const LandingPage = () => {
   const [landingPageShow, setlandingPageShow] = useState([true, false, false]);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const landingPageSwitch: LandingPageSwitch = {
     landingPage_1: () => {
-      setlandingPageShow([true, false, false]);
+      setCurrentIndex(0);
     },
     landingPage_2: () => {
-      setlandingPageShow([false, true, false]);
+      setCurrentIndex(1);
     },
     landingPage_3: () => {
-      setlandingPageShow([false, false, true]);
+      setCurrentIndex(2);
     },
   };
 
@@ -31,17 +32,11 @@ export const LandingPage = () => {
   };
 
   return (
-    <article className={style.landingPageWrapper}>
-      <div
-        className={
-          !landingPageShow[0]
-            ? style.content_1_Background
-            : [
-                style.content_1_Background,
-                style.content_1_Background_Show,
-              ].join(" ")
-        }
-      >
+    <article
+      className={style.landingPageWrapper}
+      style={{ "--current-index": currentIndex } as React.CSSProperties}
+    >
+      <div className={style.content_1_Background}>
         <div className={style.content_1_Wrapper}>
           <h2 className={style.content_1_text_1}>说走就走</h2>
           <h2 className={style.content_1_text_2}>随心自由出行</h2>
@@ -59,16 +54,7 @@ export const LandingPage = () => {
           />
         </div>
       </div>
-      <div
-        className={
-          !landingPageShow[1]
-            ? style.content_2_Background
-            : [
-                style.content_2_Background,
-                style.content_2_Background_Show,
-              ].join(" ")
-        }
-      >
+      <div className={style.content_2_Background}>
         <div className={style.content_2_BlackBackground}></div>
         <div className={style.content_2_Wrapper}>
           <Button theme={style.content_2_Button} text="立刻咨询" />
@@ -86,16 +72,7 @@ export const LandingPage = () => {
           />
         </div>
       </div>
-      <div
-        className={
-          !landingPageShow[2]
-            ? style.content_3_Background
-            : [
-                style.content_3_Background,
-                style.content_3_Background_Show,
-              ].join(" ")
-        }
-      >
+      <div className={style.content_3_Background}>
         <div className={style.content_3_WhiteBackground}></div>
         <div className={style.content_3_Wrapper}>
           <h2 className={style.content_3_text_1}>拓展国际视野</h2>
