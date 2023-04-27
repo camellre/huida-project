@@ -4,14 +4,13 @@ import style from "./LandingPage.module.scss";
 import passport_1 from "../../assets/passport_1.webp";
 import passport_2 from "../../assets/passport_2.webp";
 import passport_3 from "../../assets/passport_3.webp";
-import { useState } from "react";
+import React, { useState } from "react";
 
 interface LandingPageSwitch {
   [key: string]: () => void;
 }
 
 export const LandingPage = () => {
-  const [landingPageShow, setlandingPageShow] = useState([true, false, false]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const landingPageSwitch: LandingPageSwitch = {
@@ -27,8 +26,8 @@ export const LandingPage = () => {
   };
 
   const handlePageSwitch = (e: React.MouseEvent<HTMLElement>) => {
-    const pageSwtichFunction = landingPageSwitch[e.currentTarget.id];
-    return pageSwtichFunction();
+    const pageSwitchFunction = landingPageSwitch[e.currentTarget.id];
+    return pageSwitchFunction();
   };
 
   return (
@@ -86,7 +85,7 @@ export const LandingPage = () => {
           />
         </div>
       </div>
-      <ul className={style.landingPageTogglerWrapper}>
+      <ul className={style.landingPageToggleWrapper}>
         <li
           id="landingPage_1"
           className={style.landingPageToggler}
