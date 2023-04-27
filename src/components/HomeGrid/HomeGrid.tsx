@@ -7,6 +7,7 @@ import { FeedbackSection } from "../FeedbackSection/FeedbackSection";
 import { LandingPage } from "../LandingPage/LandingPage";
 import { ReasonForSecondCitizen } from "../ReasonForSecondCitizen/ReasonForSecondCitizen";
 import { CountrySlider } from "../CountrySlider/CountrySlider";
+import { CallOut } from "../CallOut/CallOut";
 
 export const HomeGrid = () => {
   return (
@@ -21,19 +22,7 @@ export const HomeGrid = () => {
         <CountrySlider />
       </section>
       <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
-        <OurServiceSection />
-      </section>
-      <section className={style.gridItemWrapper}>
-        <img src={image_2} alt="" />
-      </section>
-      <section className={style.gridItemWrapper}>
-        <CustomerSupportSection />
-      </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
-        <PartnerSection />
-      </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
-        <FeedbackSection />
+        <CallOut />
       </section>
     </main>
   );

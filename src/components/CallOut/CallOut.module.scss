@@ -1,0 +1,41 @@
+.callOutBackground {
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.callOutWrapper {
+  max-width: 68em;
+  margin: 0 auto;
+  background: #555ba8;
+  color: white;
+  padding: 0 3em;
+}
+
+.callOutTitle {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.callOutSideTitle {
+  font-size: 2em;
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.callOutSideNumber {
+  font-size: 4.5em;
+  margin: 0.25em 0 0.5em;
+  text-align: center;
+}
+
+.callOutBodyWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.callOutBodyText {
+  max-width: 75%;
+}
