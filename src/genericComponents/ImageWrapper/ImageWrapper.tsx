@@ -10,7 +10,7 @@ interface IconProp {
 export default function ImageWrapper({
   imageSrc,
   imageStyle,
-  imageAlt = " ",
+  imageAlt = "",
   wrapperStyle,
 }: IconProp) {
   return (

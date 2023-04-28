@@ -8,6 +8,7 @@ import { LandingPage } from "../LandingPage/LandingPage";
 import { ReasonForSecondCitizen } from "../ReasonForSecondCitizen/ReasonForSecondCitizen";
 import { CountrySlider } from "../CountrySlider/CountrySlider";
 import { CallOut } from "../CallOut/CallOut";
+import { EligibilityCheck } from "../EligibilityCheck/EligibilityCheck";
 
 export const HomeGrid = () => {
   return (
@@ -23,6 +24,9 @@ export const HomeGrid = () => {
       </section>
       <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
         <CallOut />
+      </section>
+      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+        <EligibilityCheck />
       </section>
     </main>
   );
