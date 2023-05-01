@@ -1,6 +1,5 @@
 import style from "./App.module.scss";
 import { NavigationBar } from "./components/NavigationBar/NavigationBar";
-import Footer from "./components/Footer/Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -16,7 +15,6 @@ function App() {
         <NavigationBar />
       </header>
       <Outlet />
-      <Footer />
     </>
   );
 }

@@ -6,6 +6,14 @@ import Button from "../../genericComponents/Button/Button";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { LanguageIcon } from "../../genericComponents/LanguageIcon/LanguageIcon";
+import countryIcon_1 from "../../assets/antigua_Icon.webp";
+import countryIcon_2 from "../../assets/dominica_icon.webp";
+import countryIcon_3 from "../../assets/grenada_icon.webp";
+import countryIcon_4 from "../../assets/malta_icon.webp";
+import countryIcon_5 from "../../assets/portugal_icon.webp";
+import countryIcon_6 from "../../assets/stkittis_icon.webp";
+import countryIcon_7 from "../../assets/turkey_icon.webp";
+import countryIcon_8 from "../../assets/usa_Icon.webp";
 
 interface dropDownFunctionType {
   [key: string]: () => void;
@@ -141,29 +149,55 @@ export const NavigationBar = () => {
               : style.dropDownMenuWrapper
           }
         >
+          <Link to={"/citizenship/antigua"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_1} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>安提瓜</p>
+            </li>
+          </Link>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务1</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_2} alt="" className={style.countryIcon_2} />
+            </picture>
+            <p className={style.countryName}>多米尼加</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务2</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_3} alt="" className={style.countryIcon} />
+            </picture>
+            <p className={style.countryName}>格林纳达</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务3</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_4} alt="" className={style.countryIcon} />
+            </picture>
+            <p className={style.countryName}>马耳他</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务4</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_5} alt="" className={style.countryIcon_5} />
+            </picture>
+            <p className={style.countryName}>葡萄牙</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务5</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_6} alt="" className={style.countryIcon} />
+            </picture>
+            <p className={style.countryName}>圣基茨</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务6</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_7} alt="" className={style.countryIcon} />
+            </picture>
+            <p className={style.countryName}>土耳其</p>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务7</a>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <a href="#">移民服务8</a>
+            <picture className={style.countryIconWrapper}>
+              <img src={countryIcon_8} alt="" className={style.countryIcon} />
+            </picture>
+            <p className={style.countryName}>美国</p>
           </li>
         </menu>
         <menu

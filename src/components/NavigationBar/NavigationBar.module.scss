@@ -23,6 +23,7 @@
 }
 
 .navBarLogoWrapper {
+  display: inline-block;
   height: 2em;
   margin: 0.5em;
 }
@@ -89,7 +90,7 @@
 }
 
 .dropDownWrapperShow {
-  height: 31vh;
+  height: 40vh;
 }
 
 .dropDownMenuWrapper {
@@ -112,7 +113,51 @@
 }
 
 .dropDownMenuItemWrapper {
-  justify-self: center;
+  cursor: pointer;
+  justify-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.countryIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 2px solid gold;
+  width: 5.5em;
+  height: 5.5em;
+  filter: opacity(0.8) saturate(0.7);
+  transition: all 0.2s ease-out;
+}
+
+.dropDownMenuItemWrapper:hover .countryIconWrapper {
+  filter: opacity(1) saturate(1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.countryName {
+  filter: opacity(0.8) saturate(0.7);
+  transition: all 0.2s ease-out;
+}
+
+.dropDownMenuItemWrapper:hover .countryName {
+  filter: opacity(1) saturate(1);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.countryIcon {
+  width: 3.5em;
+}
+
+.countryIcon_2 {
+  width: 4.25em;
+}
+
+.countryIcon_5 {
+  width: 4.25em;
 }
 
 .languageIcon {

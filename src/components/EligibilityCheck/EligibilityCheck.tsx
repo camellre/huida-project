@@ -36,9 +36,13 @@ export const EligibilityCheck = () => {
         wrapperStyle={style.image_5}
       />
       <div className={style.contentWrapper}>
-        <h2>最适合您的移民方案竟然是...?</h2>
-        <Button text="马上点击测试" />
-        <p>5分钟帮您匹配最合适的移民方案</p>
+        <h2 className={style.background_1}>
+          最适合您的移民
+          <br />
+          方案竟然是...?
+        </h2>
+        <Button theme={style.background_2} text="马上点击测试" />
+        <p className={style.background_3}>5分钟帮您匹配最合适的移民方案</p>
       </div>
     </article>
   );

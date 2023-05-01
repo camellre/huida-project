@@ -11,32 +11,32 @@
 
 .image_1 {
   position: absolute;
-  height: 19em;
-  left: 0;
+  height: 25em;
+  transform: translateX(5em);
 }
 
 .image_2 {
   position: absolute;
-  height: 19em;
-  left: 20%;
+  height: 25em;
+  transform: translateX(18em);
 }
 
 .image_3 {
   position: absolute;
-  height: 19em;
-  left: 40%;
+  height: 25em;
+  transform: translateX(31em);
 }
 
 .image_4 {
   position: absolute;
-  height: 19em;
-  left: 60%;
+  height: 25em;
+  transform: translateX(44em);
 }
 
 .image_5 {
   position: absolute;
-  height: 19em;
-  left: 80%;
+  height: 25em;
+  transform: translateX(57em);
 }
 
 .contentWrapper {
@@ -44,4 +44,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.background_1 {
+  font-size: 2.875em;
+  background: white;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.background_2 {
+  font-size: 1.2em;
+}
+
+.background_3 {
+  background: white;
+  border: 1px solid black;
+  padding: 0.5em;
+  color: red;
 }

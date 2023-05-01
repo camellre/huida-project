@@ -1,6 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
 import style from "./AccountPage.module.scss";
-import { NavigationBar } from "../../components/NavigationBar/NavigationBar";
 import { UserIcon } from "../../genericComponents/UserIcon/UserIcon";
 import { FilePlusIcon } from "../../genericComponents/FilePlusIcon/FilePlusIcon";
 import { FolderIcon } from "../../genericComponents/FolderIcon/FolderIcon";
@@ -19,78 +18,73 @@ function AccountPage() {
     return setSiderBarExtend(true);
   };
   return (
-    <>
-      <header>
-        <NavigationBar />
-      </header>
-      <main className={style.accountBodyWrapper}>
-        <article
-          className={
+    <main className={style.accountBodyWrapper}>
+      <article
+        className={
+          sideBarExtend
+            ? style.sideBar
+            : [style.sideBar, style.sideBarShrink].join(" ")
+        }
+      >
+        <LeftIcon
+          handleClick={handleSideBarTogglerClick}
+          leftIconStyle={
             sideBarExtend
-              ? style.sideBar
-              : [style.sideBar, style.sideBarShrink].join(" ")
+              ? style.sideBarToggler
+              : [style.sideBarToggler, style.transformedToggler].join(" ")
           }
-        >
-          <LeftIcon
-            handleClick={handleSideBarTogglerClick}
-            leftIconStyle={
-              sideBarExtend
-                ? style.sideBarToggler
-                : [style.sideBarToggler, style.transformedToggler].join(" ")
-            }
-          />
-          <div className={style.accountProfileBoxWrapper}>
-            <UserIcon userIconStyle={style.userIcon} />
-            <div>
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                ID号/名字
-              </p>
-              <Link to={"/account/profile"}>
-                <p>账号管理</p>
-              </Link>
-            </div>
+        />
+        <div className={style.accountProfileBoxWrapper}>
+          <UserIcon userIconStyle={style.userIcon} />
+          <div>
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              ID号/名字
+            </p>
+            <Link to={"/account/profile"}>
+              <p>账号管理</p>
+            </Link>
           </div>
-          <ul className={style.sideBarMenuWrapper}>
-            <li className={style.sideBarMenuItem}>
-              <FolderIcon folderIconStyle={style.sideBarMenuIcon} />
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                我的申请
-              </p>
-            </li>
-            <li className={style.sideBarMenuItem}>
-              <FileExclamationIcon
-                fileExclamationIconStyle={style.sideBarMenuIcon}
-              />
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                未交申请
-              </p>
-            </li>
-            <li className={style.sideBarMenuItem}>
-              <FileCheckIcon fileCheckIconStyle={style.sideBarMenuIcon} />
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                已交申请
-              </p>
-            </li>
-            <li className={style.sideBarMenuItem}>
-              <FilePlusIcon filePlusIconStyle={style.sideBarMenuIcon} />
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                新建申请
-              </p>
-            </li>
-            <li className={style.sideBarMenuItem}>
-              <InboxIcon inboxIconStyle={style.sideBarMenuIcon} />
-              <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
-                收信箱
-              </p>
-            </li>
-          </ul>
-          <Button text="登出账号" theme={style.logOutButton} />
-        </article>
-        <article className={style.accountBody}>
-          <Outlet />
-        </article>
-      </main>
-    </>
+        </div>
+        <ul className={style.sideBarMenuWrapper}>
+          <li className={style.sideBarMenuItem}>
+            <FolderIcon folderIconStyle={style.sideBarMenuIcon} />
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              我的申请
+            </p>
+          </li>
+          <li className={style.sideBarMenuItem}>
+            <FileExclamationIcon
+              fileExclamationIconStyle={style.sideBarMenuIcon}
+            />
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              未交申请
+            </p>
+          </li>
+          <li className={style.sideBarMenuItem}>
+            <FileCheckIcon fileCheckIconStyle={style.sideBarMenuIcon} />
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              已交申请
+            </p>
+          </li>
+          <li className={style.sideBarMenuItem}>
+            <FilePlusIcon filePlusIconStyle={style.sideBarMenuIcon} />
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              新建申请
+            </p>
+          </li>
+          <li className={style.sideBarMenuItem}>
+            <InboxIcon inboxIconStyle={style.sideBarMenuIcon} />
+            <p className={sideBarExtend ? " " : style.sideBarShrinkText}>
+              收信箱
+            </p>
+          </li>
+        </ul>
+        <Button text="登出账号" theme={style.logOutButton} />
+      </article>
+      <article className={style.accountBody}>
+        <Outlet />
+      </article>
+    </main>
   );
 }
 

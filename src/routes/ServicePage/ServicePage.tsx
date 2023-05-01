@@ -4,5 +4,10 @@ import style from "./ServicePage.module.scss";
 import Footer from "../../components/Footer/Footer";
 
 export const ServicePage = () => {
-  return <>ServicePage</>;
+  return (
+    <>
+      ServicePage
+      <Footer />
+    </>
+  );
 };
