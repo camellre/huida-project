@@ -15,11 +15,157 @@
   }
 }
 
-.intro {
-  //   background: url("src/assets/antigua_barbuda.webp");
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  background: url("/src/assets/antigua_barbuda.webp");
+.landingPage {
+  background: url("../../assets/antigua_barbuda.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 40em;
+}
+
+// .intro {
+//   height: 40em;
+// }
+
+.introWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 68em;
+  margin: 0 auto;
+}
+
+.introAdIconWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.introAdIcon {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.introAdIcon_1 {
+  font-size: 1.5em;
+  background: rgba(84, 130, 53);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.introAdIcon_2 {
+  font-size: 1.125em;
+  background: rgba(117, 102, 73);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.introAdIcon_3 {
+  font-size: 1.5em;
+  background: rgba(132, 151, 176);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.introAdIcon_4 {
+  font-size: 1.125em;
+  background: rgba(47, 85, 151);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.introAdIcon_5 {
+  font-size: 1.5em;
+  background: rgba(31, 78, 121);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.introAdIcon_6 {
+  font-size: 1.125em;
+  background: rgba(32, 56, 100);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  height: 5.5em;
+  width: 5.5em;
+}
+
+.banner {
+  position: sticky;
+  top: 0;
+  display: flex;
+  max-width: 68em;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bannerItem {
+  color: black;
+  padding: 0.5em;
+  border-bottom: 5px solid rgba(32, 56, 100);
+}
+
+.cbiLawWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 68em;
+  margin: 0 auto;
+}
+
+.countryIcon {
+  height: 6em;
+}
+
+.conditionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 68em;
+  margin: 0 auto;
+}
+
+.countryImage {
+  height: 16em;
+  width: 28em;
+  object-fit: cover;
+}
+
+.conditioinBodyWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+  align-items: center;
+  background: rgba(235, 235, 235);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.conditionSubTitles {
+  background: rgba(237, 125, 49);
+  padding: 0.25em;
+  width: 5em;
+  text-align: center;
+}
+
+.feeBodyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
