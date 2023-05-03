@@ -135,41 +135,115 @@ export const AntiguaPage = () => {
         </section>
         <section>
           <form className={style.feeBodyWrapper}>
-            <h2>请填入以下信息，系统会跟进资料计算大概费用预算</h2>
+            <h2 className={style.feeBodyTitle}>
+              请填入以下信息，系统会跟进资料计算大概费用预算
+            </h2>
             <p>附属申请人数：</p>
-            <div>
-              <label htmlFor="spouse">同行申请配偶</label>
-              <select name="withSpouseOrNot" id="spouse">
-                <option value="withSpouse">有配偶</option>
-                <option value="withoutSpouse">无配偶</option>
-              </select>
-            </div>
-            <div>
-              <label htmlFor="unmarriedChild">未婚孩子</label>
-              <input type="number" />
-            </div>
-            <div>
-              <label htmlFor="parent">父母/配偶父母</label>
-              <input type="number" />
-            </div>
-            <div>
-              <label htmlFor="sibling">兄弟姐妹</label>
-              <input type="number" />
-            </div>
+            <ul className={style.peopleSelection}>
+              <li>
+                <label htmlFor="spouse">同行申请配偶</label>
+                <select name="withSpouseOrNot" id="spouse">
+                  <option value="withSpouse">有配偶</option>
+                  <option value="withoutSpouse">无配偶</option>
+                </select>
+              </li>
+              <li>
+                <label htmlFor="unmarriedChild">未婚孩子</label>
+                <input type="number" />
+              </li>
+              <li>
+                <label htmlFor="parent">父母/配偶父母</label>
+                <input type="number" />
+              </li>
+              <li>
+                <label htmlFor="sibling">兄弟姐妹</label>
+                <input type="number" />
+              </li>
+            </ul>
             <p>意向投资项目：</p>
-            <div>
-              <input type="radio" id="dnf" />
-              <label htmlFor="dnf">国家发展基金（NDF）</label>
-            </div>
-            <div>
-              <input type="radio" id="realEstate" />
-              <label htmlFor="realEstate">汇达房地产项目</label>
-            </div>
-            <div>
-              <input type="radio" id="stock" />
-              <label htmlFor="stock">南湾股权项目</label>
-            </div>
+            <ul className={style.projectSelection}>
+              <li>
+                <input type="radio" id="dnf" />
+                <label htmlFor="dnf">国家发展基金（NDF）</label>
+              </li>
+              <li>
+                <input type="radio" id="realEstate" />
+                <label htmlFor="realEstate">汇达房地产项目</label>
+              </li>
+              <li>
+                <input type="radio" id="stock" />
+                <label htmlFor="stock">南湾股权项目</label>
+              </li>
+            </ul>
+            <Button text="开始估算" />
           </form>
+        </section>
+        <section>
+          <article className={style.documentBodyWrapper}>
+            <div>
+              <h2>
+                安提瓜和巴布达
+                <br />
+                投资入籍流程与文件要求
+              </h2>
+              <ul>
+                <li>
+                  联系客服
+                  <br />
+                  1.咨询申请详情
+                  <br />
+                  2.评估申请资格
+                  <br />
+                  3.确定申请人数
+                  <br />
+                  4.准备申请材料
+                </li>
+                <li>
+                  提交申请
+                  <br />
+                  1.填写申请表
+                  <br />
+                  2.资料初步审核
+                  <br />
+                  3.提交申请费用
+                  <br />
+                  4.递交申请材料
+                </li>
+                <li>
+                  完成入籍
+                  <br />
+                  1.通过背景调查
+                  <br />
+                  2.完成投资手续
+                  <br />
+                  3.宣誓入籍
+                  <br />
+                  4.提交护照申请
+                  <br />
+                  5.签收入籍文件
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div>
+                <p>申请安提瓜投资入籍，您需要以下文件</p>
+                <p>Citizenship by Investment Application Form AB1 </p>
+                <p>Photograph and Signature Certificate Form AB2 </p>
+                <p>Medical Certificate Form AB3</p>
+                <p>Investment Confirmation Form AB4 </p>
+                <p>Agent Form Form AB5</p>
+                <p>安提瓜护照申请表</p>
+                <p>Antigua & Barbuda Passport L Form (16 and older)</p>
+                <p>Antigua & Barbuda Passport M Form (Under 16)</p>
+                <p>投资入籍申报表</p>
+                <p>Real Estate Developer Application Form AB8</p>
+                <p>Business Investment Application Form AB9</p>
+                <p>其他文件要求</p>
+                <p>文件要求清单</p>
+              </div>
+              <Button text="马上申请" />
+            </div>
+          </article>
         </section>
       </main>
       <Footer />

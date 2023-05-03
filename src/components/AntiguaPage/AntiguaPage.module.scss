@@ -164,8 +164,42 @@
 }
 
 .feeBodyWrapper {
+  max-width: 68em;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 1em;
+  background: rgba(235, 235, 235);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feeBodyTitle {
+  font-size: 1.125em;
+  color: white;
+  background: rgba(237, 125, 49);
+  padding: 0.5em;
+}
+
+.peopleSelection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1em, 1fr));
+  column-gap: 5em;
+  row-gap: 3em;
+}
+
+.projectSelection {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 5em;
+}
+
+.documentBodyWrapper {
+  max-width: 68em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(235, 235, 235);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
