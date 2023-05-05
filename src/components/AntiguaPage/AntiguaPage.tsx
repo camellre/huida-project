@@ -120,7 +120,7 @@ export const AntiguaPage = () => {
           />
         </article>
       </section>
-      <section id="cbiLaw" ref={addToRefs}>
+      <section id="cbiLaw" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.cbiLawWrapper}>
           <img src={countryIcon} alt="" className={style.countryIcon} />
           <h2>Antigua & Barbuda CBI Program</h2>
@@ -144,7 +144,7 @@ export const AntiguaPage = () => {
           <Button text="下载法案原件" />
         </article>
       </section>
-      <section id="condition" ref={addToRefs}>
+      <section id="condition" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.conditionWrapper}>
           <h2>安提瓜三种入籍模式可选，可快速六代入籍</h2>
           <div className={style.conditioinBodyWrapper}>
@@ -174,7 +174,11 @@ export const AntiguaPage = () => {
           </div>
         </article>
       </section>
-      <section id="applicationFee" ref={addToRefs}>
+      <section
+        id="applicationFee"
+        ref={addToRefs}
+        className={style.sectionWrapper}
+      >
         <form className={style.feeBodyWrapper}>
           <h2 className={style.feeBodyTitle}>
             请填入以下信息，系统会跟进资料计算大概费用预算
@@ -219,7 +223,7 @@ export const AntiguaPage = () => {
           <Button text="开始估算" />
         </form>
       </section>
-      <section id="documents" ref={addToRefs}>
+      <section id="documents" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.documentBodyWrapper}>
           <div>
             <h2>
