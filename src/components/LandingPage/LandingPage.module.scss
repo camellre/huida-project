@@ -33,7 +33,7 @@
   height: 100%;
   position: absolute;
   transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
-  background-image: url("src/assets/planeWindows-2560.webp");
+  background-image: url("../../assets/planeWindows-2560.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -161,7 +161,7 @@
   height: 100%;
   position: absolute;
   transform: translateX(calc((var(--current-index, 0) - 1) * -100%));
-  background-image: url("src/assets/classroom (1).webp");
+  background-image: url("../../assets/classroom (1).webp");
   background-repeat: no-repeat;
   background-position: -6em 0;
   background-size: cover;
@@ -279,7 +279,7 @@
   height: 100%;
   position: absolute;
   transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
-  background-image: url("src/assets/Digital_Transformation.webp");
+  background-image: url("../../assets/Digital_Transformation.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

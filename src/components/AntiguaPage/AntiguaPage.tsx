@@ -3,8 +3,55 @@ import style from "./AntiguaPage.module.scss";
 import countryIcon from "../../assets/antigua_Icon.webp";
 import Button from "../../genericComponents/Button/Button";
 import countryImage from "../../assets/antigua_barbuda.webp";
+import { useEffect, useRef, useState } from "react";
+
+interface BannerShowLogic {
+  [key: string]: string;
+}
 
 export const AntiguaPage = () => {
+  const [bannerShow, setBannerShow] = useState("16%");
+  const elementsRef = useRef<(HTMLElement | null)[]>([]);
+
+  const bannerShowLogic: BannerShowLogic = {
+    cbiLaw: "16%",
+    condition: "36%",
+    applicationFee: "56%",
+    documents: "76%",
+  };
+
+  const addToRefs = (element: HTMLElement) => {
+    if (element && !elementsRef.current.includes(element)) {
+      elementsRef.current.push(element);
+    }
+  };
+
+  const pageObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setBannerShow(bannerShowLogic[entry.target.id]);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  useEffect(() => {
+    elementsRef.current.forEach((element) => {
+      if (element) {
+        pageObserver.observe(element);
+      }
+    });
+    return () => {
+      elementsRef.current.forEach((element) => {
+        if (element) {
+          pageObserver.unobserve(element);
+        }
+      });
+    };
+  }, [bannerShow]);
+
   return (
     <>
       <main className={style.pageBackground}>
@@ -63,23 +110,31 @@ export const AntiguaPage = () => {
             </ul>
           </article>
         </section>
-        <section>
+        <section className={style.bannerWrapper}>
           <article className={style.banner}>
-            <a href="#" className={style.bannerItem}>
+            <a href="#" className={style.bannerItem_1}>
               入籍法案
             </a>
-            <a href="#" className={style.bannerItem}>
+            <a href="#" className={style.bannerItem_2}>
               投资项目
             </a>
-            <a href="#" className={style.bannerItem}>
+            <a href="#" className={style.bannerItem_3}>
               费用估算
             </a>
-            <a href="#" className={style.bannerItem}>
+            <a href="#" className={style.bannerItem_4}>
               申请文件
             </a>
+            <div
+              style={
+                {
+                  "--bannerUderline-position": bannerShow,
+                } as React.CSSProperties
+              }
+              className={style.bannerUnderline}
+            />
           </article>
         </section>
-        <section>
+        <section id="cbiLaw" ref={addToRefs}>
           <article className={style.cbiLawWrapper}>
             <img src={countryIcon} alt="" className={style.countryIcon} />
             <h2>Antigua & Barbuda CBI Program</h2>
@@ -103,7 +158,7 @@ export const AntiguaPage = () => {
             <Button text="下载法案原件" />
           </article>
         </section>
-        <section>
+        <section id="condition" ref={addToRefs}>
           <article className={style.conditionWrapper}>
             <h2>安提瓜三种入籍模式可选，可快速六代入籍</h2>
             <div className={style.conditioinBodyWrapper}>
@@ -133,7 +188,7 @@ export const AntiguaPage = () => {
             </div>
           </article>
         </section>
-        <section>
+        <section id="applicationFee" ref={addToRefs}>
           <form className={style.feeBodyWrapper}>
             <h2 className={style.feeBodyTitle}>
               请填入以下信息，系统会跟进资料计算大概费用预算
@@ -178,7 +233,7 @@ export const AntiguaPage = () => {
             <Button text="开始估算" />
           </form>
         </section>
-        <section>
+        <section id="documents" ref={addToRefs}>
           <article className={style.documentBodyWrapper}>
             <div>
               <h2>
@@ -186,8 +241,8 @@ export const AntiguaPage = () => {
                 <br />
                 投资入籍流程与文件要求
               </h2>
-              <ul>
-                <li>
+              <ul className={style.applyStepWrapper}>
+                <li className={style.applyStepBox_1}>
                   联系客服
                   <br />
                   1.咨询申请详情
@@ -198,7 +253,7 @@ export const AntiguaPage = () => {
                   <br />
                   4.准备申请材料
                 </li>
-                <li>
+                <li className={style.applyStepBox_2}>
                   提交申请
                   <br />
                   1.填写申请表
@@ -209,7 +264,7 @@ export const AntiguaPage = () => {
                   <br />
                   4.递交申请材料
                 </li>
-                <li>
+                <li className={style.applyStepBox_3}>
                   完成入籍
                   <br />
                   1.通过背景调查
@@ -225,7 +280,7 @@ export const AntiguaPage = () => {
               </ul>
             </div>
             <div>
-              <div>
+              <div className={style.documentListWrapper}>
                 <p>申请安提瓜投资入籍，您需要以下文件</p>
                 <p>Citizenship by Investment Application Form AB1 </p>
                 <p>Photograph and Signature Certificate Form AB2 </p>

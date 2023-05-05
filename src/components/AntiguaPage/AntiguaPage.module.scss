@@ -102,20 +102,53 @@
   width: 5.5em;
 }
 
-.banner {
+.bannerWrapper {
   position: sticky;
-  top: 0;
+  top: 5em;
+}
+
+.banner {
+  position: relative;
   display: flex;
   max-width: 68em;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
+  background: red;
 }
 
-.bannerItem {
+.bannerItem_1 {
   color: black;
   padding: 0.5em;
-  border-bottom: 5px solid rgba(32, 56, 100);
+  // left: 16%;
+}
+
+.bannerItem_2 {
+  color: black;
+  padding: 0.5em;
+  // left: 36%;
+}
+
+.bannerItem_3 {
+  color: black;
+  padding: 0.5em;
+  // left: 56%;
+}
+
+.bannerItem_4 {
+  color: black;
+  padding: 0.5em;
+  // left: 76%;
+}
+
+.bannerUnderline {
+  position: absolute;
+  height: 0.375em;
+  width: 5em;
+  background: black;
+  transition: all 0.4s;
+  left: var(--bannerUderline-position);
+  top: 1em;
 }
 
 .cbiLawWrapper {
@@ -202,4 +235,30 @@
   justify-content: space-around;
   background: rgba(235, 235, 235);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.applyStepWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 3em;
+}
+
+.applyStepBox_1 {
+  background: rgba(165, 165, 165);
+  padding: 1em;
+}
+
+.applyStepBox_2 {
+  background: rgba(173, 99, 0);
+  padding: 1em;
+}
+
+.applyStepBox_3 {
+  background: rgba(180, 53, 0);
+  padding: 1em;
+}
+
+.documentListWrapper p {
+  margin: 0;
 }
