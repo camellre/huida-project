@@ -1,4 +1,4 @@
-import style from "./AntiguaPage.module.scss";
+import style from "./DominicaPage.module.scss";
 import countryIcon from "../../assets/antigua_Icon.webp";
 import Button from "../../genericComponents/Button/Button";
 import countryImage from "../../assets/antigua_barbuda.webp";
@@ -8,7 +8,7 @@ interface BannerShowLogic {
   [key: string]: string;
 }
 
-export const AntiguaPage = () => {
+export const DominicaPage = () => {
   const [bannerShow, setBannerShow] = useState("16%");
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
 

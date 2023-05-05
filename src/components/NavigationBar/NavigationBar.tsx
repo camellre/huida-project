@@ -157,48 +157,70 @@ export const NavigationBar = () => {
               <p className={style.countryName}>安提瓜</p>
             </li>
           </Link>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_2} alt="" className={style.countryIcon_2} />
-            </picture>
-            <p className={style.countryName}>多米尼加</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_3} alt="" className={style.countryIcon} />
-            </picture>
-            <p className={style.countryName}>格林纳达</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_4} alt="" className={style.countryIcon} />
-            </picture>
-            <p className={style.countryName}>马耳他</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_5} alt="" className={style.countryIcon_5} />
-            </picture>
-            <p className={style.countryName}>葡萄牙</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_6} alt="" className={style.countryIcon} />
-            </picture>
-            <p className={style.countryName}>圣基茨</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_7} alt="" className={style.countryIcon} />
-            </picture>
-            <p className={style.countryName}>土耳其</p>
-          </li>
-          <li className={style.dropDownMenuItemWrapper}>
-            <picture className={style.countryIconWrapper}>
-              <img src={countryIcon_8} alt="" className={style.countryIcon} />
-            </picture>
-            <p className={style.countryName}>美国</p>
-          </li>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img
+                  src={countryIcon_2}
+                  alt=""
+                  className={style.countryIcon_2}
+                />
+              </picture>
+              <p className={style.countryName}>多米尼加</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_3} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>格林纳达</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_4} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>马耳他</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img
+                  src={countryIcon_5}
+                  alt=""
+                  className={style.countryIcon_5}
+                />
+              </picture>
+              <p className={style.countryName}>葡萄牙</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_6} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>圣基茨</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_7} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>土耳其</p>
+            </li>
+          </Link>
+          <Link to={"/citizenship/dominica"}>
+            <li className={style.dropDownMenuItemWrapper}>
+              <picture className={style.countryIconWrapper}>
+                <img src={countryIcon_8} alt="" className={style.countryIcon} />
+              </picture>
+              <p className={style.countryName}>美国</p>
+            </li>
+          </Link>
         </menu>
         <menu
           className={
