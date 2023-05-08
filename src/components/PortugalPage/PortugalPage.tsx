@@ -1,14 +1,14 @@
-import style from "./DominicaPage.module.scss";
+import style from "./PortugalPage.module.scss";
 import countryIcon from "../../assets/antigua_Icon.webp";
 import Button from "../../genericComponents/Button/Button";
-import countryImage from "../../assets/dominica.webp";
+import countryImage from "../../assets/antigua_barbuda.webp";
 import { useEffect, useRef, useState } from "react";
 
 interface BannerShowLogic {
   [key: string]: string;
 }
 
-export const DominicaPage = () => {
+export const PortugalPage = () => {
   const [bannerShow, setBannerShow] = useState("16%");
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
 
@@ -129,25 +129,30 @@ export const DominicaPage = () => {
       <section id="cbiLaw" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.cbiLawWrapper}>
           <img src={countryIcon} alt="" className={style.countryIcon} />
-          <h2>Dominica CBI Program</h2>
-          <h2>多米尼加 投资入籍简介</h2>
+          <h2>Antigua & Barbuda CBI Program</h2>
+          <h2>安提瓜和巴布达 投资入籍简介</h2>
           <p>
-            多米尼加（Dominica）是位于加勒比海的一个国家，拥有稳定的政府和健全的金融体系。
-            该国实行议会民主制，政府积极推动经济发展和社会福利。金融服务业是多米尼克的重要经济支柱之一，包括银行、保险和投资等领域。
+            安提瓜和巴布达是东加勒比地区的一个独立的英联邦国家。
+            安提瓜和巴布达郁郁葱葱的热带岛屿拥有约 365
+            个干净碧绿的海滩，是一个诱人的天堂，被认为是世界上最美丽的地方之一。
+            因此，旅游业是国内生产总值 (GDP) 的主要驱动力，占该岛收入的 60%
+            左右，主要目标市场是美国、加拿大和欧洲。
             <br />
             <br />
-            多米尼克公民可以享受到多个国家和地区的免签待遇，包括申根区、英国、新加坡和香港等。这些优势使得多米尼克的公民投资项目备受全球投资者的青睐。
+            安提瓜和巴布达是联合国、英联邦、加勒比共同体和美洲国家组织 (OAS)
+            以及许多其他国际组织的成员。 安提瓜和巴布达护照持有人可免签前往约
+            150 个国家，包括英国和申根区国家。
             <br />
             <br />
             投资入籍单位
-            (CIU)由设立，是负责处理所有代理执照申请以及申请人及其家人的所有投资入籍申请的政府机构。
+            (CIU)由安提瓜和巴布达总理阁下设立，是负责处理所有代理执照申请以及申请人及其家人的所有投资入籍申请的政府机构。
           </p>
           <Button text="下载法案原件" />
         </article>
       </section>
       <section id="condition" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.conditionWrapper}>
-          <h2>多米尼加三种入籍模式可选，可快速六代入籍</h2>
+          <h2>安提瓜三种入籍模式可选，可快速六代入籍</h2>
           <div className={style.conditioinBodyWrapper}>
             <img src={countryImage} alt="" className={style.countryImage} />
             <div>
@@ -228,7 +233,7 @@ export const DominicaPage = () => {
         <article className={style.documentBodyWrapper}>
           <div>
             <h2>
-              多米尼加
+              安提瓜和巴布达
               <br />
               投资入籍流程与文件要求
             </h2>
@@ -272,13 +277,13 @@ export const DominicaPage = () => {
           </div>
           <div>
             <div className={style.documentListWrapper}>
-              <p>申请多米尼加投资入籍，您需要以下文件</p>
+              <p>申请安提瓜投资入籍，您需要以下文件</p>
               <p>Citizenship by Investment Application Form AB1 </p>
               <p>Photograph and Signature Certificate Form AB2 </p>
               <p>Medical Certificate Form AB3</p>
               <p>Investment Confirmation Form AB4 </p>
               <p>Agent Form Form AB5</p>
-              <p>多米尼加护照申请表</p>
+              <p>安提瓜护照申请表</p>
               <p>Antigua & Barbuda Passport L Form (16 and older)</p>
               <p>Antigua & Barbuda Passport M Form (Under 16)</p>
               <p>投资入籍申报表</p>

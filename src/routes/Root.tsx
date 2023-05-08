@@ -14,6 +14,12 @@ import { ContactUsPage } from "./ContactUsPage/ContactUsPage";
 import { AntiguaPage } from "../components/AntiguaPage/AntiguaPage";
 import { HomePage } from "./HomePage/HomePage";
 import { DominicaPage } from "../components/DominicaPage/DominicaPage";
+import { GrenadaPage } from "../components/GrenadaPage/GrenadaPage";
+import { MaltaPage } from "../components/MaltaPage/MaltaPage";
+import { PortugalPage } from "../components/PortugalPage/PortugalPage";
+import { StkittsPage } from "../components/StkittsPage/StkittsPage";
+import { TurkeyPage } from "../components/TurkeyPage/TurkeyPage";
+import { USAPage } from "../components/USAPage/USAPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,12 +30,12 @@ export const router = createBrowserRouter(
         <Route index element={<div>Citizenship Page</div>} />
         <Route path="antigua" element={<AntiguaPage />} />
         <Route path="dominica" element={<DominicaPage />} />
-        <Route path="grenada" element={<DominicaPage />} />
-        <Route path="malta" element={<DominicaPage />} />
-        <Route path="portugal" element={<DominicaPage />} />
-        <Route path="stkittis" element={<DominicaPage />} />
-        <Route path="turkey" element={<DominicaPage />} />
-        <Route path="usa" element={<DominicaPage />} />
+        <Route path="grenada" element={<GrenadaPage />} />
+        <Route path="malta" element={<MaltaPage />} />
+        <Route path="portugal" element={<PortugalPage />} />
+        <Route path="stkittis" element={<StkittsPage />} />
+        <Route path="turkey" element={<TurkeyPage />} />
+        <Route path="usa" element={<USAPage />} />
       </Route>
       <Route path="service" element={<ServicePage />} />
       <Route path="contact" element={<ContactUsPage />} />

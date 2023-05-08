@@ -169,7 +169,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>多米尼加</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/grenada"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img src={countryIcon_3} alt="" className={style.countryIcon} />
@@ -177,7 +177,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>格林纳达</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/malta"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img src={countryIcon_4} alt="" className={style.countryIcon} />
@@ -185,7 +185,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>马耳他</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/portugal"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img
@@ -197,7 +197,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>葡萄牙</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/stkittis"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img src={countryIcon_6} alt="" className={style.countryIcon} />
@@ -205,7 +205,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>圣基茨</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/turkey"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img src={countryIcon_7} alt="" className={style.countryIcon} />
@@ -213,7 +213,7 @@ export const NavigationBar = () => {
               <p className={style.countryName}>土耳其</p>
             </li>
           </Link>
-          <Link to={"/citizenship/dominica"}>
+          <Link to={"/citizenship/usa"}>
             <li className={style.dropDownMenuItemWrapper}>
               <picture className={style.countryIconWrapper}>
                 <img src={countryIcon_8} alt="" className={style.countryIcon} />
