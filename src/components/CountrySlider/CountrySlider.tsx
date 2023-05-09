@@ -1,9 +1,43 @@
 import Button from "../../genericComponents/Button/Button";
 import style from "./CountrySlider.module.scss";
+import antigua_flag from "../../assets/antigua_flag.webp";
+import dominica_flag from "../../assets/dominica_flag.webp";
+import grenada_flag from "../../assets/grenada_flag.webp";
+import malta_flag from "../../assets/malta_flag.webp";
+import portugal_flag from "../../assets/portugal_flag.webp";
+import stkittis_flag from "../../assets/stkittis_flag.webp";
+import turkey_flag from "../../assets/turkey_flag.webp";
+import usa_flag from "../../assets/usa_flag.webp";
 
 export const CountrySlider = () => {
   return (
     <article className={style.countrySliderWrapper}>
+      <ul className={style.sliderSideBar}>
+        <li>
+          <img src={antigua_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={dominica_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={grenada_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={malta_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={portugal_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={stkittis_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={turkey_flag} alt="" className={style.sliderFlag} />
+        </li>
+        <li>
+          <img src={usa_flag} alt="" className={style.sliderFlag} />
+        </li>
+      </ul>
       <div
         className={[style.contentBackground, style.content_1_Background].join(
           " "

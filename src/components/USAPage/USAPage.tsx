@@ -1,7 +1,7 @@
 import style from "./USAPage.module.scss";
 import countryIcon from "../../assets/antigua_Icon.webp";
 import Button from "../../genericComponents/Button/Button";
-import countryImage from "../../assets/antigua_barbuda.webp";
+import countryImage from "../../assets/usa.webp";
 import { useEffect, useRef, useState } from "react";
 
 interface BannerShowLogic {
@@ -54,11 +54,11 @@ export const USAPage = () => {
   return (
     <main className={style.pageBackground}>
       <section className={style.landingPage}>
-        <h1>多米尼加</h1>
+        <h1>美国</h1>
       </section>
       <section className={style.intro}>
         <article className={style.introWrapper}>
-          <h2>多米尼加</h2>
+          <h2>美国</h2>
           <p>
             多米尼加（Dominica）是位于加勒比海东部的一座美丽的小岛，面积约750平方公里，拥有约72,000人口。这个岛国被称为“自然岛”，因为它有着世界上最美丽的自然风光和独特的生态环境。多米尼加的名字来源于拉丁文“Domenica”，意为星期日，因为哥伦布在1493年的一个星期日发现了这座岛屿。
             多米尼加是加勒比地区最为原始、自然的岛屿之一。这里的山峰、热带雨林、瀑布、河流和火山温泉构成了壮观的景色。这个国家的地形主要由火山构成，有许多活火山和休眠火山。莫里纳国家公园（Morne
@@ -129,8 +129,8 @@ export const USAPage = () => {
       <section id="cbiLaw" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.cbiLawWrapper}>
           <img src={countryIcon} alt="" className={style.countryIcon} />
-          <h2>Antigua & Barbuda CBI Program</h2>
-          <h2>安提瓜和巴布达 投资入籍简介</h2>
+          <h2>EB5 Program</h2>
+          <h2>美国 投资入籍简介</h2>
           <p>
             安提瓜和巴布达是东加勒比地区的一个独立的英联邦国家。
             安提瓜和巴布达郁郁葱葱的热带岛屿拥有约 365
@@ -152,7 +152,7 @@ export const USAPage = () => {
       </section>
       <section id="condition" ref={addToRefs} className={style.sectionWrapper}>
         <article className={style.conditionWrapper}>
-          <h2>安提瓜三种入籍模式可选，可快速六代入籍</h2>
+          <h2>美国三种入籍模式可选，可快速六代入籍</h2>
           <div className={style.conditioinBodyWrapper}>
             <img src={countryImage} alt="" className={style.countryImage} />
             <div>
@@ -233,7 +233,7 @@ export const USAPage = () => {
         <article className={style.documentBodyWrapper}>
           <div>
             <h2>
-              安提瓜和巴布达
+              美国
               <br />
               投资入籍流程与文件要求
             </h2>
@@ -277,13 +277,13 @@ export const USAPage = () => {
           </div>
           <div>
             <div className={style.documentListWrapper}>
-              <p>申请安提瓜投资入籍，您需要以下文件</p>
+              <p>申请美国投资入籍，您需要以下文件</p>
               <p>Citizenship by Investment Application Form AB1 </p>
               <p>Photograph and Signature Certificate Form AB2 </p>
               <p>Medical Certificate Form AB3</p>
               <p>Investment Confirmation Form AB4 </p>
               <p>Agent Form Form AB5</p>
-              <p>安提瓜护照申请表</p>
+              <p>美国护照申请表</p>
               <p>Antigua & Barbuda Passport L Form (16 and older)</p>
               <p>Antigua & Barbuda Passport M Form (Under 16)</p>
               <p>投资入籍申报表</p>
