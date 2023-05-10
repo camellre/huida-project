@@ -3,42 +3,43 @@
   position: relative;
 }
 
-.sliderSideBar {
-  position: sticky;
-  top: 5em;
-  height: 100%;
-  z-index: 10;
+.contentSentinelWrapper {
+  position: relative;
 }
 
-.flagWrapper {
-  position: sticky;
-  top: 5em;
+.contentSentinel_1 {
   height: 40em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 4em;
-  transform: translateY(4em);
-}
-
-.sliderFlag {
-  height: 4em;
   width: 100%;
-  transition: all 0.2s;
 }
 
-.sliderFlag:hover {
-  transform: scale(1.3);
+.contentAbsoluteWrapper {
+  position: absolute;
+  top: 0;
+  height: calc(100% - 40em);
+  width: 100%;
+}
+
+.contentBackgroundWrapper {
+  position: sticky;
+  top: 5em;
+  width: 100%;
 }
 
 .contentBackground {
   height: 40em;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  position: sticky;
+  position: absolute;
   top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.contentBackgroundShow {
+  visibility: visible;
+  opacity: 1;
 }
 
 .contentBackground h2 {
@@ -113,21 +114,21 @@
   z-index: 8;
 }
 
-.contentSliderWrapper {
+.contentWrapper {
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   max-width: 68em;
   margin: 0 auto;
   justify-content: center;
   column-gap: 3.5em;
 }
 
-.contentWrapper {
-  position: sticky;
-  top: 0;
+.contentPlaceholder {
+  width: 4em;
+  height: 100%;
+}
+
+.content {
+  position: relative;
   height: 40em;
   color: white;
   display: flex;
@@ -137,40 +138,7 @@
   flex-basis: 50em;
 }
 
-.content_1_Wrapper {
-  z-index: 1;
-}
-
-.content_2_Wrapper {
-  z-index: 2;
-}
-
-.content_3_Wrapper {
-  z-index: 3;
-}
-
-.content_4_Wrapper {
-  z-index: 4;
-}
-
-.content_5_Wrapper {
-  z-index: 5;
-}
-
-.content_6_Wrapper {
-  z-index: 6;
-}
-
-.content_7_Wrapper {
-  z-index: 7;
-}
-
-.content_8_Wrapper {
-  z-index: 8;
-}
-
-.content_1_Shadow::before {
-  content: "";
+.content_1_Shadow {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -187,4 +155,48 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+.flagSliderWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  max-width: 68em;
+  margin: 0 auto;
+  justify-content: center;
+  column-gap: 3.5em;
+}
+
+.sliderSideBar {
+  position: sticky;
+  top: 5em;
+  height: 100%;
+  z-index: 9;
+}
+
+.flagWrapper {
+  position: sticky;
+  top: 5em;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 4em;
+}
+
+.sliderFlag {
+  height: 4em;
+  width: 100%;
+  transition: all 0.2s ease-out;
+}
+
+.sliderFlag:hover {
+  transform: scale(1.3);
+}
+
+.flagPlaceholder {
+  flex-basis: 50em;
 }
