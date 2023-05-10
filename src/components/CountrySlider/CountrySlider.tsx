@@ -370,28 +370,92 @@ export const CountrySlider = () => {
         <ul className={style.sliderSideBar}>
           <div className={style.flagWrapper}>
             <li>
-              <img src={antigua_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={antigua_flag}
+                alt=""
+                className={
+                  contentShow[0]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={dominica_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={dominica_flag}
+                alt=""
+                className={
+                  contentShow[1]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={grenada_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={grenada_flag}
+                alt=""
+                className={
+                  contentShow[2]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={malta_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={malta_flag}
+                alt=""
+                className={
+                  contentShow[3]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={portugal_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={portugal_flag}
+                alt=""
+                className={
+                  contentShow[4]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={stkittis_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={stkittis_flag}
+                alt=""
+                className={
+                  contentShow[5]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={turkey_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={turkey_flag}
+                alt=""
+                className={
+                  contentShow[6]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
             <li>
-              <img src={usa_flag} alt="" className={style.sliderFlag} />
+              <img
+                src={usa_flag}
+                alt=""
+                className={
+                  contentShow[7]
+                    ? [style.sliderFlag, style.sliderFlagShow].join(" ")
+                    : style.sliderFlag
+                }
+              />
             </li>
           </div>
         </ul>
