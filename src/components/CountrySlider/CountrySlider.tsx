@@ -103,6 +103,14 @@ export const CountrySlider = () => {
                 </div>
                 <Button text="了解更多" />
               </div>
+              <ul className={style.contentDecorationWrapper}>
+                <li className={style.contentDecoration} />
+                <li className={style.contentDecoration} />
+                <li className={style.contentDecoration} />
+                <li className={style.contentDecoration} />
+                <li className={style.contentDecoration} />
+                <li className={style.contentDecoration} />
+              </ul>
             </div>
           </div>
           <div
@@ -332,11 +340,6 @@ export const CountrySlider = () => {
         ></div>
         <div
           className={style.contentSentinel_1}
-          id="stkittsSlider"
-          ref={addToRefs}
-        ></div>
-        <div
-          className={style.contentSentinel_1}
           id="dominicaSlider"
           ref={addToRefs}
         ></div>
@@ -347,12 +350,17 @@ export const CountrySlider = () => {
         ></div>
         <div
           className={style.contentSentinel_1}
+          id="maltaSlider"
+          ref={addToRefs}
+        ></div>
+        <div
+          className={style.contentSentinel_1}
           id="portugalSlider"
           ref={addToRefs}
         ></div>
         <div
           className={style.contentSentinel_1}
-          id="maltaSlider"
+          id="stkittsSlider"
           ref={addToRefs}
         ></div>
         <div
