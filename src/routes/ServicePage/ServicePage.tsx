@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 export const ServicePage = () => {
   return (
     <>
-      ServicePage
+      <Outlet />
       <Footer />
     </>
   );

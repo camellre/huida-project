@@ -233,17 +233,22 @@ export const NavigationBar = () => {
         >
           <li className={style.dropDownMenuItemWrapper}>
             <a href="#" className={style.dropDownMenuItem}>
-              其他服务1
+              签证代办
             </a>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
             <a href="#" className={style.dropDownMenuItem}>
-              其他服务2
+              文件翻译
             </a>
           </li>
           <li className={style.dropDownMenuItemWrapper}>
             <a href="#" className={style.dropDownMenuItem}>
-              其他服务3
+              加州公证
+            </a>
+          </li>
+          <li className={style.dropDownMenuItemWrapper}>
+            <a href="#" className={style.dropDownMenuItem}>
+              其他服务
             </a>
           </li>
         </menu>

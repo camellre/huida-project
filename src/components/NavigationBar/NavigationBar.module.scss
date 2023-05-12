@@ -95,7 +95,8 @@
 
 .dropDownMenuWrapper {
   height: 0;
-  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, auto));
   justify-content: space-around;
@@ -114,11 +115,10 @@
 
 .dropDownMenuItemWrapper {
   cursor: pointer;
-  justify-self: start;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  column-gap: 1em;
+  // column-gap: 1em;
 }
 
 .countryIconWrapper {
@@ -141,6 +141,7 @@
 .countryName {
   filter: opacity(0.8) saturate(0.7);
   transition: all 0.2s ease-out;
+  padding: 0 0.75em;
 }
 
 .dropDownMenuItemWrapper:hover .countryName {

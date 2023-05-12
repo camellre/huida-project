@@ -37,7 +37,9 @@ export const router = createBrowserRouter(
         <Route path="turkey" element={<TurkeyPage />} />
         <Route path="usa" element={<USAPage />} />
       </Route>
-      <Route path="service" element={<ServicePage />} />
+      <Route path="service" element={<ServicePage />}>
+        <Route index element={<div>Service Page</div>} />
+      </Route>
       <Route path="contact" element={<ContactUsPage />} />
       <Route path="/account" element={<AccountPage />}>
         <Route path="profile" element={<AccountProfile />} />
