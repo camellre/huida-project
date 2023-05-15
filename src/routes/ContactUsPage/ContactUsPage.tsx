@@ -21,9 +21,9 @@ export const ContactUsPage = () => {
                   <option value="program_3">多米尼加</option>
                   <option value="program_4">美国</option>
                   <option value="program_5">马耳他</option>
-                  <option value="program_6">格林纳达</option>
-                  <option value="program_7">格林纳达</option>
-                  <option value="program_8">格林纳达</option>
+                  <option value="program_6">葡萄牙</option>
+                  <option value="program_7">安提瓜</option>
+                  <option value="program_8">土耳其</option>
                 </select>
               </li>
               <li>
