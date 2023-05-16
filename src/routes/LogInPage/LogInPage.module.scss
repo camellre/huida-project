@@ -1,17 +1,9 @@
 .logInPageWrapper {
   position: relative;
-  top: 3em;
-  bottom: 0;
   height: calc(100vh - 5em);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .logInPageWrapper {
-    top: 5em;
-  }
 }
 
 .logInBoxWrapper {

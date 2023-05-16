@@ -1,26 +1,51 @@
 .contactUsPageWrapper {
   position: relative;
-  top: 3em;
-  bottom: 0;
   max-width: 68em;
   margin: 0 auto;
   padding: 0 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .contactUsPageWrapper {
-    top: 5em;
-  }
+  padding-bottom: 3em;
 }
 
 .contactUsFormWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid black;
-  width: 40em;
+  background-color: rgba(235, 235, 235);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  width: 46em;
+}
+
+.contactUsFormCenter {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   row-gap: 1em;
+  padding: 2em 0;
+}
+
+.contactUsFormTitle {
+  align-self: center;
+}
+
+.contactUsFormItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactUsFormQuestionBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 15em;
+}
+
+.contactUsFormInput {
+  border: none;
+  border-radius: 0.5em;
+  background-color: white;
 }
