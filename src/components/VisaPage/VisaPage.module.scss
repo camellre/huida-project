@@ -1,0 +1,16 @@
+.visaPageGrid {
+  position: relative;
+  max-width: 68em;
+  margin: 0 auto;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .visaPageGrid {
+    grid-template-columns: repeat(2, minmax(1em, 1fr));
+  }
+}
+
+.visaPageImage_1 {
+  max-width: 100%;
+}
