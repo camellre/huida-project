@@ -1,5 +1,4 @@
 import Button from "../../genericComponents/Button/Button";
-import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 import style from "./EligibilityCheck.module.scss";
 import image_1 from "../../assets/test_1.webp";
 import image_2 from "../../assets/test_2.webp";
@@ -9,32 +8,14 @@ import image_5 from "../../assets/test_5.webp";
 
 export const EligibilityCheck = () => {
   return (
-    <article className={style.background}>
-      <ImageWrapper
-        imageSrc={image_1}
-        imageStyle={style.imageAll}
-        wrapperStyle={style.image_1}
-      />
-      <ImageWrapper
-        imageSrc={image_2}
-        imageStyle={style.imageAll}
-        wrapperStyle={style.image_2}
-      />
-      <ImageWrapper
-        imageSrc={image_3}
-        imageStyle={style.imageAll}
-        wrapperStyle={style.image_3}
-      />
-      <ImageWrapper
-        imageSrc={image_4}
-        imageStyle={style.imageAll}
-        wrapperStyle={style.image_4}
-      />
-      <ImageWrapper
-        imageSrc={image_5}
-        imageStyle={style.imageAll}
-        wrapperStyle={style.image_5}
-      />
+    <article className={style.backgroundWrapper}>
+      <div className={style.background}>
+        <img src={image_1} alt="" className={style.imageAll} />
+        <img src={image_2} alt="" className={style.imageAll} />
+        <img src={image_3} alt="" className={style.imageAll} />
+        <img src={image_4} alt="" className={style.imageAll} />
+        <img src={image_5} alt="" className={style.imageAll} />
+      </div>
       <div className={style.contentWrapper}>
         <h2 className={style.background_1}>
           最适合您的移民

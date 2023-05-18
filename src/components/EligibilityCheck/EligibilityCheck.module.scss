@@ -1,42 +1,19 @@
-.background {
+.backgroundWrapper {
   width: 100%;
   height: 35em;
   position: relative;
 }
 
-.imageAll {
+.background {
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image_1 {
-  position: absolute;
-  height: 25em;
-  transform: translateX(5em);
-}
-
-.image_2 {
-  position: absolute;
-  height: 25em;
-  transform: translateX(18em);
-}
-
-.image_3 {
-  position: absolute;
-  height: 25em;
-  transform: translateX(31em);
-}
-
-.image_4 {
-  position: absolute;
-  height: 25em;
-  transform: translateX(44em);
-}
-
-.image_5 {
-  position: absolute;
-  height: 25em;
-  transform: translateX(57em);
+.imageAll {
+  max-width: 15em;
+  flex-basis: 10em;
 }
 
 .contentWrapper {
