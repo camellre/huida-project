@@ -14,9 +14,7 @@ function App() {
       <header>
         <NavigationBar />
       </header>
-      <div className={style.mainBodyWrapper}>
-        <Outlet />
-      </div>
+      <Outlet />
     </>
   );
 }

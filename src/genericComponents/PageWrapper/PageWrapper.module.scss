@@ -1,0 +1,13 @@
+.mainBodyWrapper {
+  position: relative;
+  top: 3em;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .mainBodyWrapper {
+    top: 5em;
+  }
+}
