@@ -103,14 +103,14 @@ export const CountrySlider = () => {
                 </div>
                 <Button text="了解更多" />
               </div>
-              <ul className={style.contentDecorationWrapper}>
+              {/* <ul className={style.contentDecorationWrapper}>
                 <li className={style.contentDecoration} />
                 <li className={style.contentDecoration} />
                 <li className={style.contentDecoration} />
                 <li className={style.contentDecoration} />
                 <li className={style.contentDecoration} />
                 <li className={style.contentDecoration} />
-              </ul>
+              </ul> */}
             </div>
           </div>
           <div
