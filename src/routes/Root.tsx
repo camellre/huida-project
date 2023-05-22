@@ -10,9 +10,9 @@ import AccountPage from "./AccountPage/AccountPage";
 import AccountProfile from "../components/AccountProfile/AccountProfile";
 import { CitizenshipPage } from "./StaticPages/StaticPages";
 import { ServicePage } from "./StaticPages/StaticPages";
-import { ContactUsPage } from "./ContactUsPage/ContactUsPage";
-import { AntiguaPage } from "../components/AntiguaPage/AntiguaPage";
+import { ContactUsPage } from "./StaticPages/StaticPages";
 import { HomePage } from "./StaticPages/StaticPages";
+import { AntiguaPage } from "../components/AntiguaPage/AntiguaPage";
 import { DominicaPage } from "../components/DominicaPage/DominicaPage";
 import { GrenadaPage } from "../components/GrenadaPage/GrenadaPage";
 import { MaltaPage } from "../components/MaltaPage/MaltaPage";
@@ -24,12 +24,12 @@ import VisaPage from "../components/VisaPage/VisaPage";
 import TranslatePage from "../components/TranslatePage/TranslatePage";
 import NotaryPage from "../components/NotaryPage/NotaryPage";
 import OtherServices from "../components/OtherServices/OtherServices";
+import { ContactUsPageIndex } from "../components/ContactUsPage/ContactUsPageIndex";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route index element={<HomePage />} />
-      <Route path="login" element={<LogInPage />} />
       <Route path="citizenship" element={<CitizenshipPage />}>
         <Route index element={<div>Citizenship Page</div>} />
         <Route path="antigua" element={<AntiguaPage />} />
@@ -48,7 +48,10 @@ export const router = createBrowserRouter(
         <Route path="notary" element={<NotaryPage />} />
         <Route path="otherservice" element={<OtherServices />} />
       </Route>
-      <Route path="contact" element={<ContactUsPage />} />
+      <Route path="contact" element={<ContactUsPage />}>
+        <Route index element={<ContactUsPageIndex />} />
+      </Route>
+      <Route path="login" element={<LogInPage />} />
       <Route path="/account" element={<AccountPage />}>
         <Route path="profile" element={<AccountProfile />} />
       </Route>

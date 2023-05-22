@@ -1,19 +1,28 @@
 .backgroundWrapper {
   width: 100%;
-  height: 35em;
   position: relative;
 }
 
 .background {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .imageAll {
-  max-width: 15em;
-  flex-basis: 10em;
+  max-width: 100%;
+}
+
+.contentPositioner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contentWrapper {

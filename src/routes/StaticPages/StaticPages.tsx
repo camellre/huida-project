@@ -13,3 +13,7 @@ export const CitizenshipPage = () => {
 export const ServicePage = () => {
   return <PageWrapper page={<Outlet />} />;
 };
+
+export const ContactUsPage = () => {
+  return <PageWrapper page={<Outlet />} />;
+};

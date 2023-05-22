@@ -1,5 +1,4 @@
 import style from "./HomeGrid.module.scss";
-import image_2 from "../../assets/home_3.png";
 import { OurServiceSection } from "../OurServiceSection/OurServiceSection";
 import { CustomerSupportSection } from "../CustomerSupportSection/CustomerSupportSection";
 import { PartnerSection } from "../PartnerSection/PartnerSection";
@@ -12,22 +11,22 @@ import { EligibilityCheck } from "../EligibilityCheck/EligibilityCheck";
 
 export const HomeGrid = () => {
   return (
-    <main className={style.homeGrid}>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+    <div className={style.homeGrid}>
+      <section className={style.gridItemWrapper}>
         <LandingPage />
       </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+      <section className={style.gridItemWrapper}>
         <ReasonForSecondCitizen />
       </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+      <section className={style.gridItemWrapper}>
         <CountrySlider />
       </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+      <section className={style.gridItemWrapper}>
         <CallOut />
       </section>
-      <section className={[style.gridItemWrapper, style.grid2Cols].join(" ")}>
+      <section className={style.gridItemWrapper}>
         <EligibilityCheck />
       </section>
-    </main>
+    </div>
   );
 };

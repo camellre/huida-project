@@ -1,5 +1,4 @@
 import style from "./PageWrapper.module.scss";
-import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import { ReactNode } from "react";
 
