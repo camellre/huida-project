@@ -3,11 +3,31 @@
 @import "sanitize.css/typography.css";
 
 *,
-*::before,
-*::after {
+::before,
+::after {
   margin: 0;
-  padding: 0;
-  border: 0;
+}
+
+// flex container with default row direction and center x and y axis.
+@mixin flexContainer($direction: column, $axisX: center, $axisY: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $axisX;
+  align-items: $axisY;
+}
+
+@mixin gridTemplate(
+  $itemAxisY: center,
+  $itemAxisX: center,
+  $rowGap: 1rem,
+  $columnGap: 1rem
+) {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  row-gap: $rowGap;
+  column-gap: $columnGap;
+  justify-items: $itemAxisX;
+  align-items: $itemAxisY;
 }
 
 a {

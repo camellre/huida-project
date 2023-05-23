@@ -1,40 +1,37 @@
-.callOutBackground {
-  max-height: 40em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@use "../../index.scss" as index;
 
-.callOutWrapper {
+.callOutBackground {
+  @include index.gridTemplate();
   max-width: 68em;
   margin: 0 auto;
   background: #555ba8;
   color: white;
-  padding: 0 3em;
+  padding: 1em;
 }
 
 .callOutTitle {
-  font-size: 1.5em;
-  text-align: center;
+  grid-column: 1/17;
+  margin: 0;
 }
 
-.callOutSideTitle {
-  font-size: 2em;
-  margin: 0;
+.callOutSideWrapper {
+  grid-column: 1/17;
 }
 
 .callOutSideNumber {
-  font-size: 3em;
-  margin: 0;
-}
-
-.callOutBodyWrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: start;
+  font-size: 2em;
 }
 
 .callOutBodyText {
+  grid-column: 1/17;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .callOutSideWrapper {
+    grid-column: 1/4;
+  }
+  .callOutBodyText {
+    grid-column: 4/17;
+  }
 }
