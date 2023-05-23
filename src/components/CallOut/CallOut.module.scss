@@ -10,6 +10,7 @@
 }
 
 .callOutTitle {
+  font-size: 1.25em;
   grid-column: 1/17;
   margin: 0;
 }
@@ -18,8 +19,12 @@
   grid-column: 1/17;
 }
 
+.callOutSideTitle {
+  font-size: 1.25em;
+}
+
 .callOutSideNumber {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 .callOutBodyText {
@@ -28,8 +33,20 @@
 }
 
 @media screen and (min-width: 768px) {
+  .callOutTitle {
+    font-size: 1.5em;
+  }
+
   .callOutSideWrapper {
     grid-column: 1/4;
+  }
+
+  .callOutSideTitle {
+    font-size: 1.5em;
+  }
+
+  .callOutSideNumber {
+    font-size: 2em;
   }
   .callOutBodyText {
     grid-column: 4/17;
