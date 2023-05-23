@@ -3,10 +3,11 @@
 @import "sanitize.css/typography.css";
 
 *,
-::before,
-::after {
-  box-sizing: border-box; /* 1 */
-  background-repeat: no-repeat; /* 2 */
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 a {
@@ -22,17 +23,13 @@ nav a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
-img,
-video,
-picture {
+img {
   max-width: 100%;
 }
 
 ul,
 menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 footer h2 {
@@ -40,12 +37,7 @@ footer h2 {
   margin: 0.83em 0 0;
 }
 
-@media screen and (min-width: 768px) {
-  footer p {
-    margin: 0;
-  }
-}
-
+//to make h1 & h2 element stay in the middle for mobile pages
 @media screen and (max-width: 767px) {
   h1,
   h2 {

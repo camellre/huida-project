@@ -1,5 +1,5 @@
 .callOutBackground {
-  height: 30em;
+  max-height: 40em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,21 +21,20 @@
 
 .callOutSideTitle {
   font-size: 2em;
-  margin: 0.5em 0;
-  text-align: center;
+  margin: 0;
 }
 
 .callOutSideNumber {
-  font-size: 4.5em;
-  margin: 0.25em 0 0.5em;
-  text-align: center;
+  font-size: 3em;
+  margin: 0;
 }
 
 .callOutBodyWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: start;
 }
 
 .callOutBodyText {
-  max-width: 75%;
+  margin: 0;
 }
