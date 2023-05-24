@@ -8,26 +8,35 @@
   margin: 0;
 }
 
-// flex container with default row direction and center x and y axis.
-@mixin flexContainer($direction: column, $axisX: center, $axisY: center) {
+// flex template with default row direction and center x and y axis.
+@mixin flexTemplate($direction: row, $axisX: center, $axisY: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $axisX;
   align-items: $axisY;
 }
 
+// grid template with default column number, item axis x & y, row and column gap.
 @mixin gridTemplate(
+  $columnNumber: 16,
   $itemAxisY: center,
   $itemAxisX: center,
   $rowGap: 1rem,
-  $columnGap: 1rem
+  $columnGap: 1rem,
+  $rowGapMobile: 0.5rem,
+  $columnGapMobile: 0.5rem
 ) {
   display: grid;
-  grid-template-columns: repeat(16, minmax(0, 1fr));
-  row-gap: $rowGap;
-  column-gap: $columnGap;
+  grid-template-columns: repeat($columnNumber, minmax(0, 1fr));
+  row-gap: $rowGapMobile;
+  column-gap: $columnGapMobile;
   justify-items: $itemAxisX;
   align-items: $itemAxisY;
+
+  @media screen and (min-width: 768px) {
+    row-gap: $rowGap;
+    column-gap: $columnGap;
+  }
 }
 
 a {
