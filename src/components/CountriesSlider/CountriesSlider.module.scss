@@ -1,0 +1,29 @@
+@use "../../index.scss" as index;
+
+.sliderWrapper {
+  @include index.gridTemplate();
+}
+
+.flagWrapper {
+  @include index.flexTemplate();
+  grid-column: 1/17;
+  column-gap: 0.625rem;
+  padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .flagWrapper {
+    column-gap: 1.5rem;
+  }
+}
+
+.flagItemWrapper {
+  flex-basis: 4em;
+}
+
+.contentWrapper {
+  background: url(--slider-background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

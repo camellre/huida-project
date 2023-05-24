@@ -8,6 +8,7 @@ import { ReasonForSecondCitizen } from "../ReasonForSecondCitizen/ReasonForSecon
 import { CountrySlider } from "../CountrySlider/CountrySlider";
 import { CallOut } from "../CallOut/CallOut";
 import { EligibilityCheck } from "../EligibilityCheck/EligibilityCheck";
+import { CountriesSlider } from "../CountriesSlider/CountriesSlider";
 
 export const HomeGrid = () => {
   return (
@@ -19,7 +20,7 @@ export const HomeGrid = () => {
         <ReasonForSecondCitizen />
       </section>
       <section className={style.gridItemWrapper}>
-        <CountrySlider />
+        <CountriesSlider />
       </section>
       <section className={style.gridItemWrapper}>
         <CallOut />
