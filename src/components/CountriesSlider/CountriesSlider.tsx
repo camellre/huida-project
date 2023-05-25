@@ -127,23 +127,26 @@ export const CountriesSlider = () => {
           </li>
         ))}
       </ul>
-      <ul>
-        {contentList.map((item, index) => (
-          <li
-            key={index}
-            className={style.contentWrapper}
-            style={
-              { "--slider-background": item.background } as React.CSSProperties
-            }
-          >
+      {contentList.map((item, index) => (
+        <article
+          key={index}
+          className={style.contentItemWrapper}
+          style={
+            {
+              "--slider-background": `url(${item.background})`,
+            } as React.CSSProperties
+          }
+        >
+          <div className={style.contentShadow} />
+          <div className={style.contentBodyWrapper}>
             <h2>{item.title}</h2>
             <p>{item.bodyText}</p>
             <p>{item.ad_1}</p>
             <p>{item.ad_2}</p>
             <p>{item.ad_3}</p>
-          </li>
-        ))}
-      </ul>
+          </div>
+        </article>
+      ))}
     </article>
   );
 };
