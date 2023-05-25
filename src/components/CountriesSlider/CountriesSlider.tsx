@@ -15,9 +15,11 @@ import portugalBackground from "../../assets/portugal.webp";
 import stkittisBackground from "../../assets/st_kitts.webp";
 import turkeyBackground from "../../assets/turkiye.webp";
 import usaBackground from "../../assets/usa.webp";
-import React from "react";
+import React, { useState } from "react";
+import Button from "../../genericComponents/Button/Button";
 
 export const CountriesSlider = () => {
+  const [sliderShowIndex, setSliderShowIndex] = useState(0);
   const flagList = [
     antigua_flag,
     dominica_flag,
@@ -118,11 +120,24 @@ export const CountriesSlider = () => {
     turkeyContent,
     usaContent,
   ];
+
+  const handleFlagClick = (index: number) => {
+    setSliderShowIndex(index);
+  };
+
   return (
     <article className={style.sliderWrapper}>
       <ul className={style.flagWrapper}>
         {flagList.map((item, index) => (
-          <li key={index} className={style.flagItemWrapper}>
+          <li
+            key={index}
+            className={
+              sliderShowIndex - index === 0
+                ? [style.flagItemWrapper, style.flagItemActive].join(" ")
+                : style.flagItemWrapper
+            }
+            onClick={() => handleFlagClick(index)}
+          >
             <img src={item} alt="" />
           </li>
         ))}
@@ -134,16 +149,20 @@ export const CountriesSlider = () => {
           style={
             {
               "--slider-background": `url(${item.background})`,
+              "--slider-translateX": `${-(sliderShowIndex - index) * 100}%`,
             } as React.CSSProperties
           }
         >
           <div className={style.contentShadow} />
           <div className={style.contentBodyWrapper}>
-            <h2>{item.title}</h2>
-            <p>{item.bodyText}</p>
-            <p>{item.ad_1}</p>
-            <p>{item.ad_2}</p>
-            <p>{item.ad_3}</p>
+            <h2 className={style.contentBodyTitle}>{item.title}</h2>
+            <p className={style.contentBodyText}>{item.bodyText}</p>
+            <div className={style.contentAdWrapper}>
+              <p className={style.contentAd_1}>{item.ad_1}</p>
+              <p className={style.contentAd_2}>{item.ad_2}</p>
+              <p className={style.contentAd_3}>{item.ad_3}</p>
+            </div>
+            <Button text="了解更多" theme={style.contentButton} />
           </div>
         </article>
       ))}

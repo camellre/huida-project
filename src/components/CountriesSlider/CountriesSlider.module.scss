@@ -3,6 +3,7 @@
 .sliderWrapper {
   @include index.gridTemplate();
   position: relative;
+  overflow: hidden;
 }
 
 .flagWrapper {
@@ -22,12 +23,21 @@
 
 .flagItemWrapper {
   flex-basis: 4em;
+  transition: all 0.2s;
+}
+
+.flagItemWrapper:hover {
+  transform: scale(1.25);
+}
+
+.flagItemActive {
+  transform: scale(1.25);
 }
 
 .contentItemWrapper {
   position: relative;
   grid-column: 1/17;
-  //grid-row: 1 / span 2;
+  grid-row: 1 / span 2;
   background: var(--slider-background);
   background-position: center;
   background-repeat: no-repeat;
@@ -35,6 +45,15 @@
   padding: 4.5rem 1rem 1rem;
   color: white;
   height: 100%;
+  width: 100%;
+  transition: all 1s;
+  transform: translateX(var(--slider-translateX));
+}
+
+@media screen and (min-width: 768px) {
+  .contentItemWrapper {
+    padding: 6rem 1rem 1rem;
+  }
 }
 
 .contentShadow {
@@ -46,11 +65,48 @@
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0.65) 40%,
     rgba(0, 0, 0, 0.25) 100%
   );
 }
 
 .contentBodyWrapper {
   position: relative;
+  @include index.gridTemplate();
+  height: 100%;
+}
+
+.contentBodyTitle {
+  grid-column: 4/14;
+}
+
+.contentBodyText {
+  grid-column: 2/16;
+  text-align: center;
+}
+
+.contentAdWrapper {
+  @include index.flexTemplate($axisX: space-around);
+  grid-column: 2/16;
+  grid-row: 3 / span 3;
+  width: 100%;
+}
+
+.contentButton {
+  grid-column: 1/17;
+}
+
+@media screen and (min-width: 768px) {
+  .contentBodyText {
+    grid-column: 3/12;
+  }
+
+  .contentAdWrapper {
+    grid-column: 3/12;
+    grid-row: 3 / span 1;
+  }
+
+  .contentButton {
+    grid-column: 3/12;
+  }
 }
