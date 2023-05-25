@@ -1,5 +1,4 @@
 import Button from "../../genericComponents/Button/Button";
-import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 import style from "./LandingPage.module.scss";
 import passport_1 from "../../assets/passport_1.webp";
 import passport_2 from "../../assets/passport_2.webp";
@@ -35,55 +34,45 @@ export const LandingPage = () => {
       className={style.landingPageWrapper}
       style={{ "--current-index": currentIndex } as React.CSSProperties}
     >
-      <div className={style.content_1_Background}>
-        <div className={style.content_1_Wrapper}>
-          <h2 className={style.content_1_text_1}>说走就走</h2>
-          <h2 className={style.content_1_text_2}>随心自由出行</h2>
-          <h2 className={style.content_1_text_3}>
-            为 保 护 您 和 您 的 家 人 出 行 自 由 做 保 障
-          </h2>
-          <h2 className={style.content_1_text_4}>
-            无 风 险 申 请 第 二 护 照 保 驾 护 航
-          </h2>
-          <Button theme={style.content_1_Button} text="了解更多" />
-          <ImageWrapper
-            imageSrc={passport_1}
-            imageAlt=""
-            wrapperStyle={style.content_1_PassportImage}
-          />
-        </div>
+      <div className={style.content_1_Wrapper}>
+        <h2 className={style.content_1_text_1}>说走就走</h2>
+        <h2 className={style.content_1_text_2}>随心自由出行</h2>
+        <h2 className={style.content_1_text_3}>
+          为 保 护 您 和 您 的 家 人 出 行 自 由 做 保 障
+        </h2>
+        <h2 className={style.content_1_text_4}>
+          无 风 险 申 请 第 二 护 照 保 驾 护 航
+        </h2>
+        <Button theme={style.content_1_Button} text="了解更多" />
+        <picture className={style.content_1_PassportImage}>
+          <img src={passport_1} alt="" />
+        </picture>
       </div>
-      <div className={style.content_2_Background}>
-        <div className={style.content_2_BlackBackground}></div>
-        <div className={style.content_2_Wrapper}>
-          <Button theme={style.content_2_Button} text="立刻咨询" />
-          <h2 className={style.content_2_text_1}>
-            为家庭未来保驾护航，拥有第二公民身份
-          </h2>
-          <h2 className={style.content_2_text_2}>
-            为您的子女创造
-            <br />
-            无限的教育机会！
-          </h2>
-          <ImageWrapper
-            imageSrc={passport_2}
-            wrapperStyle={style.content_2_PassportImage}
-          />
-        </div>
+
+      <div className={style.content_2_Wrapper}>
+        <h2 className={style.content_2_text_2}>
+          为您的子女创造
+          <br />
+          无限的教育机会！
+        </h2>
+        <h2 className={style.content_2_text_1}>
+          为家庭未来保驾护航，拥有第二公民身份
+        </h2>
+        <Button theme={style.content_2_Button} text="立刻咨询" />
+        <picture className={style.content_2_PassportImage}>
+          <img src={passport_2} alt="" />
+        </picture>
       </div>
-      <div className={style.content_3_Background}>
-        <div className={style.content_3_WhiteBackground}></div>
-        <div className={style.content_3_Wrapper}>
-          <h2 className={style.content_3_text_1}>拓展国际视野</h2>
-          <h2 className={style.content_3_text_2}>提高安全保障</h2>
-          <h2 className={style.content_3_text_3}>拥有第二身份</h2>
-          <h2 className={style.content_3_text_4}>让您享有更多国际优势</h2>
-          <Button text="立即申请" theme={style.content_3_Button} />
-          <ImageWrapper
-            imageSrc={passport_3}
-            wrapperStyle={style.content_3_PassportImage}
-          />
-        </div>
+
+      <div className={style.content_3_Wrapper}>
+        <h2 className={style.content_3_text_1}>拓展国际视野</h2>
+        <h2 className={style.content_3_text_2}>提高安全保障</h2>
+        <h2 className={style.content_3_text_3}>拥有第二身份</h2>
+        <h2 className={style.content_3_text_4}>让您享有更多国际优势</h2>
+        <Button text="立即申请" theme={style.content_3_Button} />
+        <picture className={style.content_3_PassportImage}>
+          <img src={passport_3} alt="" />
+        </picture>
       </div>
       <ul className={style.landingPageToggleWrapper}>
         <li

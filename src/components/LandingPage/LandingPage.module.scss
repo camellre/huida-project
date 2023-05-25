@@ -1,43 +1,10 @@
+@use "../../index.scss" as index;
+
 .landingPageWrapper {
+  @include index.gridTemplate();
   width: 100%;
   height: 35em;
   position: relative;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .landingPageWrapper {
-    height: 40em;
-  }
-
-  .landingPageToggleWrapper {
-    position: absolute;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 1em;
-    bottom: 1%;
-    left: 48%;
-  }
-
-  .landingPageToggler {
-    cursor: pointer;
-    border: 1px solid red;
-  }
-}
-
-//content 1 section
-.content_1_Background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
-  background-image: url("../../assets/planeWindows-2560.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition: all 1s;
   overflow: hidden;
 }
 
@@ -46,238 +13,164 @@
   margin: 0;
 }
 
-.content_1_Wrapper {
-  position: relative;
-  max-width: 68em;
-  margin: 0 auto;
-  padding: 0 1em;
-  height: 55%;
+@media screen and (min-width: 768px) {
+  .landingPageWrapper {
+    height: 40em;
+  }
+}
+
+.landingPageToggleWrapper {
+  grid-column: 1/17;
+  grid-row: 1;
+  color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  row-gap: 0.5em;
+  align-items: center;
+  column-gap: 1em;
+  z-index: 1;
+  transform: translateY(12em);
+}
+
+.landingPageToggler {
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+//content 1 section
+.content_1_Wrapper {
+  grid-column: 1/17;
+  grid-row: 1;
+  @include index.gridTemplate();
+  width: 100%;
+  height: 100%;
+  transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
+  background-image: url("../../assets/planeWindows-2560.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 1s;
 }
 
 .content_1_text_1 {
   font-size: 3em;
+  grid-column: 1/17;
 }
 
 .content_1_text_2 {
   font-size: 3em;
   white-space: nowrap;
+  grid-column: 1/17;
 }
 
 .content_1_text_3 {
   padding-top: 0.875em;
   font-size: 1em;
+  grid-column: 1/17;
 }
 
 .content_1_text_4 {
   font-size: 1em;
   padding-bottom: 1em;
+  grid-column: 1/17;
 }
 
 .content_1_Button {
-  top: 62%;
-  left: 38%;
+  grid-column: 1/17;
 }
 
 .content_1_PassportImage {
-  position: absolute;
-  top: 19.5em;
-  right: 5%;
+  grid-column: 1/17;
 }
 
 @media screen and (min-width: 768px) {
-  .content_1_Wrapper {
-    height: 100%;
-  }
-
   .content_1_text_1 {
     font-size: 4em;
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    grid-column: 1/17;
   }
 
   .content_1_text_2 {
     font-size: 4em;
-    position: absolute;
-    top: 26%;
-    left: 18%;
+    grid-column: 1/17;
   }
 
   .content_1_text_3 {
     font-size: 1.125em;
-    position: absolute;
-    top: 41%;
-    left: 34%;
+    grid-column: 1/17;
   }
 
   .content_1_text_4 {
     font-size: 1.125em;
-    position: absolute;
-    top: 49%;
-    left: 25%;
+    grid-column: 1/17;
   }
 
   .content_1_Button {
-    position: absolute;
-    top: 62%;
-    left: 38%;
+    grid-column: 1/17;
   }
 
   .content_1_PassportImage {
-    top: 42%;
-    left: 49%;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .content_1_PassportImage {
-    top: 45%;
-    left: 55%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  .content_1_PassportImage {
-    top: 47%;
-    left: 55%;
-  }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .content_1_PassportImage {
-    top: 42%;
-    left: 49%;
+    grid-column: 1/17;
   }
 }
 
 //content 2 section
-.content_2_Background {
+.content_2_Wrapper {
+  @include index.gridTemplate();
+  grid-column: 1/17;
+  grid-row: 1;
   width: 100%;
   height: 100%;
-  position: absolute;
   transform: translateX(calc((var(--current-index, 0) - 1) * -100%));
   background-image: url("../../assets/classroom (1).webp");
   background-repeat: no-repeat;
-  background-position: -6em 0;
   background-size: cover;
   transition: all 1s;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .content_2_Background {
-    background-position: -9em 0;
-  }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 1999px) {
-  .content_2_Background {
-    background-position: 0 -5em;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .content_2_Background {
-    background-position: 0 -9em;
-  }
-}
-
-.content_2_Wrapper {
-  position: relative;
-  max-width: 68em;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
 }
 
 .content_2_text_1 {
   font-size: 0.875em;
+  grid-column: 1/17;
 }
 
 .content_2_text_2 {
   font-size: 2.125em;
+  grid-column: 1/17;
 }
 
-.content_2_BlackBackground::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 1%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.75) 75%,
-    rgba(0, 0, 0, 0.99) 100%
-  );
+.content_2_Button {
+  grid-column: 1/17;
+}
+
+.content_2_PassportImage {
+  grid-column: 1/17;
 }
 
 @media screen and (min-width: 768px) {
-  .content_2_BlackBackground {
-    height: 100%;
-    width: 40%;
-    position: absolute;
-    right: 0;
-  }
-
-  .content_2_BlackBackground::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 140%;
-    left: -40%;
-    bottom: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0) 1%,
-      rgba(0, 0, 0, 0.9) 50%,
-      rgba(0, 0, 0, 0.95) 75%,
-      rgba(0, 0, 0, 0.99) 100%
-    );
-  }
-
   .content_2_text_1 {
     font-size: 1.125em;
-    position: absolute;
-    top: 27%;
-    right: 6%;
+    grid-column: 1/17;
   }
 
   .content_2_text_2 {
     font-size: 3em;
-    position: absolute;
-    top: 35%;
-    right: 1%;
+    grid-column: 1/17;
   }
 
   .content_2_Button {
-    position: absolute;
-    top: 15%;
-    right: 17%;
+    grid-column: 1/17;
   }
 
   .content_2_PassportImage {
-    position: absolute;
-    top: 55%;
-    right: -10%;
+    grid-column: 1/17;
   }
 }
 
 //content 3 background
-.content_3_Background {
+.content_3_Wrapper {
+  @include index.gridTemplate();
+  grid-column: 1/17;
+  grid-row: 1;
   width: 100%;
   height: 100%;
-  position: absolute;
   transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
   background-image: url("../../assets/Digital_Transformation.webp");
   background-repeat: no-repeat;
@@ -287,104 +180,60 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .content_3_Background {
-    background-position: 20em 0;
-  }
+.content_3_text_1 {
+  font-size: 3.125em;
+  grid-column: 1/17;
 }
 
-@media screen and (min-width: 1440px) {
-  .content_3_Background {
-    background-position: 30em -20em;
-  }
+.content_3_text_2 {
+  font-size: 3.125em;
+  grid-column: 1/17;
 }
 
-.content_3_Wrapper {
-  position: relative;
-  height: 100%;
-  max-width: 68em;
-  margin: 0 auto;
-  padding: 0 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
+.content_3_text_3 {
+  font-size: 1.125em;
+  grid-column: 1/17;
 }
 
-.content_3_WhiteBackground::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 1%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.75) 75%,
-    rgba(0, 0, 0, 0.99) 100%
-  );
+.content_3_text_4 {
+  font-size: 1.125em;
+  grid-column: 1/17;
+}
+
+.content_3_Button {
+  grid-column: 1/17;
+}
+
+.content_3_PassportImage {
+  grid-column: 1/17;
 }
 
 @media screen and (min-width: 768px) {
-  .content_3_WhiteBackground::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    right: calc(100% - 50em);
-    bottom: 0;
-    background: linear-gradient(
-      270deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.45) 10em,
-      rgba(255, 255, 255, 0.9) 20em,
-      rgba(255, 255, 255, 1) 30em,
-      rgba(255, 255, 255, 1) 100%
-    );
-  }
-
   .content_3_text_1 {
-    position: absolute;
     font-size: 3.125em;
-    top: 20%;
-    left: 5%;
-  }
-
-  .content_3_Wrapper h2 {
-    color: black;
+    grid-column: 1/17;
   }
 
   .content_3_text_2 {
-    position: absolute;
     font-size: 3.125em;
-    top: 35%;
-    left: 11%;
+    grid-column: 1/17;
   }
 
   .content_3_text_3 {
-    position: absolute;
     font-size: 1.125em;
-    top: 53%;
-    left: 12%;
+    grid-column: 1/17;
   }
 
   .content_3_text_4 {
-    position: absolute;
     font-size: 1.125em;
-    top: 60%;
-    left: 8.5%;
+    grid-column: 1/17;
   }
 
   .content_3_Button {
-    position: absolute;
-    top: 69%;
-    left: 13%;
+    grid-column: 1/17;
   }
 
   .content_3_PassportImage {
-    position: absolute;
-    top: 20%;
-    left: 60%;
+    grid-column: 1/17;
   }
 }
