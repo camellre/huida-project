@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .sliderWrapper {
+    min-height: 35rem;
+  }
+}
+
 .flagWrapper {
   @include index.flexTemplate();
   grid-column: 1/17;
@@ -52,7 +58,7 @@
 
 @media screen and (min-width: 768px) {
   .contentItemWrapper {
-    padding: 6rem 1rem 1rem;
+    padding: 7.5rem 1rem 1rem;
   }
 }
 
