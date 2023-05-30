@@ -62,6 +62,7 @@
   width: 100%;
   max-width: 100rem;
   height: 100%;
+  grid-auto-rows: minmax(0, auto);
 }
 
 .content_1_text_1 {
@@ -93,6 +94,7 @@
 
 .content_1_PassportImage {
   grid-column: 1/17;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -129,6 +131,7 @@
 //content 2 section
 .content_2_Wrapper {
   @include index.gridTemplate();
+  grid-auto-rows: minmax(0, auto);
   grid-column: 1/17;
   grid-row: 1;
   width: 100%;
@@ -142,10 +145,10 @@
 
 .content_2_Shadow {
   grid-column: 6/17;
-  grid-row: 1/5;
+  grid-row: 1/6;
   background: linear-gradient(
     270deg,
-    rgba(0, 0, 0, 0.99) 0%,
+    rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.75) 70%,
     rgba(0, 0, 0, 0) 100%
   );
@@ -154,40 +157,60 @@
 }
 
 .content_2_text_1 {
-  font-size: 0.875em;
+  font-size: 2.125em;
   grid-column: 1/17;
-  grid-row: 2;
+  grid-row: 1;
+  transform: translateY(2rem);
 }
 
 .content_2_text_2 {
   font-size: 2.125em;
   grid-column: 1/17;
-  grid-row: 1;
+  grid-row: 2;
+  transform: translateY(2rem);
+}
+
+.content_2_text_3 {
+  font-size: 0.875em;
+  grid-column: 1/17;
+  grid-row: 3;
+  transform: translateY(2rem);
 }
 
 .content_2_Button {
   grid-column: 1/17;
-  grid-row: 3;
+  grid-row: 4;
+  transform: translateY(2rem);
 }
 
 .content_2_PassportImage {
   grid-column: 1/17;
-  grid-row: 4;
+  grid-row: 5;
+  transform: translateY(3rem);
 }
 
 @media screen and (min-width: 768px) {
   .content_2_text_1 {
-    font-size: 1.125em;
+    font-size: 3em;
     grid-column: 6/17;
+    transform: translateY(3rem);
   }
 
   .content_2_text_2 {
     font-size: 3em;
     grid-column: 6/17;
+    transform: translateY(3rem);
+  }
+
+  .content_2_text_3 {
+    font-size: 1.125em;
+    grid-column: 6/17;
+    transform: translateY(3rem);
   }
 
   .content_2_Button {
     grid-column: 6/17;
+    transform: translateY(3rem);
   }
 
   .content_2_PassportImage {
@@ -196,10 +219,11 @@
 }
 
 //content 3 background
-.content_3_Background {
-  @include index.flexTemplate();
+.content_3_Wrapper {
+  @include index.gridTemplate();
   grid-column: 1/17;
   grid-row: 1;
+  grid-auto-rows: minmax(0, auto);
   width: 100%;
   height: 100%;
   transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
@@ -210,67 +234,105 @@
   transition: all 1s;
 }
 
-.content_3_Wrapper {
-  @include index.gridTemplate();
-  max-width: 100rem;
-  width: 100%;
+.content_3_Wrapper h2 {
+  color: black;
+}
+
+.content_3_Shadow {
+  grid-column: 1/17;
+  grid-row: 1 / span 6;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.99) 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
   height: 100%;
+  width: 100%;
 }
 
 .content_3_text_1 {
   font-size: 3.125em;
   grid-column: 1/17;
+  grid-row: 1;
+  transform: translateY(1.5rem);
 }
 
 .content_3_text_2 {
   font-size: 3.125em;
   grid-column: 1/17;
+  grid-row: 2;
+  transform: translateY(1.5rem);
 }
 
 .content_3_text_3 {
   font-size: 1.125em;
   grid-column: 1/17;
+  grid-row: 3;
+  transform: translateY(1.5rem);
 }
 
 .content_3_text_4 {
   font-size: 1.125em;
   grid-column: 1/17;
+  grid-row: 4;
+  transform: translateY(1.5rem);
 }
 
 .content_3_Button {
   grid-column: 1/17;
+  grid-row: 5;
+  transform: translateY(1.5rem);
 }
 
 .content_3_PassportImage {
   grid-column: 1/17;
+  grid-row: 6;
+  transform: translateY(4rem);
 }
 
 @media screen and (min-width: 768px) {
+  .content_3_Shadow {
+    grid-column: 1/12;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.99) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.65) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
   .content_3_text_1 {
     font-size: 3.125em;
-    grid-column: 1/17;
+    grid-column: 1/13;
+    transform: translateY(6rem);
   }
 
   .content_3_text_2 {
     font-size: 3.125em;
-    grid-column: 1/17;
+    grid-column: 1/13;
+    transform: translateY(6rem);
   }
 
   .content_3_text_3 {
     font-size: 1.125em;
-    grid-column: 1/17;
+    grid-column: 1/13;
+    transform: translateY(6rem);
   }
 
   .content_3_text_4 {
     font-size: 1.125em;
-    grid-column: 1/17;
+    grid-column: 1/13;
+    transform: translateY(6rem);
   }
 
   .content_3_Button {
-    grid-column: 1/17;
+    grid-column: 1/13;
+    transform: translateY(6rem);
   }
 
   .content_3_PassportImage {
     grid-column: 1/17;
+    transform: translate(20rem, -10rem);
   }
 }

@@ -53,12 +53,9 @@ export const LandingPage = () => {
 
       <div className={style.content_2_Wrapper}>
         <div className={style.content_2_Shadow} />
-        <h2 className={style.content_2_text_2}>
-          为您的子女创造
-          <br />
-          无限的教育机会！
-        </h2>
-        <h2 className={style.content_2_text_1}>
+        <h2 className={style.content_2_text_1}>为您的子女创造</h2>
+        <h2 className={style.content_2_text_2}>无限的教育机会！</h2>
+        <h2 className={style.content_2_text_3}>
           为家庭未来保驾护航，拥有第二公民身份
         </h2>
         <Button theme={style.content_2_Button} text="立刻咨询" />
@@ -67,17 +64,16 @@ export const LandingPage = () => {
         </picture>
       </div>
 
-      <div className={style.content_3_Background}>
-        <div className={style.content_3_Wrapper}>
-          <h2 className={style.content_3_text_1}>拓展国际视野</h2>
-          <h2 className={style.content_3_text_2}>提高安全保障</h2>
-          <h2 className={style.content_3_text_3}>拥有第二身份</h2>
-          <h2 className={style.content_3_text_4}>让您享有更多国际优势</h2>
-          <Button text="立即申请" theme={style.content_3_Button} />
-          <picture className={style.content_3_PassportImage}>
-            <img src={passport_3} alt="" />
-          </picture>
-        </div>
+      <div className={style.content_3_Wrapper}>
+        <div className={style.content_3_Shadow} />
+        <h2 className={style.content_3_text_1}>拓展国际视野</h2>
+        <h2 className={style.content_3_text_2}>提高安全保障</h2>
+        <h2 className={style.content_3_text_3}>拥有第二身份</h2>
+        <h2 className={style.content_3_text_4}>让您享有更多国际优势</h2>
+        <Button text="立即申请" theme={style.content_3_Button} />
+        <picture className={style.content_3_PassportImage}>
+          <img src={passport_3} alt="" />
+        </picture>
       </div>
 
       <ul className={style.landingPageToggleWrapper}>
