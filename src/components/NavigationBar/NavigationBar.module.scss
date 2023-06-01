@@ -17,7 +17,7 @@
 .navBarWrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 68em;
+  max-width: 85em;
   margin: 0 auto;
   padding: 0 0.5em;
 }
@@ -95,7 +95,7 @@
 
 .dropDownMenuWrapper {
   height: 0;
-  max-width: 68em;
+  max-width: 85em;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, auto));
