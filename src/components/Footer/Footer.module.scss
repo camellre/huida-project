@@ -1,3 +1,5 @@
+@use "../../index.scss" as index;
+
 .footerBackground {
   position: relative;
   top: 3em;
@@ -20,37 +22,36 @@
 }
 
 .footerWrapper {
-  position: relative;
-  max-width: 64em;
+  @include index.gridTemplate_1();
+  max-width: 85em;
   margin: 0 auto;
 }
 
 .footerLogoWrapper {
-  display: flex;
-  justify-content: center;
-  height: 4em;
-  padding: 1em 0 0;
+  grid-column: 1/17;
+  width: 18rem;
+  padding-top: 0.625rem;
 }
 
 @media screen and (min-width: 768px) {
   .footerLogoWrapper {
-    justify-content: start;
-    height: 5em;
-    margin: 0 2em;
+    grid-column: 2/17;
+    justify-self: start;
   }
 }
 
-.footerGrid {
-  display: grid;
-  grid-template-rows: repeat(12, minmax(1em, auto));
-  justify-content: center;
-  margin: 0 2em;
-}
-
 .mobileBreakLine {
+  grid-column: 1/17;
   border: none;
+  width: 18rem;
   height: 2px;
   background-color: black;
+}
+
+.footerItem {
+  grid-column: 1/17;
+  width: 18rem;
+  padding: 0.625rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,90 +59,83 @@
     display: none;
   }
 
-  .footerGrid {
-    grid-template-rows: repeat(3, minmax(1em, auto));
-    grid-template-columns: repeat(5, minmax(1em, 1fr));
-    grid-template-areas:
-      "contact contact      quickLinks follow     social"
-      "address salesEmail   term       newsLetter social"
-      "phone   supportEmail policy     emailSub   social";
-    column-gap: 1em;
-    row-gap: 3em;
-    padding: 0 0 4em 0;
+  .footerItem {
+    width: auto;
+    justify-self: start;
+    align-self: start;
   }
 
   .contact {
-    grid-area: contact;
+    grid-column: 2/8;
+    grid-row: 2;
   }
 
   .quickLinks {
-    grid-area: quickLinks;
+    grid-column: 8/11;
+    grid-row: 2;
   }
 
   .follow {
-    grid-area: follow;
+    grid-column: 11/14;
+    grid-row: 2;
   }
 
   .address {
-    grid-area: address;
+    grid-column: 2/5;
+    grid-row: 3;
   }
 
   .salesEmail {
-    grid-area: salesEmail;
+    grid-column: 5/ 8;
+    grid-row: 3;
   }
 
   .term {
-    grid-area: term;
+    grid-column: 8/11;
+    grid-row: 3;
   }
 
   .newsLetter {
-    grid-area: newsLetter;
+    grid-column: 11/14;
+    grid-row: 3;
   }
 
   .phone {
-    grid-area: phone;
+    grid-column: 2/5;
+    grid-row: 4;
   }
 
   .supportEmail {
-    grid-area: supportEmail;
+    grid-column: 5/8;
+    grid-row: 4;
   }
 
   .policy {
-    grid-area: policy;
+    grid-column: 8/11;
+    grid-row: 4;
   }
 
   .emailSub {
-    grid-area: emailSub;
-  }
-
-  .social {
-    grid-area: social;
+    grid-column: 11/14;
+    grid-row: 4;
   }
 }
 
-.footerSocialIconWrapper {
+.socialIconWrapper {
   display: flex;
-  flex-direction: row;
-  margin: 1em 0;
-  justify-content: center;
+  justify-content: space-between;
+  grid-column: 1/17;
+  width: 18rem;
+  padding: 0.625rem 0;
 }
 
 @media screen and (min-width: 768px) {
-  .footerSocialIconWrapper {
-    position: absolute;
-    top: 15%;
-    left: 85%;
-    display: flex;
+  .socialIconWrapper {
+    grid-column: 14/17;
+    grid-row: 2/5;
     flex-direction: column;
-    align-items: center;
+    width: auto;
   }
-}
-
-.footerCopyright {
-  background-color: black;
-  text-align: center;
-  color: white;
-  padding: 0.5em 0;
 }
 
 .footerSocialIcon {
@@ -154,4 +148,11 @@
 
 .footerSocialIcon:hover {
   fill: rgba(0, 0, 0, 1);
+}
+
+.footerCopyright {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 0.625rem 0;
 }

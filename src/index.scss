@@ -40,6 +40,18 @@
   }
 }
 
+@mixin gridTemplate_1(
+  $columnNumber: 16,
+  $itemAxisY: center,
+  $itemAxisX: center
+) {
+  display: grid;
+  grid-template-columns: repeat($columnNumber, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, auto);
+  justify-items: $itemAxisX;
+  align-items: $itemAxisY;
+}
+
 a {
   text-decoration: none;
 }
@@ -60,17 +72,4 @@ img {
 ul,
 menu {
   list-style: none;
-}
-
-footer h2 {
-  text-align: start;
-  margin: 0.83em 0 0;
-}
-
-//to make h1 & h2 element stay in the middle for mobile pages
-@media screen and (max-width: 767px) {
-  h1,
-  h2 {
-    text-align: center;
-  }
 }

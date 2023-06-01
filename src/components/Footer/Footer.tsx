@@ -12,83 +12,72 @@ function Footer() {
     <footer className={style.footerBackground}>
       <div className={style.footerWrapper}>
         <Logo logoWrapperStyle={style.footerLogoWrapper} />
-        <ul className={style.footerGrid}>
-          <li className={style.contact}>
-            <h2>Contact</h2>
-            <hr className={style.mobileBreakLine} />
-          </li>
-          <li className={style.address}>
-            <p>
-              500 Market Street
-              <br />
-              San Francisco CA, 94518
-            </p>
-          </li>
-          <li className={style.salesEmail}>
-            <p>
-              Sales:
-              <br />
-              info@mysite.com
-            </p>
-          </li>
-          <li className={style.phone}>
-            <p>
-              General Inquires:
-              <br />
-              123-456-7890
-            </p>
-          </li>
-          <li className={style.supportEmail}>
-            <p>
-              Customer Care:
-              <br />
-              info@mysite.com
-            </p>
-          </li>
+        <h2 className={[style.footerItem, style.contact].join(" ")}>Contact</h2>
+        <hr className={style.mobileBreakLine} />
+        <p className={[style.footerItem, style.address].join(" ")}>
+          500 Market Street
+          <br />
+          San Francisco CA, 94518
+        </p>
+        <p className={[style.footerItem, style.salesEmail].join(" ")}>
+          Sales:
+          <br />
+          info@mysite.com
+        </p>
+        <p className={[style.footerItem, style.phone].join(" ")}>
+          General Inquires:
+          <br />
+          123-456-7890
+        </p>
+        <p className={[style.footerItem, style.supportEmail].join(" ")}>
+          Customer Care:
+          <br />
+          info@mysite.com
+        </p>
 
-          <li className={style.quickLinks}>
-            <h2>Quick Links</h2>
-            <hr className={style.mobileBreakLine} />
-          </li>
-          <li className={style.term}>
-            <p>Terms & Conditions</p>
-          </li>
-          <li className={style.policy}>
-            <p>Privacy Policy</p>
-          </li>
+        <h2 className={[style.footerItem, style.quickLinks].join(" ")}>
+          Quick Links
+        </h2>
+        <hr className={style.mobileBreakLine} />
 
-          <li className={style.follow}>
-            <h2>Follow</h2>
-            <hr className={style.mobileBreakLine} />
+        <a className={[style.footerItem, style.term].join(" ")}>
+          Terms & Conditions
+        </a>
+
+        <a className={[style.footerItem, style.policy].join(" ")}>
+          Privacy Policy
+        </a>
+
+        <h2 className={[style.footerItem, style.follow].join(" ")}>Follow</h2>
+        <hr className={style.mobileBreakLine} />
+
+        <a className={[style.footerItem, style.newsLetter].join(" ")}>
+          Sign up to get the latest <br />
+          news on us.
+        </a>
+
+        <a className={[style.footerItem, style.emailSub].join(" ")}>
+          Email Subscribe
+        </a>
+
+        <ul className={style.socialIconWrapper}>
+          <li>
+            <FacebookIcon facebookIconStyle={style.footerSocialIcon} />
           </li>
-          <li className={style.newsLetter}>
-            <p>
-              Sign up to get the latest <br />
-              news on us.
-            </p>
+          <li>
+            <TwitterIcon twitterIconStyle={style.footerSocialIcon} />
           </li>
-          <li className={style.emailSub}>Email Subscribe</li>
-          <li className={style.social}>
-            <ul className={style.footerSocialIconWrapper}>
-              <li>
-                <FacebookIcon facebookIconStyle={style.footerSocialIcon} />
-              </li>
-              <li>
-                <TwitterIcon twitterIconStyle={style.footerSocialIcon} />
-              </li>
-              <li>
-                <InstagramIcon instagramIconStyle={style.footerSocialIcon} />
-              </li>
-              <li>
-                <TiktokIcon tiktokIconStyle={style.footerSocialIcon} />
-              </li>
-              <li>
-                <YoutubeIcon youtubeIconStyle={style.footerSocialIcon} />
-              </li>
-              <li>
-                <WeiboIcon weiboIconStyle={style.footerSocialIcon} />
-              </li>
-            </ul>
+          <li>
+            <InstagramIcon instagramIconStyle={style.footerSocialIcon} />
+          </li>
+          <li>
+            <TiktokIcon tiktokIconStyle={style.footerSocialIcon} />
+          </li>
+          <li>
+            <YoutubeIcon youtubeIconStyle={style.footerSocialIcon} />
+          </li>
+          <li>
+            <WeiboIcon weiboIconStyle={style.footerSocialIcon} />
           </li>
         </ul>
       </div>
