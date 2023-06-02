@@ -25,13 +25,14 @@ import TranslatePage from "../components/TranslatePage/TranslatePage";
 import NotaryPage from "../components/NotaryPage/NotaryPage";
 import OtherServices from "../components/OtherServices/OtherServices";
 import { ContactUsPageIndex } from "../components/ContactUsPage/ContactUsPageIndex";
+import { CitizenshipPageIndex } from "../components/CitizenshipPageIndex/CitizenshipPageIndex";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route index element={<HomePage />} />
       <Route path="citizenship" element={<CitizenshipPage />}>
-        <Route index element={<div>Citizenship Page</div>} />
+        <Route index element={<CitizenshipPageIndex />} />
         <Route path="antigua" element={<AntiguaPage />} />
         <Route path="dominica" element={<DominicaPage />} />
         <Route path="grenada" element={<GrenadaPage />} />
@@ -43,10 +44,10 @@ export const router = createBrowserRouter(
       </Route>
       <Route path="service" element={<ServicePage />}>
         <Route index element={<div>Service Page</div>} />
-        <Route path="visa" element={<VisaPage />} />
+        {/* <Route path="visa" element={<VisaPage />} />
         <Route path="translate" element={<TranslatePage />} />
         <Route path="notary" element={<NotaryPage />} />
-        <Route path="otherservice" element={<OtherServices />} />
+        <Route path="otherservice" element={<OtherServices />} /> */}
       </Route>
       <Route path="contact" element={<ContactUsPage />}>
         <Route index element={<ContactUsPageIndex />} />

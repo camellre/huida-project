@@ -37,7 +37,7 @@ export const NavigationBar = () => {
       setDropDownList([true, true, false]);
     },
     otherService: () => {
-      setDropDownList([true, false, true]);
+      setDropDownList([false, false, false]);
     },
     contactUs: () => {
       setDropDownList([false, false, false]);

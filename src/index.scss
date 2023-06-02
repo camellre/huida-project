@@ -43,11 +43,12 @@
 @mixin gridTemplate_1(
   $columnNumber: 16,
   $itemAxisY: center,
-  $itemAxisX: center
+  $itemAxisX: center,
+  $rowHeight: minmax(1rem, auto)
 ) {
   display: grid;
   grid-template-columns: repeat($columnNumber, minmax(0, 1fr));
-  grid-auto-rows: minmax(0, auto);
+  grid-auto-rows: $rowHeight;
   justify-items: $itemAxisX;
   align-items: $itemAxisY;
 }
