@@ -1,4 +1,4 @@
-@use "../../index.scss" as index;
+@use "../../App.module.scss" as index;
 
 .landingPageWrapper {
   @include index.gridTemplate();

@@ -1,4 +1,4 @@
-@use "../../index.scss" as index;
+@use "../../App.module.scss" as index;
 
 .pageWrapper {
   @include index.gridTemplate_1();
@@ -32,5 +32,73 @@
     grid-row: 2;
     padding-top: 2rem;
     max-width: 26rem;
+  }
+}
+
+.countrySection {
+  @include index.gridTemplate_1($rowHeight: 7rem);
+  width: 100%;
+  grid-column: 3/15;
+  grid-row: 8;
+}
+
+.programTitle {
+  grid-column: 1/17;
+  width: 100%;
+  justify-self: start;
+}
+
+@media screen and (min-width: 768px) {
+  .countrySection {
+    @include index.gridTemplate_1($rowHeight: 10rem);
+    grid-column: 2/16;
+    grid-row: 4;
+  }
+}
+
+.countryIcon {
+  position: relative;
+  top: 2rem;
+  grid-column: 1/17;
+  max-width: 6rem;
+}
+
+.countryTitle {
+  position: relative;
+  top: 1rem;
+  grid-column: 1/17;
+}
+
+.countryText {
+  position: relative;
+  top: -1rem;
+  grid-column: 1/17;
+}
+
+.countryButton {
+  position: relative;
+  top: -2rem;
+  grid-column: 1/17;
+}
+
+@media screen and (min-width: 768px) {
+  .countryIcon {
+    top: 0;
+    grid-column: 1/4;
+  }
+
+  .countryTitle {
+    top: 0;
+    grid-column: 4/7;
+  }
+
+  .countryText {
+    top: 0;
+    grid-column: 8/14;
+  }
+
+  .countryButton {
+    top: 0;
+    grid-column: 14/17;
   }
 }
