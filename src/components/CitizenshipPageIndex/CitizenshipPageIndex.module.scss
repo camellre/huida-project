@@ -7,29 +7,30 @@
 }
 
 .introSection {
+  @include index.flexTemplate();
   grid-column: 3/15;
   grid-row: 2;
+  height: 23rem;
 }
 
 .passportImageSection {
+  @include index.flexTemplate();
   grid-column: 3/15;
   grid-row: 5;
-  max-width: 26rem;
+  max-width: 16.875rem;
 }
 
 @media screen and (min-width: 768px) {
   .introSection {
-    @include index.flexTemplate();
     grid-column: 2/8;
     grid-row: 2;
     height: 29rem;
   }
 
   .passportImageSection {
-    @include index.flexTemplate();
     grid-column: 9/16;
     grid-row: 2;
     padding-top: 2rem;
-    height: 29rem;
+    max-width: 26rem;
   }
 }
