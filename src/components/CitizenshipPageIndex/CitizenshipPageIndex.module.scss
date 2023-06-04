@@ -102,3 +102,60 @@
     grid-column: 14/17;
   }
 }
+
+.contactUsSection {
+  @include index.gridTemplate_1($rowHeight: 4rem);
+  width: 100%;
+  grid-column: 3/15;
+  grid-row: 11;
+}
+
+.contactUsTitle {
+  grid-column: 1/17;
+  grid-row: 1;
+}
+
+.contactUsText {
+  grid-column: 1/17;
+  grid-row: 5/8;
+}
+
+.contactUsButton {
+  grid-column: 1/17;
+  grid-row: 8/9;
+}
+
+.contactUsImage {
+  grid-column: 1/17;
+  grid-row: 2/5;
+  width: 16.876rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contactUsSection {
+    @include index.gridTemplate_1($rowHeight: 8.5rem);
+    grid-column: 1/17;
+    grid-row: 6;
+  }
+
+  .contactUsTitle {
+    grid-column: 2/9;
+    grid-row: 1;
+  }
+
+  .contactUsText {
+    grid-column: 2/9;
+    grid-row: 2;
+  }
+
+  .contactUsButton {
+    grid-column: 2/9;
+    grid-row: 3;
+  }
+
+  .contactUsImage {
+    grid-column: 10/16;
+    grid-row: 1/4;
+    width: auto;
+  }
+}

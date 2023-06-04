@@ -8,6 +8,7 @@ import countryIcon_5 from "../../assets/portugal_icon.webp";
 import countryIcon_6 from "../../assets/stkittis_icon.webp";
 import countryIcon_7 from "../../assets/turkey_icon.webp";
 import countryIcon_8 from "../../assets/usa_Icon.webp";
+import contactUsImage from "../../assets/otherservice_image_1.webp";
 import Button from "../../genericComponents/Button/Button";
 
 export const CitizenshipPageIndex = () => {
@@ -96,6 +97,16 @@ export const CitizenshipPageIndex = () => {
           investors. Options start from USD 800,000.
         </p>
         <Button text={"Learn More"} theme={style.countryButton} />
+      </section>
+      <section className={style.contactUsSection}>
+        <h3 className={style.contactUsTitle}>Contact Us Today</h3>
+        <p className={style.contactUsText}>
+          Skyward assists international clients in obtaining visa and
+          citizenship under the respective programs. Contact us to arrange an
+          initial private consultation.
+        </p>
+        <Button text={"Contact Us"} theme={style.contactUsButton} />
+        <img src={contactUsImage} alt={" "} className={style.contactUsImage} />
       </section>
     </div>
   );
