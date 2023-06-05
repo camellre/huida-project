@@ -26,6 +26,7 @@ import NotaryPage from "../components/NotaryPage/NotaryPage";
 import OtherServices from "../components/OtherServices/OtherServices";
 import { ContactUsPageIndex } from "../components/ContactUsPage/ContactUsPageIndex";
 import { CitizenshipPageIndex } from "../components/CitizenshipPageIndex/CitizenshipPageIndex";
+import { ServicePageIndex } from "../components/ServicePageIndex/ServicePageIndex";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -43,7 +44,7 @@ export const router = createBrowserRouter(
         <Route path="usa" element={<USAPage />} />
       </Route>
       <Route path="service" element={<ServicePage />}>
-        <Route index element={<div>Service Page</div>} />
+        <Route index element={<ServicePageIndex />} />
         {/* <Route path="visa" element={<VisaPage />} />
         <Route path="translate" element={<TranslatePage />} />
         <Route path="notary" element={<NotaryPage />} />

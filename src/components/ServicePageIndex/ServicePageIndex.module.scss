@@ -1,0 +1,178 @@
+@use "../../App.module.scss" as index;
+
+.pageWrapper {
+  @include index.gridTemplate_1();
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+.visaSection {
+  @include index.gridTemplate_1($rowHeight: 4rem);
+  width: 100%;
+  grid-column: 3/15;
+  grid-row: 2;
+}
+
+.visaTitle {
+  grid-column: 1/17;
+  grid-row: 1;
+}
+
+.visaText {
+  grid-column: 1/17;
+  grid-row: 5/8;
+}
+
+.visaButton {
+  grid-column: 1/17;
+  grid-row: 8/9;
+}
+
+.visaImage {
+  grid-column: 1/17;
+  grid-row: 2/5;
+  width: 16.876rem;
+}
+
+@media screen and (min-width: 768px) {
+  .visaSection {
+    @include index.gridTemplate_1($rowHeight: 8.5rem);
+    grid-column: 1/17;
+    grid-row: 2;
+  }
+
+  .visaTitle {
+    grid-column: 2/9;
+    grid-row: 1;
+  }
+
+  .visaText {
+    grid-column: 2/9;
+    grid-row: 2;
+  }
+
+  .visaButton {
+    grid-column: 2/9;
+    grid-row: 3;
+  }
+
+  .visaImage {
+    grid-column: 10/16;
+    grid-row: 1/4;
+    width: auto;
+  }
+}
+
+.notarySection {
+  @include index.gridTemplate_1($rowHeight: 4rem);
+  width: 100%;
+  grid-column: 3/15;
+  grid-row: 5;
+}
+
+.notaryTitle {
+  grid-column: 1/17;
+  grid-row: 1;
+}
+
+.notaryText {
+  grid-column: 1/17;
+  grid-row: 5/8;
+}
+
+.notaryButton {
+  grid-column: 1/17;
+  grid-row: 8/9;
+}
+
+.notaryImage {
+  grid-column: 1/17;
+  grid-row: 2/5;
+  width: 16.876rem;
+}
+
+@media screen and (min-width: 768px) {
+  .notarySection {
+    @include index.gridTemplate_1($rowHeight: 8.5rem);
+    grid-column: 1/17;
+    grid-row: 4;
+  }
+
+  .notaryTitle {
+    grid-column: 9/16;
+    grid-row: 1;
+  }
+
+  .notaryText {
+    grid-column: 9/16;
+    grid-row: 2;
+  }
+
+  .notaryButton {
+    grid-column: 9/16;
+    grid-row: 3;
+  }
+
+  .notaryImage {
+    grid-column: 2/8;
+    grid-row: 1/4;
+    width: auto;
+  }
+}
+
+.contactUsSection {
+  @include index.gridTemplate_1($rowHeight: 4rem);
+  width: 100%;
+  grid-column: 3/15;
+  grid-row: 11;
+}
+
+.contactUsTitle {
+  grid-column: 1/17;
+  grid-row: 1;
+}
+
+.contactUsText {
+  grid-column: 1/17;
+  grid-row: 5/8;
+}
+
+.contactUsButton {
+  grid-column: 1/17;
+  grid-row: 8/9;
+}
+
+.contactUsImage {
+  grid-column: 1/17;
+  grid-row: 2/5;
+  width: 16.876rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contactUsSection {
+    @include index.gridTemplate_1($rowHeight: 8.5rem);
+    grid-column: 1/17;
+    grid-row: 6;
+  }
+
+  .contactUsTitle {
+    grid-column: 2/9;
+    grid-row: 1;
+  }
+
+  .contactUsText {
+    grid-column: 2/9;
+    grid-row: 2;
+  }
+
+  .contactUsButton {
+    grid-column: 2/9;
+    grid-row: 3;
+  }
+
+  .contactUsImage {
+    grid-column: 10/16;
+    grid-row: 1/4;
+    width: auto;
+  }
+}
