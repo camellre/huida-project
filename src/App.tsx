@@ -10,12 +10,12 @@ function App() {
     window.scrollTo(0, 0);
   }, [routeLocation]);
   return (
-    <>
-      <header>
+    <div className={style.viewport}>
+      <header className={style.header}>
         <NavigationBar />
       </header>
       <Outlet />
-    </>
+    </div>
   );
 }
 

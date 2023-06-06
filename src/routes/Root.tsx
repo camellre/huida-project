@@ -46,7 +46,7 @@ export const router = createBrowserRouter(
         <Route index element={<ContactUsPageIndex />} />
       </Route>
       <Route path="login" element={<LogInPage />} />
-      <Route path="/account" element={<AccountPage />}>
+      <Route path="account" element={<AccountPage />}>
         <Route path="profile" element={<AccountProfile />} />
       </Route>
     </Route>

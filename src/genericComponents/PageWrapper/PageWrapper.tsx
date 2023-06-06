@@ -9,7 +9,7 @@ interface PageWrapperProps {
 export const PageWrapper = ({ page }: PageWrapperProps) => {
   return (
     <>
-      <main className={style.mainBodyWrapper}>{page}</main>
+      <main>{page}</main>
       <Footer />
     </>
   );

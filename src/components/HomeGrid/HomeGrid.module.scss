@@ -1,11 +1,11 @@
 @use "../../App.module.scss" as index;
 
 .homeGrid {
-  @include index.gridTemplate($rowGap: 5rem, $rowGapMobile: 2rem);
+  @include index.gridTemplate();
 }
 
 .gridItemWrapper {
   @include index.flexTemplate();
-  grid-column: 1/17;
+  grid-column: 1/25;
   width: 100%;
 }

@@ -1,5 +1,5 @@
 .navBar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background: linear-gradient(
@@ -11,7 +11,6 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
-  z-index: 3;
 }
 
 .navBarWrapper {

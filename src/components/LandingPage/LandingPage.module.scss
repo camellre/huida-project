@@ -1,7 +1,7 @@
 @use "../../App.module.scss" as index;
 
 .landingPageWrapper {
-  @include index.gridTemplate_1($rowHeight: 90vh);
+  @include index.gridTemplate();
   width: 100%;
   position: relative;
 }
@@ -11,11 +11,11 @@
   margin: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .landingPageWrapper {
-    @include index.gridTemplate_1($rowHeight: 100vh);
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .landingPageWrapper {
+//     @include index.gridTemplate_1($rowHeight: 100vh);
+//   }
+// }
 
 //.landingPageToggleWrapper {
 //  grid-column: 1/17;
@@ -43,7 +43,7 @@
 //content 1 section
 .content_1_Background {
   @include index.flexTemplate();
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 1;
   //transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
   background-image: url("../../assets/planeWindows-2560.webp");
@@ -51,8 +51,9 @@
   background-position: center;
   background-size: cover;
   transition: all 1s;
-  height: 100%;
   width: 100%;
+  height: calc(100vh - 5rem);
+  scroll-snap-align: start;
 }
 
 .content_1_Wrapper {
@@ -60,90 +61,89 @@
   width: 100%;
   max-width: 100rem;
   height: 100%;
-  grid-auto-rows: minmax(0, auto);
 }
 
 .content_1_text_1 {
   font-size: 3em;
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .content_1_text_2 {
   font-size: 3em;
   white-space: nowrap;
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .content_1_text_3 {
   padding-top: 0.875em;
   font-size: 1em;
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .content_1_text_4 {
   font-size: 1em;
   padding-bottom: 1em;
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .content_1_Button {
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .content_1_PassportImage {
-  grid-column: 1/17;
+  grid-column: 1/25;
   height: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .content_1_text_1 {
     font-size: 4em;
-    grid-column: 2/9;
+    grid-column: 1/25;
   }
 
   .content_1_text_2 {
     font-size: 4em;
-    grid-column: 3/11;
+    grid-column: 1/25;
   }
 
   .content_1_text_3 {
     font-size: 1.125em;
-    grid-column: 3/11;
+    grid-column: 1/25;
   }
 
   .content_1_text_4 {
     font-size: 1.125em;
-    grid-column: 3/11;
+    grid-column: 1/25;
   }
 
   .content_1_Button {
-    grid-column: 6/8;
+    grid-column: 1/25;
   }
 
   .content_1_PassportImage {
-    grid-column: 7/17;
-    transform: translate(4rem, -10rem);
+    grid-column: 1/25;
+    // transform: translate(4rem, -10rem);
   }
 }
 
 //content 2 section
 .content_2_Wrapper {
   @include index.gridTemplate();
-  grid-auto-rows: minmax(0, auto);
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 2;
   width: 100%;
-  height: 100%;
   //transform: translateX(calc((var(--current-index, 0) - 1) * -100%));
   background-image: url("../../assets/classroom (1).webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -8rem 0;
   transition: all 1s;
+  height: calc(100vh - 5rem);
+  scroll-snap-align: start;
 }
 
 .content_2_Shadow {
-  grid-column: 6/17;
+  grid-column: 14/25;
   grid-row: 1/6;
   background: linear-gradient(
     270deg,
@@ -157,33 +157,33 @@
 
 .content_2_text_1 {
   font-size: 2.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 1;
   transform: translateY(2rem);
 }
 
 .content_2_text_2 {
   font-size: 2.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 2;
   transform: translateY(2rem);
 }
 
 .content_2_text_3 {
   font-size: 0.875em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 3;
   transform: translateY(2rem);
 }
 
 .content_2_Button {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 4;
   transform: translateY(2rem);
 }
 
 .content_2_PassportImage {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 5;
   transform: translateY(3rem);
 }
@@ -191,46 +191,46 @@
 @media screen and (min-width: 768px) {
   .content_2_text_1 {
     font-size: 3em;
-    grid-column: 6/17;
+    grid-column: 6/25;
     transform: translateY(3rem);
   }
 
   .content_2_text_2 {
     font-size: 3em;
-    grid-column: 6/17;
+    grid-column: 6/25;
     transform: translateY(3rem);
   }
 
   .content_2_text_3 {
     font-size: 1.125em;
-    grid-column: 6/17;
+    grid-column: 6/25;
     transform: translateY(3rem);
   }
 
   .content_2_Button {
-    grid-column: 6/17;
+    grid-column: 6/25;
     transform: translateY(3rem);
   }
 
   .content_2_PassportImage {
-    grid-column: 6/17;
+    grid-column: 6/25;
   }
 }
 
 //content 3 background
 .content_3_Wrapper {
   @include index.gridTemplate();
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 3;
-  grid-auto-rows: minmax(0, auto);
   width: 100%;
-  height: 100%;
   //transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
   background-image: url("../../assets/Digital_Transformation.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   transition: all 1s;
+  height: calc(100vh - 5rem);
+  scroll-snap-align: start;
 }
 
 .content_3_Wrapper h2 {
@@ -238,7 +238,7 @@
 }
 
 .content_3_Shadow {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 1 / span 6;
   background: linear-gradient(
     90deg,
@@ -252,40 +252,40 @@
 
 .content_3_text_1 {
   font-size: 3.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 1;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_2 {
   font-size: 3.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 2;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_3 {
   font-size: 1.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 3;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_4 {
   font-size: 1.125em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 4;
   transform: translateY(1.5rem);
 }
 
 .content_3_Button {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 5;
   transform: translateY(1.5rem);
 }
 
 .content_3_PassportImage {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 6;
   transform: translateY(3rem);
 }
@@ -303,35 +303,35 @@
   }
   .content_3_text_1 {
     font-size: 3.125em;
-    grid-column: 1/13;
+    grid-column: 1/20;
     transform: translateY(6rem);
   }
 
   .content_3_text_2 {
     font-size: 3.125em;
-    grid-column: 1/13;
+    grid-column: 1/20;
     transform: translateY(6rem);
   }
 
   .content_3_text_3 {
     font-size: 1.125em;
-    grid-column: 1/13;
+    grid-column: 1/20;
     transform: translateY(6rem);
   }
 
   .content_3_text_4 {
     font-size: 1.125em;
-    grid-column: 1/13;
+    grid-column: 1/20;
     transform: translateY(6rem);
   }
 
   .content_3_Button {
-    grid-column: 1/13;
+    grid-column: 1/20;
     transform: translateY(6rem);
   }
 
   .content_3_PassportImage {
-    grid-column: 1/17;
+    grid-column: 1/20;
     transform: translate(20rem, -10rem);
   }
 }

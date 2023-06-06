@@ -5,6 +5,21 @@
   padding: 0;
 }
 
+#root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 3rem;
+}
+
+@media screen and (min-width:768px) {
+  #root {
+    scroll-padding-top: 5rem;
+  }
+}
+
 a {
   text-decoration: none;
 }
