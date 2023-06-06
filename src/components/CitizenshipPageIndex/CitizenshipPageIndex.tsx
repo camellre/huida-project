@@ -16,14 +16,10 @@ export const CitizenshipPageIndex = () => {
     <div className={style.pageWrapper}>
       <section className={style.introSection}>
         <article>
-          <h1>Citizenship by Investment</h1>
+          <h1>投资入籍</h1>
           <p>
-            Explore the benefits of our Citizenship by Investment (CBI) program.
-            By making a significant investment in a country's economic
-            development, you can swiftly obtain citizenship. This allows for
-            greater global mobility and potential tax advantages, while
-            simultaneously contributing to the country's growth. Engage with the
-            CBI program - a strategic investment for a promising future.
+            探索我们的投资入籍（CBI）计划的好处。通过对一个国家的经济发展做出重大投资，您可以迅速获得公民身份。这使您能享受更大的全球流动性和潜在的税收优惠，同时为该国的增长做出贡献。参与CBI计划
+            - 对充满希望的未来的战略投资。
           </p>
         </article>
       </section>
@@ -33,79 +29,94 @@ export const CitizenshipPageIndex = () => {
         </picture>
       </section>
       <section className={style.countrySection}>
-        <h2 className={style.programTitle}>
-          Citizenship by Investment Programs
-        </h2>
+        <h2 className={style.programTitle}>投资入籍国家</h2>
         <img src={countryIcon_1} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Antigua and Barbuda</h3>
+        <h3 className={style.countryTitle}>安提瓜与巴布达</h3>
         <p className={style.countryText}>
-          Antigua and Barbuda offers one of the most competitive citizenship
-          programs in the Caribbean. Options start from USD 100,000.
+          安提瓜和巴布达提供了加勒比地区最具竞争力的公民计划之一。100,000美元起。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/antigua"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_2} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Dominica</h3>
+        <h3 className={style.countryTitle}>多米尼加</h3>
         <p className={style.countryText}>
-          Dominica offers an attractive citizenship program with a real estate
-          option. Required contributions start from USD 100,000.
+          多米尼加提供了一个有吸引力的公民计划，该计划包括房地产选项。投资100,000美元起。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/dominica"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_3} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Grenada</h3>
+        <h3 className={style.countryTitle}>格林纳达</h3>
         <p className={style.countryText}>
-          Grenada has the only Caribbean citizenship program that holds an E-2
-          Investor Visa Treaty with the USA, allowing citizens to be eligible to
-          apply for a non-immigrant visa.
+          格林纳达是唯一一家与美国持有E-2投资者签证条约的加勒比公民计划，使公民有资格申请非移民签证。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/grenada"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_4} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Malta</h3>
+        <h3 className={style.countryTitle}>马耳他</h3>
         <p className={style.countryText}>
-          Citizenship by Naturalisation for Exceptional Services by Direct
-          Investment. This process offers the world’s strictest due diligence
-          standards and vetting.
+          通过直接投资的特殊服务获得归化公民身份。此过程提供世界上最严格的尽职调查和审查标准。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/malta"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_5} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Portugal</h3>
+        <h3 className={style.countryTitle}>葡萄牙</h3>
         <p className={style.countryText}>
-          As one of the EU members, Portugal offers benefits that provide the
-          opportunities to invest in the entire EU. Options start from USD
-          500,000.
+          作为欧盟成员之一，葡萄牙提供的福利为在整个欧盟投资提供了机会。500,000美元起。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/portugal"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_6} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>St. Kitts and Nevis</h3>
+        <h3 className={style.countryTitle}>圣基茨</h3>
         <p className={style.countryText}>
-          St. Kitts and Nevis has one of the strongest passports among all the
-          Caribbean citizenship programs. A donation of USD 125,000 is required.
+          圣基茨和尼维斯拥有加勒比公民计划中最强大的护照之一。125,000美元起。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/stkittis"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_7} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>Türkiye</h3>
+        <h3 className={style.countryTitle}>土耳其</h3>
         <p className={style.countryText}>
-          The Türkiye Citizenship by Investment Program provides citizenship of
-          a country with links to both Asia and Europe and access to the markets
-          in both regions.
+          土耳其投资入籍计划提供了一个与亚洲和欧洲都有联系的国家的公民身份，并能进入两个地区的市场。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/turkey"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
         <img src={countryIcon_8} alt={" "} className={style.countryIcon} />
-        <h3 className={style.countryTitle}>United States</h3>
+        <h3 className={style.countryTitle}>美国</h3>
         <p className={style.countryText}>
-          The United States of America, as the most powerful country in the
-          world, offers the most comprehensive benefits for every kind of
-          investors. Options start from USD 800,000.
+          作为世界上最强大的国家，美利坚合众国为所有类型的投资者提供最全面的福利。800,000美元起。
         </p>
-        <Button text={"Learn More"} theme={style.countryButton} />
+        <Button
+          to="/citizenship/usa"
+          text={"Learn More"}
+          theme={style.countryButton}
+        />
       </section>
       <section className={style.contactUsSection}>
-        <h3 className={style.contactUsTitle}>Contact Us Today</h3>
+        <h3 className={style.contactUsTitle}>联系我们</h3>
         <p className={style.contactUsText}>
-          Skyward assists international clients in obtaining visa and
-          citizenship under the respective programs. Contact us to arrange an
-          initial private consultation.
+          汇达移民信息咨询中心协助国际客户在各自的程序下获得签证和公民身份。联系我们安排初次私人咨询。
         </p>
-        <Button text={"Contact Us"} theme={style.contactUsButton} />
+        <Button to="/contact" text={"立即咨询"} theme={style.contactUsButton} />
         <img src={contactUsImage} alt={" "} className={style.contactUsImage} />
       </section>
     </div>

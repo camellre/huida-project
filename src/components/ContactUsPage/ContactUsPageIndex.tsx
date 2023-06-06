@@ -96,7 +96,7 @@ export const ContactUsPageIndex = () => {
               <option value="residencyCountry_6">USA</option>
             </select>
           </div>
-          <Button theme={style.submitButton} text="提交" />
+          <Button to="/contact" theme={style.submitButton} text="提交" />
         </form>
       </article>
     </>

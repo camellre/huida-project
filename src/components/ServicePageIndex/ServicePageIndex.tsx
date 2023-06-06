@@ -25,13 +25,11 @@ export const ServicePageIndex = () => {
         <img src={notaryImage} alt={" "} className={style.notaryImage} />
       </section>
       <section className={style.contactUsSection}>
-        <h3 className={style.contactUsTitle}>Contact Us Today</h3>
+        <h3 className={style.contactUsTitle}>联系我们</h3>
         <p className={style.contactUsText}>
-          Skyward assists international clients in obtaining visa and
-          citizenship under the respective programs. Contact us to arrange an
-          initial private consultation.
+          汇达移民信息咨询中心协助国际客户在各自的程序下获得签证和公民身份。联系我们安排初次私人咨询。
         </p>
-        <Button text={"Contact Us"} theme={style.contactUsButton} />
+        <Button to="/contact" text={"立即咨询"} theme={style.contactUsButton} />
         <img src={contactUsImage} alt={" "} className={style.contactUsImage} />
       </section>
     </div>

@@ -3,8 +3,8 @@ import Logo from "../Logo/Logo";
 import style from "./NavigationBar.module.scss";
 import mobileMenuSwitchIcon from "../../assets/menu-duo-md-svgrepo-com.svg";
 import Button from "../../genericComponents/Button/Button";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { LanguageIcon } from "../../genericComponents/LanguageIcon/LanguageIcon";
 import countryIcon_1 from "../../assets/antigua_Icon.webp";
 import countryIcon_2 from "../../assets/dominica_icon.webp";
@@ -22,6 +22,11 @@ interface dropDownFunctionType {
 export const NavigationBar = () => {
   const [dropDownList, setDropDownList] = useState([false, false, false]);
   const [mobileMenuSwitch, setMobileMenuSwitch] = useState(false);
+  let routeLocation = useLocation();
+
+  useEffect(() => {
+    setMobileMenuSwitch(false);
+  }, [routeLocation]);
 
   const dropDownFunction: dropDownFunctionType = {
     navLogo: () => {
@@ -112,14 +117,14 @@ export const NavigationBar = () => {
           </li>
         </menu>
         <menu className={style.menuWrapper}>
-          <li>
+          {/* <li>
             <Link to={"/login"}>
               <Button theme={style.logInButton} text="Log In/Sign Up" />
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Button theme={style.customerServiceButton} text="在线客服" />
-          </li>
+          </li> */}
           <li>
             <LanguageIcon languageIconStyle={style.languageIcon} />
           </li>
@@ -262,24 +267,24 @@ export const NavigationBar = () => {
       >
         <menu className={style.mobileMenu}>
           <li className={style.mobileMenuItemWrapper}>
-            <a className={style.mobileMenuItem} href="#">
+            <Link className={style.mobileMenuItem} to="/">
               首页
-            </a>
+            </Link>
           </li>
           <li className={style.mobileMenuItemWrapper}>
-            <a className={style.mobileMenuItem} href="#">
+            <Link className={style.mobileMenuItem} to="/citizenship">
               移民服务
-            </a>
+            </Link>
           </li>
           <li className={style.mobileMenuItemWrapper}>
-            <a className={style.mobileMenuItem} href="#">
+            <Link className={style.mobileMenuItem} to="/service">
               其他服务
-            </a>
+            </Link>
           </li>
           <li className={style.mobileMenuItemWrapper}>
-            <a className={style.mobileMenuItem} href="#">
+            <Link className={style.mobileMenuItem} to="/contact">
               联系我们
-            </a>
+            </Link>
           </li>
         </menu>
       </div>

@@ -142,7 +142,7 @@ export default function CountryPage({ country }: CountryPageProps) {
           <br />
           {country.introText_4}
         </p>
-        <Button text="下载法案原件" theme={style.lawButton} />
+        <Button to=" " text="下载法案原件" theme={style.lawButton} />
       </section>
       <section id="project" ref={addToRefs} className={style.project}>
         <h2 className={style.projectTitle}>
@@ -234,7 +234,7 @@ export default function CountryPage({ country }: CountryPageProps) {
             {country.priceProject_3}
           </label>
 
-          <Button text="开始估算" theme={style.projectButton} />
+          <Button to=" " text="开始估算" theme={style.projectButton} />
         </form>
       </section>
       <section id="documents" ref={addToRefs} className={style.documents}>
@@ -296,7 +296,7 @@ export default function CountryPage({ country }: CountryPageProps) {
           <p>其他文件要求</p>
           <p>文件要求清单</p>
         </div>
-        <Button text="马上申请" theme={style.documentsButton} />
+        <Button to="/contact" text="马上申请" theme={style.documentsButton} />
       </section>
     </main>
   );

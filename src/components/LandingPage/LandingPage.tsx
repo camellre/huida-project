@@ -44,7 +44,11 @@ export const LandingPage = () => {
           <h2 className={style.content_1_text_4}>
             无 风 险 申 请 第 二 护 照 保 驾 护 航
           </h2>
-          <Button theme={style.content_1_Button} text="了解更多" />
+          <Button
+            to="/citizenship"
+            theme={style.content_1_Button}
+            text="了解更多"
+          />
           <picture className={style.content_1_PassportImage}>
             <img src={passport_1} alt="" />
           </picture>
@@ -58,7 +62,11 @@ export const LandingPage = () => {
         <h2 className={style.content_2_text_3}>
           为家庭未来保驾护航，拥有第二公民身份
         </h2>
-        <Button theme={style.content_2_Button} text="立刻咨询" />
+        <Button
+          to="/citizenship"
+          theme={style.content_2_Button}
+          text="立刻咨询"
+        />
         <picture className={style.content_2_PassportImage}>
           <img src={passport_2} alt="" />
         </picture>
@@ -70,7 +78,11 @@ export const LandingPage = () => {
         <h2 className={style.content_3_text_2}>提高安全保障</h2>
         <h2 className={style.content_3_text_3}>拥有第二身份</h2>
         <h2 className={style.content_3_text_4}>让您享有更多国际优势</h2>
-        <Button text="立即申请" theme={style.content_3_Button} />
+        <Button
+          to="/citizenship"
+          text="立即申请"
+          theme={style.content_3_Button}
+        />
         <picture className={style.content_3_PassportImage}>
           <img src={passport_3} alt="" />
         </picture>

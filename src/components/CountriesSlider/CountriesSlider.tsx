@@ -38,6 +38,7 @@ export const CountriesSlider = () => {
     ad_2: "4代入籍",
     ad_3: "10万美元起",
     background: antiguaBackground,
+    to: "/citizenship/antigua",
   };
 
   const dominicaContent = {
@@ -48,6 +49,7 @@ export const CountriesSlider = () => {
     ad_2: "130+免签国",
     ad_3: "10万美元起",
     background: dominicaBackground,
+    to: "/citizenship/dominica",
   };
 
   const grenadaContent = {
@@ -58,6 +60,7 @@ export const CountriesSlider = () => {
     ad_2: "130+免签国",
     ad_3: "15万美元起",
     background: grenadaBackground,
+    to: "/citizenship/grenada",
   };
 
   const maltaContent = {
@@ -68,6 +71,7 @@ export const CountriesSlider = () => {
     ad_2: "186免签国",
     ad_3: "95万欧元起",
     background: maltaBackground,
+    to: "/citizenship/malta",
   };
 
   const portugalContent = {
@@ -78,6 +82,7 @@ export const CountriesSlider = () => {
     ad_2: "195免签国",
     ad_3: "35万欧元起",
     background: portugalBackground,
+    to: "/citizenship/portugal",
   };
 
   const stkittisContent = {
@@ -88,6 +93,7 @@ export const CountriesSlider = () => {
     ad_2: "139+免签国",
     ad_3: "30万美元起",
     background: stkittisBackground,
+    to: "/citizenship/stkittis",
   };
 
   const turkeyContent = {
@@ -98,6 +104,7 @@ export const CountriesSlider = () => {
     ad_2: "E2签证",
     ad_3: "30万美元起",
     background: turkeyBackground,
+    to: "/citizenship/turkey",
   };
 
   const usaContent = {
@@ -108,6 +115,7 @@ export const CountriesSlider = () => {
     ad_2: "130+免签国",
     ad_3: "15万美元起",
     background: usaBackground,
+    to: "/citizenship/usa",
   };
 
   const contentList = [
@@ -162,7 +170,7 @@ export const CountriesSlider = () => {
               <p className={style.contentAd_2}>{item.ad_2}</p>
               <p className={style.contentAd_3}>{item.ad_3}</p>
             </div>
-            <Button text="了解更多" theme={style.contentButton} />
+            <Button to={item.to} text="了解更多" theme={style.contentButton} />
           </div>
         </article>
       ))}
