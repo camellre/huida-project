@@ -8,27 +8,32 @@
   @include index.gridTemplate_1();
   grid-column: 1/17;
   grid-row: 1;
-  background: url("../../assets/antigua_barbuda.webp");
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--country-image) no-repeat center;
   background-size: cover;
-  height: 40em;
+  height: 28rem;
   width: 100%;
 }
 
-.countryName {
-  grid-column: 2/16;
-  color: white;
-  position: relative;
-  top: -10%;
-  font-size: 2.5rem;
-}
-
 @media screen and (min-width: 768px) {
-  .countryName {
-    font-size: 3.5rem;
+  .introImage {
+    height: 35rem;
   }
 }
+
+.countryName {
+  display: none;
+  //grid-column: 2/16;
+  //color: white;
+  //position: relative;
+  //top: -10%;
+  //font-size: 2.5rem;
+}
+
+//@media screen and (min-width: 768px) {
+//  .countryName {
+//    font-size: 3.5rem;
+//  }
+//}
 
 .introText {
   @include index.gridTemplate_1($columnNumber: 18);
@@ -150,59 +155,83 @@
   }
 }
 
-.banner {
+.bannerSentinel {
   @include index.gridTemplate_1();
-  grid-column: 2/16;
-  grid-row: 8;
-  max-width: 85rem;
+  grid-column: 1/17;
+  grid-row: 8/21;
   width: 100%;
+  height: 100%;
+}
+
+.bannerBackground {
+  grid-column: 1/17;
+  grid-row: 1;
+  align-self: start;
   position: sticky;
-  top: 5rem;
+  width: 100%;
+  height: 3.5rem;
+  top: 3rem;
+  background-color: white;
+}
+
+.banner {
+  @include index.gridTemplate_1($columnNumber: 4);
+  grid-column: 1/17;
+  grid-row: 1;
+  align-self: start;
+  position: sticky;
+  max-width: 64rem;
+  width: 100%;
+  top: 3rem;
+  padding-top: 1rem;
 }
 
 .bannerItem_1 {
-  grid-column: 1/5;
+  grid-column: span 1;
+  grid-row: 1;
 }
 
 .bannerItem_2 {
-  grid-column: 5/9;
+  grid-column: span 1;
+  grid-row: 1;
 }
 
 .bannerItem_3 {
-  grid-column: 9/13;
+  grid-column: span 1;
+  grid-row: 1;
 }
 
 .bannerItem_4 {
-  grid-column: 13/17;
+  grid-column: span 1;
+  grid-row: 1;
+}
+
+.bannerUnderlineWrapper {
+  @include index.flexTemplate();
+  grid-column: 1/2;
+  grid-row: 2;
+  transform: translateX(var(--bannerUderline-position));
+  transition: all 0.4s;
+  width: 100%;
 }
 
 .bannerUnderline {
-  grid-column: 1/5;
   height: 0.375em;
   width: 5em;
   background: black;
-  transition: all 0.4s;
 }
 
 @media screen and (min-width: 768px) {
-  .bannerItem_1 {
-    grid-column: 3/6;
+  .bannerSentinel {
+    grid-row: 8/22;
   }
 
-  .bannerItem_2 {
-    grid-column: 6/9;
+  .banner {
+    top: 5rem;
   }
 
-  .bannerItem_3 {
-    grid-column: 9/12;
-  }
-
-  .bannerItem_4 {
-    grid-column: 12/15;
-  }
-
-  .bannerUnderline {
-    grid-column: 3/6;
+  .bannerBackground {
+    top: 5rem;
   }
 }
 
@@ -213,6 +242,13 @@
   max-width: 85rem;
   width: 100%;
   min-height: 35rem;
+  padding-top: 6.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .law {
+    padding-top: 8.5rem;
+  }
 }
 
 .countryIcon {
@@ -244,37 +280,48 @@
   max-width: 85rem;
   width: 100%;
   min-height: 35rem;
+  padding-top: 6.5rem;
 }
 
 .projectTitle {
   grid-column: 1/17;
   text-align: center;
+  grid-row: 1;
 }
 
 .projectImage {
   grid-column: 1/17;
   width: 20rem;
+  grid-row: 3;
 }
 
 .projectSubTitles_1 {
   grid-column: 1/17;
+  grid-row: 5;
 }
 
 .projectText_1 {
   grid-column: 1/17;
   max-width: 23.1rem;
+  grid-row: 7;
 }
 
 .projectSubTitles_2 {
   grid-column: 1/17;
+  grid-row: 9;
 }
 
 .projectText_2 {
   grid-column: 1/17;
   max-width: 23.1rem;
+  grid-row: 11;
 }
 
 @media screen and (min-width: 768px) {
+  .project {
+    padding-top: 8.5rem;
+  }
+
   .projectTitle {
     grid-row: 1;
   }
@@ -287,20 +334,24 @@
 
   .projectSubTitles_1 {
     grid-column: 9/17;
+    grid-row: 2;
   }
 
   .projectText_1 {
     grid-column: 9/17;
     max-width: 23.1rem;
+    grid-row: 3;
   }
 
   .projectSubTitles_2 {
     grid-column: 9/17;
+    grid-row: 4;
   }
 
   .projectText_2 {
     grid-column: 9/17;
     max-width: 23.1rem;
+    grid-row: 5;
   }
 }
 
@@ -309,17 +360,19 @@
   grid-row: 17;
   max-width: 64rem;
   width: 100%;
+  min-height: 35rem;
+  padding-top: 6.5rem;
 }
 
 .formGrid {
   @include index.gridTemplate_1($columnNumber: 12);
-  min-height: 35rem;
   width: 100%;
 }
 
 .priceTitle {
   grid-column: 1/13;
   grid-row: span 4;
+  text-align: center;
 }
 
 .pricePersonNumber {
@@ -362,6 +415,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .price {
+    padding-top: 8.5rem;
+  }
   .projectLabels {
     grid-column: span 3;
     grid-row: span 4;
@@ -387,10 +443,11 @@
 .documents {
   @include index.gridTemplate_1($columnNumber: 12);
   grid-column: 2/16;
-  grid-row: 20;
+  grid-row: 20/28;
   max-width: 64rem;
   width: 100%;
   min-height: 35rem;
+  padding-top: 6.5rem;
 }
 
 .documentsTitle {
@@ -399,31 +456,38 @@
 }
 
 .applyStepBox_1 {
-  grid-column: 1/13;
-  grid-row: 2;
+  grid-column: 1/5;
+  grid-row: 3;
+  font-size: 0.875rem;
 }
 
 .applyStepBox_2 {
-  grid-column: 1/13;
-  grid-row: 4;
+  grid-column: 5/9;
+  grid-row: 3;
+  font-size: 0.875rem;
 }
 
 .applyStepBox_3 {
-  grid-column: 1/13;
-  grid-row: 6;
+  grid-column: 9/13;
+  grid-row: 3;
+  font-size: 0.875rem;
 }
 
 .documentsListWrapper {
   grid-column: 1/13;
-  grid-row: 8;
+  grid-row: 5;
 }
 
 .documentsButton {
   grid-column: 1/13;
-  grid-row: 10;
+  grid-row: 7;
 }
 
 @media screen and (min-width: 768px) {
+  .documents {
+    grid-row: 20/29;
+    padding-top: 8.5rem;
+  }
   .applyStepBox_1 {
     grid-column: 1/3;
     grid-row: 2;

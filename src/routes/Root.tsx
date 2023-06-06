@@ -20,14 +20,9 @@ import { PortugalPage } from "../components/PortugalPage/PortugalPage";
 import { StkittsPage } from "../components/StkittsPage/StkittsPage";
 import { TurkeyPage } from "../components/TurkeyPage/TurkeyPage";
 import { USAPage } from "../components/USAPage/USAPage";
-import VisaPage from "../components/VisaPage/VisaPage";
-import TranslatePage from "../components/TranslatePage/TranslatePage";
-import NotaryPage from "../components/NotaryPage/NotaryPage";
-import OtherServices from "../components/OtherServices/OtherServices";
 import { ContactUsPageIndex } from "../components/ContactUsPage/ContactUsPageIndex";
 import { CitizenshipPageIndex } from "../components/CitizenshipPageIndex/CitizenshipPageIndex";
 import { ServicePageIndex } from "../components/ServicePageIndex/ServicePageIndex";
-import CountryPage from "../components/CountryPage/CountryPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,7 +30,7 @@ export const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="citizenship" element={<CitizenshipPage />}>
         <Route index element={<CitizenshipPageIndex />} />
-        <Route path="antigua" element={<CountryPage />} />
+        <Route path="antigua" element={<AntiguaPage />} />
         <Route path="dominica" element={<DominicaPage />} />
         <Route path="grenada" element={<GrenadaPage />} />
         <Route path="malta" element={<MaltaPage />} />
@@ -46,10 +41,6 @@ export const router = createBrowserRouter(
       </Route>
       <Route path="service" element={<ServicePage />}>
         <Route index element={<ServicePageIndex />} />
-        {/* <Route path="visa" element={<VisaPage />} />
-        <Route path="translate" element={<TranslatePage />} />
-        <Route path="notary" element={<NotaryPage />} />
-        <Route path="otherservice" element={<OtherServices />} /> */}
       </Route>
       <Route path="contact" element={<ContactUsPage />}>
         <Route index element={<ContactUsPageIndex />} />
