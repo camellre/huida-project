@@ -3,36 +3,36 @@ import style from "./LandingPage.module.scss";
 import passport_1 from "../../assets/passport_1.webp";
 import passport_2 from "../../assets/passport_2.webp";
 import passport_3 from "../../assets/passport_3.webp";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-interface LandingPageSwitch {
-  [key: string]: () => void;
-}
+// interface LandingPageSwitch {
+//   [key: string]: () => void;
+// }
 
 export const LandingPage = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const landingPageSwitch: LandingPageSwitch = {
-    landingPage_1: () => {
-      setCurrentIndex(0);
-    },
-    landingPage_2: () => {
-      setCurrentIndex(1);
-    },
-    landingPage_3: () => {
-      setCurrentIndex(2);
-    },
-  };
-
-  const handlePageSwitch = (e: React.MouseEvent<HTMLElement>) => {
-    const pageSwitchFunction = landingPageSwitch[e.currentTarget.id];
-    return pageSwitchFunction();
-  };
+  // const [currentIndex, setCurrentIndex] = useState<number>(0);
+  //
+  // const landingPageSwitch: LandingPageSwitch = {
+  //   landingPage_1: () => {
+  //     setCurrentIndex(0);
+  //   },
+  //   landingPage_2: () => {
+  //     setCurrentIndex(1);
+  //   },
+  //   landingPage_3: () => {
+  //     setCurrentIndex(2);
+  //   },
+  // };
+  //
+  // const handlePageSwitch = (e: React.MouseEvent<HTMLElement>) => {
+  //   const pageSwitchFunction = landingPageSwitch[e.currentTarget.id];
+  //   return pageSwitchFunction();
+  // };
 
   return (
     <article
       className={style.landingPageWrapper}
-      style={{ "--current-index": currentIndex } as React.CSSProperties}
+      // style={{ "--current-index": currentIndex } as React.CSSProperties}
     >
       <div className={style.content_1_Background}>
         <div className={style.content_1_Wrapper}>
@@ -76,29 +76,29 @@ export const LandingPage = () => {
         </picture>
       </div>
 
-      <ul className={style.landingPageToggleWrapper}>
-        <li
-          id="landingPage_1"
-          className={style.landingPageToggler}
-          onClick={handlePageSwitch}
-        >
-          1
-        </li>
-        <li
-          id="landingPage_2"
-          className={style.landingPageToggler}
-          onClick={handlePageSwitch}
-        >
-          2
-        </li>
-        <li
-          id="landingPage_3"
-          className={style.landingPageToggler}
-          onClick={handlePageSwitch}
-        >
-          3
-        </li>
-      </ul>
+      {/*<ul className={style.landingPageToggleWrapper}>*/}
+      {/*  <li*/}
+      {/*    id="landingPage_1"*/}
+      {/*    className={style.landingPageToggler}*/}
+      {/*    onClick={handlePageSwitch}*/}
+      {/*  >*/}
+      {/*    1*/}
+      {/*  </li>*/}
+      {/*  <li*/}
+      {/*    id="landingPage_2"*/}
+      {/*    className={style.landingPageToggler}*/}
+      {/*    onClick={handlePageSwitch}*/}
+      {/*  >*/}
+      {/*    2*/}
+      {/*  </li>*/}
+      {/*  <li*/}
+      {/*    id="landingPage_3"*/}
+      {/*    className={style.landingPageToggler}*/}
+      {/*    onClick={handlePageSwitch}*/}
+      {/*  >*/}
+      {/*    3*/}
+      {/*  </li>*/}
+      {/*</ul>*/}
     </article>
   );
 };

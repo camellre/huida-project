@@ -2,12 +2,13 @@
 
 .cardWrapper {
   width: 100%;
-  background: url("src/assets/world_map_background.webp");
+  background: url("../../assets/world_map_background.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   @include index.gridTemplate();
   padding: 1rem;
+  height: 60vh;
 }
 
 .cardTitle {
