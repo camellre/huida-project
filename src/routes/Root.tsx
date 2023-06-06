@@ -27,6 +27,7 @@ import OtherServices from "../components/OtherServices/OtherServices";
 import { ContactUsPageIndex } from "../components/ContactUsPage/ContactUsPageIndex";
 import { CitizenshipPageIndex } from "../components/CitizenshipPageIndex/CitizenshipPageIndex";
 import { ServicePageIndex } from "../components/ServicePageIndex/ServicePageIndex";
+import CountryPage from "../components/CountryPage/CountryPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,7 +35,7 @@ export const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="citizenship" element={<CitizenshipPage />}>
         <Route index element={<CitizenshipPageIndex />} />
-        <Route path="antigua" element={<AntiguaPage />} />
+        <Route path="antigua" element={<CountryPage />} />
         <Route path="dominica" element={<DominicaPage />} />
         <Route path="grenada" element={<GrenadaPage />} />
         <Route path="malta" element={<MaltaPage />} />
