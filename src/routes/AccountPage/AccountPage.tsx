@@ -79,7 +79,7 @@ function AccountPage() {
             </p>
           </li>
         </ul>
-        <Button text="登出账号" theme={style.logOutButton} />
+        <Button to=" " text="登出账号" theme={style.logOutButton} />
       </article>
       <article className={style.accountBody}>
         <Outlet />
