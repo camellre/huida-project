@@ -94,11 +94,13 @@
   grid-column: 2/24;
   grid-row: 4;
   width: 100%;
+  position: relative;
+  top: -3rem;
 }
 
 .contentButton {
   position: relative;
-  top: -3rem;
+  top: -5rem;
   grid-column: 2/24;
   grid-row: 5;
 }
@@ -114,6 +116,7 @@
 
   .contentAdWrapper {
     grid-column: 6/16;
+    top: 0;
   }
 
   .contentButton {
