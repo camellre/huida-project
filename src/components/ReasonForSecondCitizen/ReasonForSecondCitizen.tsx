@@ -5,7 +5,7 @@ export const ReasonForSecondCitizen = () => {
   return (
     <article className={style.cardWrapper}>
       <h2 className={style.cardTitle}>为什么需要第二身份</h2>
-      <video className={style.cardVideoWrapper} controls autoPlay loop muted>
+      <video className={style.cardVideoWrapper} controls loop muted>
         <source src={worldMapVideo} />
       </video>
       <p className={style.cardText}>

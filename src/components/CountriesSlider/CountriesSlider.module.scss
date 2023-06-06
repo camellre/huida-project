@@ -97,6 +97,8 @@
 }
 
 .contentButton {
+  position: relative;
+  top: -3rem;
   grid-column: 2/24;
   grid-row: 5;
 }
@@ -116,5 +118,6 @@
 
   .contentButton {
     grid-column: 6/16;
+    top: 0;
   }
 }
