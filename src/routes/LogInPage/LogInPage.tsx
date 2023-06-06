@@ -33,10 +33,10 @@ function LogInPage() {
               placeholder="输入密码"
             />
             <div className={style.logInButtonWrapper}>
-              <Button text="注册新用户" />
+              <Button to=" " text="注册新用户" />
               <span>已有账户？</span>
               <Link to={"/account"}>
-                <Button text="登录" />
+                <Button to="" text="登录" />
               </Link>
             </div>
           </form>

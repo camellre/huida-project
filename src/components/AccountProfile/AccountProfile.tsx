@@ -15,28 +15,28 @@ function AccountProfile() {
         <span>昵称</span>
         <span>ID号/名字</span>
         <span>
-          <Button theme="navBarButton" text="修改" />
+          <Button to=" " theme="navBarButton" text="修改" />
         </span>
       </div>
       <div className={style.accountProfileItemWrapper}>
         <span>密码</span>
         <span>************</span>
         <span>
-          <Button theme="navBarButton" text="修改" />
+          <Button to=" " theme="navBarButton" text="修改" />
         </span>
       </div>
       <div className={style.accountProfileItemWrapper}>
         <span>手机号</span>
         <span>+1510****8888</span>
         <span>
-          <Button theme="navBarButton" text="修改" />
+          <Button to=" " theme="navBarButton" text="修改" />
         </span>
       </div>
       <div className={style.accountProfileItemWrapper}>
         <span>Email</span>
         <span>huida*******.com</span>
         <span>
-          <Button theme="navBarButton" text="修改" />
+          <Button to=" " theme="navBarButton" text="修改" />
         </span>
       </div>
       <div className={style.accountProfileItemWrapper}>
@@ -47,7 +47,7 @@ function AccountProfile() {
           </div>
         </span>
         <span>
-          <Button theme="navBarButton" text="注销账号" />
+          <Button to=" " theme="navBarButton" text="注销账号" />
         </span>
       </div>
     </div>
