@@ -7,8 +7,8 @@
 
 .background {
   @include index.flexTemplate();
-  grid-column: 1/17;
-  grid-row: 1 / span 7;
+  grid-column: 1/25;
+  grid-row: 1 / span 9;
 }
 
 .backgroundMobile {
@@ -16,7 +16,7 @@
 }
 
 .background_1 {
-  grid-column: 1/17;
+  grid-column: 1/25;
   grid-row: 3;
   font-size: 1.25em;
   background: white;
@@ -26,14 +26,14 @@
 }
 
 .background_2 {
-  grid-column: 1/17;
-  grid-row: 4;
+  grid-column: 1/25;
+  grid-row: 5/6;
   font-size: 0.875em;
 }
 
 .background_3 {
-  grid-row: 5;
-  grid-column: 1/17;
+  grid-row: 7/9;
+  grid-column: 1/25;
   background: white;
   border: 1px solid black;
   padding: 0.5em;

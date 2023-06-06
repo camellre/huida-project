@@ -3,7 +3,7 @@
 .callOutBackground {
   @include index.gridTemplate();
   max-width: 68em;
-  margin: 0 auto;
+  margin: 3rem auto;
   background: #555ba8;
   color: white;
   padding: 1em;
@@ -11,12 +11,12 @@
 
 .callOutTitle {
   font-size: 1.25em;
-  grid-column: 1/17;
+  grid-column: 1/25;
   margin: 0;
 }
 
 .callOutSideWrapper {
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 .callOutSideTitle {
@@ -28,16 +28,20 @@
 }
 
 .callOutBodyText {
-  grid-column: 1/17;
+  grid-column: 1/25;
 }
 
 @media screen and (min-width: 768px) {
+  .callOutBackground {
+    margin: 5rem auto;
+  }
+
   .callOutTitle {
     font-size: 1.5em;
   }
 
   .callOutSideWrapper {
-    grid-column: 1/4;
+    grid-column: 1/7;
   }
 
   .callOutSideTitle {
@@ -48,6 +52,6 @@
     font-size: 2em;
   }
   .callOutBodyText {
-    grid-column: 4/17;
+    grid-column: 7/25;
   }
 }
