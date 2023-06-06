@@ -5,12 +5,12 @@ import { useEffect } from "react";
 
 function App() {
   let routeLocation = useLocation();
-
+  const viewportRef = document.getElementById("root");
   useEffect(() => {
-    window.scrollTo(0, 0);
+    viewportRef?.scrollTo(0, 0);
   }, [routeLocation]);
   return (
-    <div className={style.viewport}>
+    <div>
       <header className={style.header}>
         <NavigationBar />
       </header>

@@ -11,49 +11,19 @@
   margin: 0;
 }
 
-// @media screen and (min-width: 768px) {
-//   .landingPageWrapper {
-//     @include index.gridTemplate_1($rowHeight: 100vh);
-//   }
-// }
-
-//.landingPageToggleWrapper {
-//  grid-column: 1/17;
-//  grid-row: 1;
-//  color: black;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  column-gap: 1em;
-//  z-index: 1;
-//  transform: translateY(16em);
-//}
-//
-//@media screen and (min-width: 768px) {
-//  .landingPageToggleWrapper {
-//    transform: translateY(18em);
-//  }
-//}
-//
-//.landingPageToggler {
-//  cursor: pointer;
-//  border: 1px solid red;
-//}
-
 //content 1 section
 .content_1_Background {
   @include index.flexTemplate();
   grid-column: 1/25;
   grid-row: 1;
-  //transform: translateX(calc((var(--current-index, 0) - 0) * -100%));
   background-image: url("../../assets/planeWindows-2560.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 1s;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 3rem);
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .content_1_Wrapper {
@@ -96,6 +66,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .content_1_Background {
+    height: calc(100vh - 5rem);
+  }
   .content_1_text_1 {
     font-size: 4em;
     grid-column: 1/25;
@@ -132,23 +105,23 @@
   grid-column: 1/25;
   grid-row: 2;
   width: 100%;
-  //transform: translateX(calc((var(--current-index, 0) - 1) * -100%));
   background-image: url("../../assets/classroom (1).webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -8rem 0;
-  transition: all 1s;
-  height: calc(100vh - 5rem);
+  background-position: -9rem 0;
+  height: calc(100vh - 3rem);
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .content_2_Shadow {
-  grid-column: 14/25;
+  grid-column: 1/25;
   grid-row: 1/6;
   background: linear-gradient(
     270deg,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.75) 70%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.5) 70%,
     rgba(0, 0, 0, 0) 100%
   );
   height: 100%;
@@ -156,21 +129,21 @@
 }
 
 .content_2_text_1 {
-  font-size: 2.125em;
+  font-size: 2.625em;
   grid-column: 1/25;
   grid-row: 1;
   transform: translateY(2rem);
 }
 
 .content_2_text_2 {
-  font-size: 2.125em;
+  font-size: 2.625em;
   grid-column: 1/25;
   grid-row: 2;
   transform: translateY(2rem);
 }
 
 .content_2_text_3 {
-  font-size: 0.875em;
+  font-size: 1em;
   grid-column: 1/25;
   grid-row: 3;
   transform: translateY(2rem);
@@ -185,18 +158,33 @@
 .content_2_PassportImage {
   grid-column: 1/25;
   grid-row: 5;
-  transform: translateY(3rem);
+  transform: translateY(2.8rem);
 }
 
 @media screen and (min-width: 768px) {
+  .content_2_Wrapper {
+    height: calc(100vh - 5rem);
+  }
+
+  .content_2_Shadow {
+    grid-column: 5/25;
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.6) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
   .content_2_text_1 {
-    font-size: 3em;
+    font-size: 4em;
     grid-column: 6/25;
     transform: translateY(3rem);
   }
 
   .content_2_text_2 {
-    font-size: 3em;
+    font-size: 4em;
     grid-column: 6/25;
     transform: translateY(3rem);
   }
@@ -214,6 +202,7 @@
 
   .content_2_PassportImage {
     grid-column: 6/25;
+    transform: translateY(2.375rem);
   }
 }
 
@@ -223,14 +212,20 @@
   grid-column: 1/25;
   grid-row: 3;
   width: 100%;
-  //transform: translateX(calc((var(--current-index, 0) - 2) * -100%));
   background-image: url("../../assets/Digital_Transformation.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 1s;
-  height: calc(100vh - 5rem);
+  background-position: -14rem 0;
+  height: calc(100vh - 3rem);
   scroll-snap-align: start;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 640px) {
+  .content_3_Wrapper {
+    background-position: 0 0;
+  }
 }
 
 .content_3_Wrapper h2 {
@@ -242,37 +237,37 @@
   grid-row: 1 / span 6;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.99) 0%,
-    rgba(255, 255, 255, 0.9) 50%,
-    rgba(255, 255, 255, 0.8) 100%
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0.55) 100%
   );
   height: 100%;
   width: 100%;
 }
 
 .content_3_text_1 {
-  font-size: 3.125em;
+  font-size: 3em;
   grid-column: 1/25;
   grid-row: 1;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_2 {
-  font-size: 3.125em;
+  font-size: 3em;
   grid-column: 1/25;
   grid-row: 2;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_3 {
-  font-size: 1.125em;
+  font-size: 1em;
   grid-column: 1/25;
   grid-row: 3;
   transform: translateY(1.5rem);
 }
 
 .content_3_text_4 {
-  font-size: 1.125em;
+  font-size: 1em;
   grid-column: 1/25;
   grid-row: 4;
   transform: translateY(1.5rem);
@@ -291,47 +286,47 @@
 }
 
 @media screen and (min-width: 768px) {
+  .content_3_Wrapper {
+    height: calc(100vh - 5rem);
+  }
+
   .content_3_Shadow {
-    grid-column: 1/12;
+    grid-column: 1/22;
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.99) 0%,
-      rgba(255, 255, 255, 0.9) 50%,
-      rgba(255, 255, 255, 0.65) 70%,
+      rgba(255, 255, 255, 0.75) 50%,
       rgba(255, 255, 255, 0) 100%
     );
   }
+
   .content_3_text_1 {
-    font-size: 3.125em;
-    grid-column: 1/20;
-    transform: translateY(6rem);
+    font-size: 4em;
+    grid-column: 1/18;
   }
 
   .content_3_text_2 {
-    font-size: 3.125em;
-    grid-column: 1/20;
-    transform: translateY(6rem);
+    font-size: 4em;
+    grid-column: 1/18;
   }
 
   .content_3_text_3 {
     font-size: 1.125em;
-    grid-column: 1/20;
-    transform: translateY(6rem);
+    grid-column: 1/18;
+    padding-top: 1rem;
   }
 
   .content_3_text_4 {
     font-size: 1.125em;
-    grid-column: 1/20;
-    transform: translateY(6rem);
+    grid-column: 1/18;
+    padding-bottom: 1rem;
   }
 
   .content_3_Button {
-    grid-column: 1/20;
-    transform: translateY(6rem);
+    grid-column: 1/18;
   }
 
   .content_3_PassportImage {
-    grid-column: 1/20;
-    transform: translate(20rem, -10rem);
+    grid-column: 1/18;
   }
 }
