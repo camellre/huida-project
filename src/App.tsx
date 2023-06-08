@@ -7,7 +7,7 @@ import BodyHeightContext from "./stateManagement/bodyHeightContext";
 function App() {
   let routeLocation = useLocation();
   const bodyRef = useRef<HTMLDivElement>(null);
-  const [bodyHeight, setBodyHeight] = useState(0);
+  const [bodyHeight, setBodyHeight] = useState(500);
 
   const handleResize = () => {
     if (bodyRef.current !== null) setBodyHeight(bodyRef.current.offsetHeight);

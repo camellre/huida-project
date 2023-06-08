@@ -57,7 +57,7 @@ export const LandingPage = () => {
             text="了解更多"
           />
           <picture className={style.content_1_PassportImage}>
-            <img src={passport_1} alt="" />
+            <img src={passport_1} alt="" className={style.contentImage} />
           </picture>
         </div>
       </div>
@@ -80,7 +80,7 @@ export const LandingPage = () => {
           text="立刻咨询"
         />
         <picture className={style.content_2_PassportImage}>
-          <img src={passport_2} alt="" />
+          <img src={passport_2} alt="" className={style.contentImage} />
         </picture>
       </div>
 
@@ -101,7 +101,7 @@ export const LandingPage = () => {
           theme={style.content_3_Button}
         />
         <picture className={style.content_3_PassportImage}>
-          <img src={passport_3} alt="" />
+          <img src={passport_3} alt="" className={style.contentImage} />
         </picture>
       </div>
 

@@ -9,6 +9,7 @@
   @include index.flexTemplate();
   grid-column: 1/25;
   grid-row: 1 / span 9;
+  height: 100%;
 }
 
 .backgroundMobile {
