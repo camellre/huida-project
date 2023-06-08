@@ -14,6 +14,14 @@ export default function CountryPage({ country }: CountryPageProps) {
   const [bannerShow, setBannerShow] = useState("0");
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
 
+  const handleBannerClick = (e: React.MouseEvent<HTMLElement>) => {
+    elementsRef.current[parseInt(e.currentTarget.id.slice(-1))]?.scrollIntoView(
+      {
+        behavior: "smooth",
+      }
+    );
+  };
+
   const bannerShowLogic: BannerShowLogic = {
     law: "0",
     project: "100%",
@@ -102,18 +110,34 @@ export default function CountryPage({ country }: CountryPageProps) {
       <section className={style.bannerSentinel}>
         <div className={style.bannerBackground} />
         <div className={style.banner}>
-          <a href="#law" className={style.bannerItem_1}>
+          <p
+            id="banner_0"
+            onClick={handleBannerClick}
+            className={style.bannerItem_1}
+          >
             入籍法案
-          </a>
-          <a href="#project" className={style.bannerItem_2}>
+          </p>
+          <p
+            id="banner_1"
+            onClick={handleBannerClick}
+            className={style.bannerItem_2}
+          >
             投资项目
-          </a>
-          <a href="#price" className={style.bannerItem_3}>
+          </p>
+          <p
+            id="banner_2"
+            onClick={handleBannerClick}
+            className={style.bannerItem_3}
+          >
             费用估算
-          </a>
-          <a href="#documents" className={style.bannerItem_4}>
+          </p>
+          <p
+            id="banner_3"
+            onClick={handleBannerClick}
+            className={style.bannerItem_4}
+          >
             申请文件
-          </a>
+          </p>
           <div
             style={
               {
