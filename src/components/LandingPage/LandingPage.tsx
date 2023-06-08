@@ -3,13 +3,15 @@ import style from "./LandingPage.module.scss";
 import passport_1 from "../../assets/passport_1.webp";
 import passport_2 from "../../assets/passport_2.webp";
 import passport_3 from "../../assets/passport_3.webp";
-// import React, { useState } from "react";
+import React, { useContext } from "react";
+import BodyHeightContext from "../../stateManagement/bodyHeightContext";
 
 // interface LandingPageSwitch {
 //   [key: string]: () => void;
 // }
 
 export const LandingPage = () => {
+  const { bodyHeight } = useContext(BodyHeightContext);
   // const [currentIndex, setCurrentIndex] = useState<number>(0);
   //
   // const landingPageSwitch: LandingPageSwitch = {
@@ -34,7 +36,12 @@ export const LandingPage = () => {
       className={style.landingPageWrapper}
       // style={{ "--current-index": currentIndex } as React.CSSProperties}
     >
-      <div className={style.content_1_Background}>
+      <div
+        className={style.content_1_Background}
+        style={
+          { "--initialBody-height": `${bodyHeight}px` } as React.CSSProperties
+        }
+      >
         <div className={style.content_1_Wrapper}>
           <h2 className={style.content_1_text_1}>说走就走</h2>
           <h2 className={style.content_1_text_2}>随心自由出行</h2>
@@ -55,7 +62,12 @@ export const LandingPage = () => {
         </div>
       </div>
 
-      <div className={style.content_2_Wrapper}>
+      <div
+        className={style.content_2_Wrapper}
+        style={
+          { "--initialBody-height": `${bodyHeight}px` } as React.CSSProperties
+        }
+      >
         <div className={style.content_2_Shadow} />
         <h2 className={style.content_2_text_1}>为您的子女创造</h2>
         <h2 className={style.content_2_text_2}>无限的教育机会！</h2>
@@ -72,7 +84,12 @@ export const LandingPage = () => {
         </picture>
       </div>
 
-      <div className={style.content_3_Wrapper}>
+      <div
+        className={style.content_3_Wrapper}
+        style={
+          { "--initialBody-height": `${bodyHeight}px` } as React.CSSProperties
+        }
+      >
         <div className={style.content_3_Shadow} />
         <h2 className={style.content_3_text_1}>拓展国际视野</h2>
         <h2 className={style.content_3_text_2}>提高安全保障</h2>

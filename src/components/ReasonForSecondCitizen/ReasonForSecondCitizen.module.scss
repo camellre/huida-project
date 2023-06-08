@@ -8,7 +8,7 @@
   background-position: center;
   @include index.gridTemplate();
   padding: 1rem;
-  height: calc(100vh - 3rem);
+  height: calc(var(--initialBody-height) - 3rem);
   scroll-snap-align: start;
 }
 
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 768px) {
   .cardWrapper {
-    height: calc(100vh - 5rem);
+    height: calc(var(--initialBody-height) - 5rem);
   }
 
   .cardTitle {

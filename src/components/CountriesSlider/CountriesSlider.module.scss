@@ -4,13 +4,13 @@
   @include index.gridTemplate();
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 3rem);
+  height: calc(var(--initialBody-height) - 3rem);
   scroll-snap-align: start;
 }
 
 @media screen and (min-width: 768px) {
   .sliderWrapper {
-    height: calc(100vh - 5rem);
+    height: calc(var(--initialBody-height) - 5rem);
   }
 }
 

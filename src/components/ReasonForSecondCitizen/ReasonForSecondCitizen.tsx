@@ -1,9 +1,17 @@
 import style from "./ReasonForSecondCitizen.module.scss";
 import worldMapVideo from "../../assets/pexels-vlada-karpovich-7429830-1280x720-25fps.mp4";
+import { useContext } from "react";
+import BodyHeightContext from "../../stateManagement/bodyHeightContext";
 
 export const ReasonForSecondCitizen = () => {
+  const { bodyHeight } = useContext(BodyHeightContext);
   return (
-    <article className={style.cardWrapper}>
+    <article
+      className={style.cardWrapper}
+      style={
+        { "--initialBody-height": `${bodyHeight}px` } as React.CSSProperties
+      }
+    >
       <h2 className={style.cardTitle}>为什么需要第二身份</h2>
       <video className={style.cardVideoWrapper} controls loop muted>
         <source src={worldMapVideo} />

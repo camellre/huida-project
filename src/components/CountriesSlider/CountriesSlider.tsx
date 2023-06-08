@@ -15,10 +15,12 @@ import portugalBackground from "../../assets/portugal.webp";
 import stkittisBackground from "../../assets/st_kitts.webp";
 import turkeyBackground from "../../assets/turkiye.webp";
 import usaBackground from "../../assets/usa.webp";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "../../genericComponents/Button/Button";
+import BodyHeightContext from "../../stateManagement/bodyHeightContext";
 
 export const CountriesSlider = () => {
+  const { bodyHeight } = useContext(BodyHeightContext);
   const [sliderShowIndex, setSliderShowIndex] = useState(0);
   const flagList = [
     antigua_flag,
@@ -134,7 +136,12 @@ export const CountriesSlider = () => {
   };
 
   return (
-    <article className={style.sliderWrapper}>
+    <article
+      className={style.sliderWrapper}
+      style={
+        { "--initialBody-height": `${bodyHeight}px` } as React.CSSProperties
+      }
+    >
       <ul className={style.flagWrapper}>
         {flagList.map((item, index) => (
           <li

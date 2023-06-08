@@ -21,29 +21,19 @@
 
 // grid template with default column number, item axis x & y, row and column gap.
 @mixin gridTemplate(
-  $columnNumber: 24,
+  $columnTemplate: repeat(24, minmax(0, 1fr)),
   $itemAxisY: center,
   $itemAxisX: center,
   $rowHeight: minmax(1rem, auto)
 ) {
   display: grid;
-  grid-template-columns: repeat($columnNumber, minmax(0, 1fr));
+  grid-template-columns: $columnTemplate;
   grid-auto-rows: $rowHeight;
   justify-items: $itemAxisX;
   align-items: $itemAxisY;
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  height: 3rem;
-  overflow: visible;
+.bodyWrapper {
   width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    height: 5rem;
-  }
+  height: 100%;
 }

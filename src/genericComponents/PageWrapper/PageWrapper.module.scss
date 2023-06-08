@@ -1,1 +1,13 @@
+.mainWrapper {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  z-index: 2;
+}
 
+@media screen and (min-width: 768px) {
+  .mainWrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

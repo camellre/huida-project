@@ -21,8 +21,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: calc(100vh - 3rem);
-  scroll-snap-align: start;
+  height: calc(var(--initialBody-height) - 3rem);
   overflow: hidden;
 }
 
@@ -67,7 +66,7 @@
 
 @media screen and (min-width: 768px) {
   .content_1_Background {
-    height: calc(100vh - 5rem);
+    height: calc(var(--initialBody-height) - 5rem);
   }
   .content_1_text_1 {
     font-size: 4em;
@@ -109,8 +108,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -9rem 0;
-  height: calc(100vh - 3rem);
-  scroll-snap-align: start;
+  height: calc(var(--initialBody-height) - 3rem);
   overflow: hidden;
 }
 
@@ -163,7 +161,7 @@
 
 @media screen and (min-width: 768px) {
   .content_2_Wrapper {
-    height: calc(100vh - 5rem);
+    height: calc(var(--initialBody-height) - 5rem);
   }
 
   .content_2_Shadow {
@@ -217,8 +215,7 @@
   background-position: center;
   background-size: cover;
   background-position: -14rem 0;
-  height: calc(100vh - 3rem);
-  scroll-snap-align: start;
+  height: calc(var(--initialBody-height) - 3rem);
   overflow: hidden;
 }
 
@@ -287,7 +284,7 @@
 
 @media screen and (min-width: 768px) {
   .content_3_Wrapper {
-    height: calc(100vh - 5rem);
+    height: calc(var(--initialBody-height) - 5rem);
   }
 
   .content_3_Shadow {
