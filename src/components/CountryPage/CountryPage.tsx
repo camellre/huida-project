@@ -44,7 +44,7 @@ export default function CountryPage({ country }: CountryPageProps) {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.7 }
     );
 
     elementsRef.current.forEach((element) => {

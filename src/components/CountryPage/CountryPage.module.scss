@@ -215,7 +215,7 @@
   grid-column: 1/2;
   grid-row: 2;
   transform: translateX(var(--bannerUderline-position));
-  transition: all 0.4s;
+  transition: all 0.25s ease-out;
   width: 100%;
 }
 
