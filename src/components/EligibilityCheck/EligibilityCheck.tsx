@@ -31,7 +31,7 @@ export const EligibilityCheck = () => {
         <br />
         方案竟然是...?
       </h2>
-      <Button to="/" theme={style.background_2} text="马上点击测试" />
+      <Button to="/contact" theme={style.background_2} text="马上点击测试" />
       <p className={style.background_3}>5分钟帮您匹配最合适的移民方案</p>
     </article>
   );
