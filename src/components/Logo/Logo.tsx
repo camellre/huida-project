@@ -1,5 +1,5 @@
 import style from "./Logo.module.scss";
-import logo from "../../assets/huida-logo.svg";
+import logo from "../../assets/huida-logo_no_padding.svg";
 import ImageWrapper from "../../genericComponents/ImageWrapper/ImageWrapper";
 
 interface LogoProps {
